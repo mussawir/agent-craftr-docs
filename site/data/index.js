@@ -1,0 +1,44 @@
+/* Every file the site loads. Add a name here when you add a file in screens/, flows/ or pages/.
+   The order here is the order in the menu and of "Next →" between screens. */
+window.DOCS_FILES = {
+  pages: ["what-is-agentcraftr", "items", "agent-and-handover", "trades-and-features", "roles", "plans-and-limits", "consent", "glossary"],
+  screens: [
+    /* web — public */
+    "web-signup", "web-login",
+    /* web — owner */
+    "web-home", "web-setup", "web-items", "web-item-knowledge", "web-item-files", "web-item-products", "web-channels",
+    "web-inbox", "web-customers", "web-customer-profile",
+    "web-orders", "web-order-detail", "web-payments", "web-requests", "web-appointments",
+    "web-broadcasts", "web-team", "web-billing",
+    /* partner */
+    "partner-home", "partner-businesses",
+    /* admin */
+    "admin-home", "admin-tenants", "admin-tenant-detail",
+    /* mobile app — screenshots to be added with the marking editor */
+    "mobile-today", "mobile-chats", "mobile-chat", "mobile-orders", "mobile-teach", "mobile-customers", "mobile-partner-home",
+  ],
+  flows: ["go-live", "customer-message", "shop-order", "payment-proof", "handover", "booking", "quote-request", "broadcast", "partner-business"],
+};
+
+Docs.site({
+  headline: "Learn AgentCraftr by looking at it.",
+  intro: "Every screen of the web dashboard, the mobile app, the partner pages and our admin, with each action marked: a numbered box shows what you can click, an arrow shows what comes next. Workflows show who does what, from a customer's first message to a confirmed payment.",
+  heroScreen: "web-inbox",
+  covers: { web: "web-home", partner: "partner-home", admin: "admin-home", mobile: "mobile-today" },
+  roles: [
+    { icon: "🏪", title: "I own a business", text: "Set up the agent, connect WhatsApp, and run orders and chats.", href: "#/flow/go-live" },
+    { icon: "💬", title: "I work for a business", text: "Answer handed-over chats, pack orders, check payments.", href: "#/screen/web-inbox" },
+    { icon: "📱", title: "I use the phone app", text: "Today's work, chats and teaching the agent from your phone.", href: "#/app/mobile" },
+    { icon: "🤝", title: "I'm a partner", text: "Bring businesses in your cities and trades, and track earnings.", href: "#/flow/partner-business" },
+    { icon: "🛠️", title: "I'm on the AgentCraftr team", text: "Onboard tenants, watch numbers, confirm payments.", href: "#/app/admin" },
+    { icon: "📘", title: "I'm new to all this", text: "What AgentCraftr is, in plain words, in five minutes.", href: "#/page/what-is-agentcraftr" },
+  ],
+  journey: [
+    { title: "Sign up", text: "3-day free trial, pick your trade and city", href: "#/screen/web-signup" },
+    { title: "Add an Item", text: "A product, service or your whole shop", href: "#/screen/web-items" },
+    { title: "Teach it", text: "Files, photos, voice notes, prices", href: "#/screen/web-item-knowledge" },
+    { title: "Connect WhatsApp", text: "Your official number, via Meta", href: "#/screen/web-channels" },
+    { title: "Attach number to Item", text: "Without this the agent stays silent", href: "#/flow/go-live/6" },
+    { title: "First customer message", text: "The agent answers; you watch the Inbox", href: "#/flow/customer-message" },
+  ],
+});

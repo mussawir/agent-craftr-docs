@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marking Editor</title>
+<meta name="description" content="Draw numbered boxes and arrows on a screenshot and save it as an AgentCraftr Docs screen file.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/docs.css">
+<style>
+  body{background:var(--bg2)}
+  .ed{display:grid;grid-template-columns:minmax(0,1fr) 380px;min-height:100vh}
+  .canvaswrap{padding:18px;overflow:auto}
+  .head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+  .head h1{font-size:20px;margin-right:auto}
+  .drop{border:2px dashed var(--line2);border-radius:14px;min-height:60vh;display:grid;place-items:center;text-align:center;color:var(--muted);background:var(--panel);padding:30px}
+  .drop.over{border-color:var(--teal);background:var(--teal-soft)}
+  .drop b{display:block;font-size:18px;color:var(--ink);margin-bottom:6px}
+  #board{position:relative;display:inline-block;line-height:0;cursor:crosshair;box-shadow:var(--shadow);border-radius:8px;overflow:visible;max-width:100%}
+  #board img{display:block;max-width:100%;height:auto;border-radius:8px;user-select:none;-webkit-user-drag:none}
+  #board .mk{cursor:move}
+  #board .mk.sel{border-width:3px;box-shadow:0 0 0 3px rgba(255,255,255,.9),0 0 0 6px var(--mark)}
+  #board .mk .h{position:absolute;right:-7px;bottom:-7px;width:14px;height:14px;border-radius:4px;background:#fff;border:2px solid var(--mark);cursor:nwse-resize}
+  #board .mk .tag{display:block}
+  #board.arrowing,#board.arrowing .mk{cursor:pointer}
+  #board .ghost{position:absolute;border:2px dashed var(--mark);border-radius:8px;pointer-events:none}
+  .panel{border-left:1px solid var(--line);background:var(--panel);padding:16px;overflow:auto;height:100vh;position:sticky;top:0;display:flex;flex-direction:column;gap:14px}
+  .panel h2{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-family:var(--mono)}
+  .f{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--muted)}
+  .f input,.f select,.f textarea{font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line2);border-radius:8px;padding:6px 9px}
+  .f textarea{min-height:64px;resize:vertical}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .mlist{display:flex;flex-direction:column;gap:6px}
+  .mrow{display:grid;grid-template-columns:26px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:9px;padding:6px 8px;cursor:pointer;font-size:13.5px}
+  .mrow.sel{border-color:var(--mark)}
+  .mrow .n{width:22px;height:22px;border-radius:50%;background:var(--mark);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
+  .mrow .ops{display:flex;gap:2px}
+  .mrow .ops button{border:0;background:none;cursor:pointer;color:var(--muted);padding:2px 4px;border-radius:5px}
+  .mrow .ops button:hover{background:var(--line);color:var(--ink)}
+  .arow{display:flex;justify-content:space-between;align-items:center;font-size:13px;border-bottom:1px dashed var(--line);padding:4px 0}
+  pre#out{font-family:var(--mono);font-size:11.5px;background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:10px;white-space:pre-wrap;max-height:240px;overflow:auto;margin:0}
+  .hint{font-size:12.5px;color:var(--muted);line-height:1.5}
+  .toast{position:fixed;bottom:18px;left:50%;translate:-50% 0;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:10px;font-size:13.5px;opacity:0;transition:opacity .2s;pointer-events:none}
+  .toast.on{opacity:1}
+  @media (max-width:980px){.ed{grid-template-columns:1fr}.panel{height:auto;position:static;border-left:0;border-top:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<div class="ed">
+  <div class="canvaswrap">
+    <div class="head">
+      <h1>✎ Marking editor</h1>
+      <a class="btn" href="index.html">← Docs</a>
+      <label class="btn">🖼️ Open screenshot<input type="file" id="imgfile" accept="image/*" hidden></label>
+      <label class="btn">📄 Open screen file<input type="file" id="jsfile" accept=".js" hidden></label>
+      <button class="btn" id="arrowBtn" aria-pressed="false">➜ Draw arrow</button>
+      <button class="btn" id="clearBtn">Start over</button>
+    </div>
+    <div class="drop" id="drop"><div><b>Paste a screenshot (Ctrl + V), drop it here, or open a file.</b>
+      Then drag on the picture to draw a box around each button. Number them in the order someone would use them.</div></div>
+    <div id="board" hidden><img id="img" alt="Screenshot being marked"></div>
+    <p class="hint" style="margin-top:12px">Drag on the picture: new box · drag a box: move · corner: resize · <span class="kbd">Del</span> removes the selected box ·
+      <b>Draw arrow</b>: click the box it starts from, then the box it points to (“what you can do next”).</p>
+  </div>
+
+  <aside class="panel">
+    <h2>Screen</h2>
+    <div class="two">
+      <label class="f">Id<input id="m_id" placeholder="mobile-orders"></label>
+      <label class="f">App<select id="m_app"><option>mobile</option><option>web</option><option>partner</option><option>admin</option></select></label>
+    </div>
+    <label class="f">Title<input id="m_title" placeholder="Orders"></label>
+    <div class="two">
+      <label class="f">Menu group<input id="m_section" placeholder="Sales"></label>
+      <label class="f">Where in the app<input id="m_route" placeholder="Orders tab"></label>
+    </div>
+    <label class="f">Who sees it (comma separated)<input id="m_roles" placeholder="owner, staff"></label>
+    <label class="f">One-line summary<textarea id="m_summary" placeholder="What this screen is for, in plain words."></textarea></label>
+    <label class="f">Image path (save the picture here)<input id="m_image" placeholder="images/mobile/orders.png"></label>
+
+    <h2>Marks</h2>
+    <div class="mlist" id="mlist"><p class="hint">No boxes yet.</p></div>
+    <div id="markForm" hidden style="display:flex;flex-direction:column;gap:8px">
+      <label class="f">Label (the button's own words)<input id="k_label"></label>
+      <label class="f">What it does and why<textarea id="k_text"></textarea></label>
+      <div class="two">
+        <label class="f">Kind<select id="k_kind"><option value="action">action (click it)</option><option value="info">info (read it)</option><option value="warn">warn (watch out)</option></select></label>
+        <label class="f">Opens screen (id)<input id="k_go" placeholder="mobile-order"></label>
+      </div>
+    </div>
+
+    <h2>Arrows</h2>
+    <div id="alist"><p class="hint">None. Use “Draw arrow”.</p></div>
+
+    <h2>Save</h2>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <button class="btn primary" id="dlJs">⬇ Screen file (.js)</button>
+      <button class="btn" id="dlImg">⬇ Image (.png)</button>
+      <button class="btn" id="copyJs">Copy code</button>
+    </div>
+    <p class="hint">Put the <b>.js</b> in <code>site/data/screens/</code> and the <b>.png</b> at the image path, then add the id to <code>site/data/index.js</code>. If the id is already there (a “screenshot needed” screen), just replace the file.</p>
+    <pre id="out"></pre>
+  </aside>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  "use strict";
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const st = { meta: { id: "", app: "mobile", title: "", section: "", route: "", roles: "owner, staff", summary: "", image: "" },
+               W: 0, H: 0, src: "", marks: [], arrows: [], sel: -1, arrowFrom: null, arrowing: false };
+  const board = $("#board"), img = $("#img");
+  const toast = (t) => { const e = $("#toast"); e.textContent = t; e.classList.add("on"); setTimeout(() => e.classList.remove("on"), 1800); };
+
+  // ── image in ──
+  function setImage(src, keepMarks) {
+    const probe = new Image();
+    probe.onload = () => {
+      st.W = probe.naturalWidth; st.H = probe.naturalHeight; st.src = src;
+      img.src = src; $("#drop").hidden = true; board.hidden = false;
+      if (!keepMarks) { st.marks = []; st.arrows = []; st.sel = -1; }
+      if (!st.meta.app) st.meta.app = st.W > st.H ? "web" : "mobile";
+      if (!keepMarks && !$("#m_app").dataset.touched) { st.meta.app = st.W > st.H ? "web" : "mobile"; $("#m_app").value = st.meta.app; }
+      render();
+    };
+    probe.src = src;
+  }
+  function readFile(file) { const r = new FileReader(); r.onload = () => setImage(r.result, st.marks.length > 0); r.readAsDataURL(file); }
+  $("#imgfile").addEventListener("change", (e) => e.target.files[0] && readFile(e.target.files[0]));
+  document.addEventListener("paste", (e) => {
+    const it = [...(e.clipboardData?.items || [])].find((i) => i.type.startsWith("image/"));
+    if (it) { readFile(it.getAsFile()); e.preventDefault(); }
+  });
+  const drop = $("#drop");
+  ["dragover", "dragenter"].forEach((ev) => document.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add("over"); }));
+  ["dragleave", "drop"].forEach((ev) => document.addEventListener(ev, () => drop.classList.remove("over")));
+  document.addEventListener("drop", (e) => {
+    e.preventDefault();
+    const f = e.dataTransfer.files[0];
+    if (!f) return;
+    if (f.type.startsWith("image/")) readFile(f); else if (f.name.endsWith(".js")) readJs(f);
+  });
+
+  // ── existing screen file in ──
+  function readJs(file) {
+    const r = new FileReader();
+    r.onload = () => {
+      let got = null;
+      try { new Function("Docs", r.result)({ screen: (s) => { got = s; } }); } catch (err) { toast("Couldn't read that file: " + err.message); return; }
+      if (!got) { toast("No Docs.screen(...) found in that file."); return; }
+      st.meta = { id: got.id || "", app: got.app || "mobile", title: got.title || "", section: got.section || "", route: got.route || "",
+                  roles: (got.roles || []).join(", "), summary: got.summary || "", image: got.image || "" };
+      st.marks = (got.marks || []).map((m) => ({ ...m, box: m.box ? m.box.slice() : null }));
+      st.arrows = (got.arrows || []).map((a) => ({ ...a }));
+      st.W = got.width || st.W; st.H = got.height || st.H;
+      fillMeta();
+      // try to load its picture from the site folder; works when the editor is opened from the site
+      if (got.image && !st.src) {
+        const p = new Image();
+        p.onload = () => setImage(got.image, true);
+        p.onerror = () => toast("Now paste or open the screenshot for “" + got.title + "”.");
+        p.src = got.image;
+      }
+      render();
+      toast("Loaded " + (got.title || got.id));
+    };
+    r.readAsText(file);
+  }
+  $("#jsfile").addEventListener("change", (e) => e.target.files[0] && readJs(e.target.files[0]));
+
+  // ── meta form ──
+  const metaKeys = ["id", "app", "title", "section", "route", "roles", "summary", "image"];
+  function fillMeta() { metaKeys.forEach((k) => { $("#m_" + k).value = st.meta[k] || ""; }); }
+  metaKeys.forEach((k) => $("#m_" + k).addEventListener("input", (e) => {
+    st.meta[k] = e.target.value;
+    if (k === "app") e.target.dataset.touched = "1";
+    if ((k === "id" || k === "app") && !$("#m_image").dataset.touched) {
+      const short = st.meta.id.replace(new RegExp("^" + st.meta.app + "-"), "");
+      st.meta.image = st.meta.id ? `images/${st.meta.app}/${short}.png` : "";
+      $("#m_image").value = st.meta.image;
+    }
+    if (k === "image") e.target.dataset.touched = "1";
+    out(); save();
+  }));
+
+  // ── drawing ──
+  const toImg = (e) => { const r = img.getBoundingClientRect(); return [((e.clientX - r.left) / r.width) * st.W, ((e.clientY - r.top) / r.height) * st.H]; };
+  let drag = null;
+  board.addEventListener("pointerdown", (e) => {
+    if (st.arrowing) return;
+    const mkEl = e.target.closest(".mk");
+    const p = toImg(e);
+    if (mkEl) {
+      const i = +mkEl.dataset.i;
+      select(i);
+      drag = { kind: e.target.classList.contains("h") ? "resize" : "move", i, start: p, box: st.marks[i].box.slice() };
+    } else {
+      drag = { kind: "new", start: p };
+      const g = document.createElement("div"); g.className = "ghost"; board.appendChild(g); drag.ghost = g;
+    }
+    board.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+  board.addEventListener("pointermove", (e) => {
+    if (!drag) return;
+    const p = toImg(e), dx = p[0] - drag.start[0], dy = p[1] - drag.start[1];
+    if (drag.kind === "new") {
+      const x = Math.min(p[0], drag.start[0]), y = Math.min(p[1], drag.start[1]);
+      Object.assign(drag.ghost.style, { left: (x / st.W) * 100 + "%", top: (y / st.H) * 100 + "%", width: (Math.abs(dx) / st.W) * 100 + "%", height: (Math.abs(dy) / st.H) * 100 + "%" });
+    } else {
+      const b = st.marks[drag.i].box, o = drag.box;
+      if (drag.kind === "move") { b[0] = clamp(o[0] + dx, 0, st.W - o[2]); b[1] = clamp(o[1] + dy, 0, st.H - o[3]); }
+      else { b[2] = clamp(o[2] + dx, 12, st.W - o[0]); b[3] = clamp(o[3] + dy, 12, st.H - o[1]); }
+      renderBoxes();
+    }
+  });
+  board.addEventListener("pointerup", (e) => {
+    if (!drag) return;
+    if (drag.kind === "new") {
+      drag.ghost.remove();
+      const p = toImg(e);
+      const box = [Math.min(p[0], drag.start[0]), Math.min(p[1], drag.start[1]), Math.abs(p[0] - drag.start[0]), Math.abs(p[1] - drag.start[1])];
+      if (box[2] > 10 && box[3] > 10) {
+        // a described-but-unplaced mark gets this box first (screens made before their screenshot)
+        const unplaced = st.marks.findIndex((m) => !m.box);
+        if (unplaced >= 0) { st.marks[unplaced].box = box.map(Math.round); select(unplaced); }
+        else {
+          const n = st.marks.length + 1;
+          st.marks.push({ id: "m" + n, n, box: box.map(Math.round), kind: "action", label: "", text: "" });
+          select(st.marks.length - 1);
+          setTimeout(() => $("#k_label").focus(), 0);
+        }
+      }
+    } else st.marks[drag.i].box = st.marks[drag.i].box.map(Math.round);
+    drag = null; render();
+  });
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+  // arrows
+  $("#arrowBtn").addEventListener("click", () => {
+    st.arrowing = !st.arrowing; st.arrowFrom = null;
+    $("#arrowBtn").setAttribute("aria-pressed", st.arrowing); $("#arrowBtn").classList.toggle("primary", st.arrowing);
+    board.classList.toggle("arrowing", st.arrowing);
+    toast(st.arrowing ? "Click the box the arrow starts from" : "Arrow drawing off");
+  });
+  board.addEventListener("click", (e) => {
+    if (!st.arrowing) return;
+    const mkEl = e.target.closest(".mk"); if (!mkEl) return;
+    const id = st.marks[+mkEl.dataset.i].id;
+    if (!st.arrowFrom) { st.arrowFrom = id; toast("Now click the box it points to"); }
+    else if (st.arrowFrom !== id) { st.arrows.push({ from: st.arrowFrom, to: id }); st.arrowFrom = null; toast("Arrow added"); render(); }
+  });
+
+  // ── selection + mark form ──
+  function select(i) {
+    st.sel = i;
+    const m = st.marks[i];
+    $("#markForm").hidden = !m;
+    if (m) { $("#k_label").value = m.label || ""; $("#k_text").value = m.text || ""; $("#k_kind").value = m.kind || "action"; $("#k_go").value = m.go || ""; }
+    render();
+  }
+  ["label", "text", "kind", "go"].forEach((k) => $("#k_" + k).addEventListener("input", (e) => {
+    const m = st.marks[st.sel]; if (!m) return;
+    m[k] = e.target.value; if (k === "go" && !e.target.value) delete m.go;
+    if (k === "label") { const base = slug(e.target.value); if (base && /^m\d+$/.test(m.id)) { const old = m.id; m.id = uniq(base, m); st.arrows.forEach((a) => { if (a.from === old) a.from = m.id; if (a.to === old) a.to = m.id; }); } }
+    render(true);
+  }));
+  const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 24);
+  const uniq = (b, self) => { let id = b, k = 2; while (st.marks.some((m) => m !== self && m.id === id)) id = b + "-" + k++; return id; };
+  document.addEventListener("keydown", (e) => {
+    if (e.target.closest("input,textarea,select")) return;
+    if ((e.key === "Delete" || e.key === "Backspace") && st.sel >= 0) removeMark(st.sel);
+    if (e.key === "Escape" && st.arrowing) $("#arrowBtn").click();
+  });
+  function removeMark(i) {
+    const id = st.marks[i].id;
+    st.marks.splice(i, 1);
+    st.arrows = st.arrows.filter((a) => a.from !== id && a.to !== id);
+    renumber(); st.sel = -1; $("#markForm").hidden = true; render();
+  }
+  function renumber() { st.marks.forEach((m, i) => { m.n = i + 1; }); }
+  function move(i, d) { const j = i + d; if (j < 0 || j >= st.marks.length) return; [st.marks[i], st.marks[j]] = [st.marks[j], st.marks[i]]; renumber(); st.sel = j; render(); }
+
+  // ── render ──
+  function renderBoxes() {
+    board.querySelectorAll(".mk").forEach((e) => e.remove());
+    st.marks.forEach((m, i) => {
+      if (!m.box) return;
+      const [x, y, w, h] = m.box;
+      const el = document.createElement("div");
+      el.className = `mk ${m.kind || "action"} ${i === st.sel ? "sel" : ""}`;
+      el.dataset.i = i;
+      Object.assign(el.style, { left: (x / st.W) * 100 + "%", top: (y / st.H) * 100 + "%", width: (w / st.W) * 100 + "%", height: (h / st.H) * 100 + "%" });
+      el.innerHTML = `<span class="badge">${m.n}</span>${m.label ? `<span class="tag">${esc(m.label)}</span>` : ""}<span class="h"></span>`;
+      board.appendChild(el);
+    });
+  }
+  function render(keepForm) {
+    renumber();
+    if (st.W) renderBoxes();
+    $("#mlist").innerHTML = st.marks.length ? st.marks.map((m, i) => `<div class="mrow ${i === st.sel ? "sel" : ""}" data-i="${i}">
+      <span class="n">${m.n}</span><span>${esc(m.label || "(no label yet)")}${m.box ? "" : ' <span class="chip todo">draw its box</span>'}</span>
+      <span class="ops"><button data-up="${i}" title="Earlier">↑</button><button data-down="${i}" title="Later">↓</button><button data-del="${i}" title="Remove">✕</button></span></div>`).join("")
+      : `<p class="hint">No boxes yet. Drag on the picture.</p>`;
+    const lab = (id) => { const m = st.marks.find((x) => x.id === id); return m ? `${m.n}. ${esc(m.label || m.id)}` : id; };
+    $("#alist").innerHTML = st.arrows.length ? st.arrows.map((a, i) => `<div class="arow"><span>${lab(a.from)} → ${lab(a.to)}</span><button class="btn" data-adel="${i}">✕</button></div>`).join("")
+      : `<p class="hint">None. Use “Draw arrow”.</p>`;
+    if (!keepForm && st.sel < 0) $("#markForm").hidden = true;
+    out(); save();
+  }
+  $("#mlist").addEventListener("click", (e) => {
+    const t = e.target;
+    if (t.dataset.up) return move(+t.dataset.up, -1);
+    if (t.dataset.down) return move(+t.dataset.down, 1);
+    if (t.dataset.del) return removeMark(+t.dataset.del);
+    const r = t.closest(".mrow"); if (r) select(+r.dataset.i);
+  });
+  $("#alist").addEventListener("click", (e) => { const d = e.target.dataset.adel; if (d !== undefined) { st.arrows.splice(+d, 1); render(); } });
+
+  // ── output ──
+  function code() {
+    const m = st.meta;
+    const roles = m.roles.split(",").map((s) => s.trim()).filter(Boolean);
+    const q = (s) => JSON.stringify(s ?? "");
+    const marks = st.marks.map((k) => `    { id: ${q(k.id)}, n: ${k.n}, ${k.box ? `box: [${k.box.join(", ")}], ` : ""}kind: ${q(k.kind || "action")}, label: ${q(k.label)}, text: ${q(k.text)}${k.go ? `, go: ${q(k.go)}` : ""} },`).join("\n");
+    const arrows = st.arrows.map((a) => `{ from: ${q(a.from)}, to: ${q(a.to)}${a.label ? `, label: ${q(a.label)}` : ""} }`).join(", ");
+    const pending = !st.src || st.marks.some((k) => !k.box);
+    return `Docs.screen({
+  id: ${q(m.id)}, app: ${q(m.app)}, section: ${q(m.section)}, title: ${q(m.title)},
+  route: ${q(m.route)}, roles: ${JSON.stringify(roles)},${pending ? " pending: true," : ""}
+  summary: ${q(m.summary)},
+  image: ${q(m.image)}, width: ${st.W || 1080}, height: ${st.H || 2400},
+  marks: [
+${marks}
+  ],
+  arrows: [${arrows}],
+});
+`;
+  }
+  function out() { $("#out").textContent = code(); }
+  function download(name, href) { const a = document.createElement("a"); a.href = href; a.download = name; document.body.appendChild(a); a.click(); a.remove(); }
+  $("#dlJs").addEventListener("click", () => {
+    if (!st.meta.id) { toast("Give the screen an id first"); $("#m_id").focus(); return; }
+    download(st.meta.id + ".js", URL.createObjectURL(new Blob([code()], { type: "text/javascript" })));
+  });
+  $("#dlImg").addEventListener("click", () => {
+    if (!st.src) { toast("No screenshot yet"); return; }
+    const name = (st.meta.image.split("/").pop() || (st.meta.id || "screen") + ".png");
+    if (st.src.startsWith("data:image/png")) return download(name, st.src);
+    const c = document.createElement("canvas"); c.width = st.W; c.height = st.H;
+    const i = new Image(); i.onload = () => { c.getContext("2d").drawImage(i, 0, 0); download(name.replace(/\.\w+$/, ".png"), c.toDataURL("image/png")); }; i.src = st.src;
+  });
+  $("#copyJs").addEventListener("click", async () => { try { await navigator.clipboard.writeText(code()); toast("Copied"); } catch { toast("Select the code below and copy it"); } });
+  $("#clearBtn").addEventListener("click", () => {
+    if (!confirm("Clear the picture, boxes and arrows?")) return;
+    st.src = ""; st.W = st.H = 0; st.marks = []; st.arrows = []; st.sel = -1;
+    board.hidden = true; $("#drop").hidden = false; try { localStorage.removeItem("acdocs.editor"); } catch {} render();
+  });
+
+  // ── draft (boxes and text only; the picture is too big to keep) ──
+  function save() { try { localStorage.setItem("acdocs.editor", JSON.stringify({ meta: st.meta, marks: st.marks, arrows: st.arrows, W: st.W, H: st.H })); } catch {} }
+  try {
+    const d = JSON.parse(localStorage.getItem("acdocs.editor") || "null");
+    if (d && (d.marks?.length || d.meta?.id)) { Object.assign(st, { meta: d.meta, marks: d.marks, arrows: d.arrows, W: d.W, H: d.H }); toast("Draft restored. Paste the screenshot again to keep going."); }
+  } catch {}
+  fillMeta(); render();
+})();
+</script>
+</body>
+</html>

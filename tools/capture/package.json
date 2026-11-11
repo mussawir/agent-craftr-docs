@@ -1,0 +1,12 @@
+{
+  "name": "agentcraftr-docs-capture",
+  "private": true,
+  "version": "0.1.0",
+  "type": "commonjs",
+  "scripts": {
+    "capture": "node capture.js"
+  },
+  "devDependencies": {
+    "playwright": "1.62.0"
+  }
+}
