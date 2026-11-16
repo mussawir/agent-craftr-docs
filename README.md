@@ -8,6 +8,9 @@ tools the business runs on: inbox and human handover, orders, payments, bookings
 khata (credit), marketing, staff tasks and reports. It has a web dashboard and a mobile app
 (owner, staff and partner modes, plus the "Ac" app family).
 
+**Direction and decisions:** see [MASTER-PLAN.md](MASTER-PLAN.md): names, products, money, payments, prices,
+AI models, hardware, countries, launch tasks and who does what.
+
 ## Open the interactive docs
 
 **Open `site/index.html` in a browser.** There's no build step and no server: it works straight from the folder.
