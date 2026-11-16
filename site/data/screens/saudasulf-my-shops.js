@@ -8,32 +8,45 @@ Docs.screen({
   "roles": [
     "customer"
   ],
-  "summary": "The shops this customer added. Empty at first: a shop gives its customers a code or a QR to add it.",
+  "summary": "The shops this customer added, the default one first. A shop gives its customers a code or a QR to add it.",
   "image": "images/saudasulf/my-shops.png",
   "width": 1080,
   "height": 2400,
   "marks": [
     {
-      "id": "empty",
+      "id": "default",
       "n": 1,
       "box": [
-        342,
-        1158,
-        396,
-        96
+        42,
+        210,
+        84,
+        84
       ],
       "kind": "info",
-      "label": "No shops yet",
-      "text": "You only see shops you added yourself. There is no list of other shops."
+      "label": "Default shop",
+      "text": "The star marks the shop you order from first. Long-press or tap the three dots on another shop to make it the default or remove it."
+    },
+    {
+      "id": "shop",
+      "n": 2,
+      "box": [
+        0,
+        330,
+        1092,
+        228
+      ],
+      "kind": "info",
+      "label": "A shop",
+      "text": "Tap a shop to open it. A shop that is not taking orders yet says so."
     },
     {
       "id": "add",
-      "n": 2,
+      "n": 3,
       "box": [
-        90,
-        1458,
-        900,
-        168
+        607,
+        2178,
+        431,
+        180
       ],
       "kind": "action",
       "label": "Add a shop",
@@ -42,7 +55,7 @@ Docs.screen({
     },
     {
       "id": "menu",
-      "n": 3,
+      "n": 4,
       "box": [
         930,
         6,
@@ -56,7 +69,11 @@ Docs.screen({
   ],
   "arrows": [
     {
-      "from": "empty",
+      "from": "default",
+      "to": "shop"
+    },
+    {
+      "from": "shop",
       "to": "add"
     }
   ]

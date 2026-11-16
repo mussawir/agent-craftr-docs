@@ -38,8 +38,8 @@ Docs.screen({
       ],
       "kind": "action",
       "label": "I want to order",
-      "text": "For customers. Opens My shops, where you add the shops you buy from.",
-      "go": "saudasulf-my-shops"
+      "text": "For customers. Asks for your name and phone number once, then opens My shops, where you add the shops you buy from.",
+      "go": "saudasulf-onboarding"
     },
     {
       "id": "shop",

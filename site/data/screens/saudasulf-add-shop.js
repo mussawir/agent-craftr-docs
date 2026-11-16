@@ -37,7 +37,7 @@ Docs.screen({
       ],
       "kind": "action",
       "label": "Add",
-      "text": "Checks the code and adds the shop to My shops. (Coming next: the shop lookup on our side.)"
+      "text": "Looks the code up and shows the shop it belongs to. Check the name, then tap Add this shop to put it in My shops."
     }
   ],
   "arrows": [

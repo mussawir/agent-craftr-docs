@@ -41,9 +41,10 @@ Docs.page({
 <table>
 <tr><th>Part</th><th>Status</th></tr>
 <tr><td>Welcome, shop sign-in, the shop's five tabs, language</td><td>Built (<a href="#/app/saudasulf">screens</a>)</td></tr>
-<tr><td>Customer: My shops, Add a shop by code</td><td>Screens built; adding a shop needs shop codes on our side</td></tr>
-<tr><td>SaudaSulf packages and payments on our side</td><td>Being built</td></tr>
-<tr><td>Shop codes and QR, customer accounts, catalogue, cart, orders, chat, khata in the app</td><td>Next</td></tr>
+<tr><td>SaudaSulf packages and payments on our side</td><td>Built (waiting for the database update)</td></tr>
+<tr><td>Shop code &amp; QR, customer sign-up (name + number), Add a shop, My shops</td><td>Built (<a href="#/screen/saudasulf-shop-code">shop code</a>, <a href="#/screen/saudasulf-onboarding">sign-up</a>)</td></tr>
+<tr><td>App customers: confirm, not this person, block</td><td>Built (<a href="#/screen/saudasulf-app-customers">screen</a>)</td></tr>
+<tr><td>Catalogue, cart, orders, chat, khata in the app</td><td>Next</td></tr>
 </table>
 <p class="muted">Decisions as of 16 November 2026. Source: MASTER-PLAN.md, section 3.</p>`,
 });
