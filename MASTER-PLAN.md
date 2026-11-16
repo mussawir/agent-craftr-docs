@@ -38,8 +38,8 @@ Everything is built for businesses where the technology is still simple. We star
 | Name | What it is | Don't call it |
 |---|---|---|
 | **AgentCraftr** | The company and the WhatsApp AI service with its web dashboard | — |
-| **CoAgent** 🟡 | The mobile app for every business (store name "CoAgent by AgentCraftr"). The AI agent answers; you work alongside it. | "the owner app", "Ac app" |
-| **SaudaSulf** (سودا سلف) | The grocery app for shops and their customers | "customer app" |
+| **CoAgent** 🟡 | The mobile app for every business (store name "CoAgent by AgentCraftr"): the WhatsApp communication and analytics hub. The AI agent answers; you work alongside it. | "the owner app", "Ac app" |
+| **SaudaSulf** (سودا سلف) | The ordering app for shops and their customers, for every trade that sells from a product list (grocery first) | "customer app", "grocery app" |
 | **Trade Partner** | The top level of the sales network: holds trades or sectors in an area | Friend, Sector Manager, Trade Manager, Trade Holder |
 | **Franchise holder** | The level below: holds a **franchise** (city + trade), brings in and sets up businesses | Partner, Associate |
 | **Franchise** | What a Franchise holder holds, e.g. "Lahore · Grocery" | Territory, coverage |
@@ -60,7 +60,7 @@ The chain: **AgentCraftr → Trade Partner → Franchise holder → Business →
 | **AgentCraftr (WhatsApp AI)** | Businesses' customers, on WhatsApp | Answers text, voice notes and pictures; takes orders, bookings and requests; reads payment screenshots; hands a chat to a person | `salesagent-backend` | ✅ Built |
 | **Web dashboard** | Owners and staff | Inbox, orders, payments, customers (CRM), khata, marketing, reports, setup | `salesagent-frontend` (`/app`) | ✅ Built |
 | **CoAgent app** | Every business; Franchise holders also log in here | Inbox, orders, customers, khata, staff tasks with photo/video proof, approvals, "Ask your business", teach the agent | `agentcraftr-app` | ✅ Built (not in the stores yet) |
-| **SaudaSulf app** | Grocery shops and their customers | Customers add a shop by code/QR and order; the shop runs orders and khata on the same app | to build | ✅ Designed, coding next |
+| **SaudaSulf app** | Shops of every trade that sells from a product list, and their customers | Customers add a shop by code/QR, browse its catalogue, order, chat and see their orders, payments and khata; the shop runs catalogue, orders (from the app **and** WhatsApp), payments, khata and app chats | `saudasulf` | ✅ Designed, coding started |
 | **Franchise holder dashboard** | Franchise holders | Their businesses, setup help, leads, earnings | web `/partner` + inside CoAgent | ✅ Built (to rename) |
 | **Trade Partner dashboard** | Trade Partners | Their area, Franchise holders, businesses, earnings, "cities with no Franchise holder yet" | web `/holder` | ✅ Built (to rename); not in the app yet |
 | **Admin** | AgentCraftr staff | Businesses, payments, numbers, verification, Trade Partners, activity log | web `/admin` | ✅ Built |
@@ -70,6 +70,15 @@ The chain: **AgentCraftr → Trade Partner → Franchise holder → Business →
 - ✅ SaudaSulf and WhatsApp are **two separate products**. A shop with both has one login and one set of data, but two subscriptions, each paid and paused on its own.
 - ✅ No websites for shops. Everything is in the apps.
 - ✅ Android and iPhone at launch.
+
+**One hub, many dedicated apps (decided 2026-11-16):**
+- ✅ **CoAgent is the hub.** Every business gets it with its WhatsApp package. It holds all communication, customers, analytics, marketing and lead generation. Every customer arrives through WhatsApp first, so CoAgent is where leads are found.
+- ✅ **Dedicated apps for specific jobs, each sold on its own after the WhatsApp package.** SaudaSulf (ordering) is the first. A new app is added only when it is a distinct job that shops pay for separately (the stores reject look-alike apps, and every app costs listing, upkeep and push setup). Food delivery / restaurants will be a separate app later, so restaurants are not in SaudaSulf.
+- ✅ **SaudaSulf is for every trade that sells from a product list** (grocery, pharmacy, bakery, …), not only grocery. The name stays. Its own codebase (`saudasulf`), the same backend, database and login.
+- ✅ **The order rule: each order is worked in exactly one app at a time.** Orders are worked in CoAgent until the shop buys SaudaSulf. From then on every order, from WhatsApp **and** from the app, lands in SaudaSulf and is worked there; CoAgent still shows every order, with "Open in SaudaSulf" in place of its buttons. If SaudaSulf lapses or is paused, the buttons return to CoAgent automatically; no order is ever stuck. Riders and warehouse staff follow the same rule. One orders table: nothing is copied between apps.
+- ✅ **A WhatsApp-only shop works its orders in CoAgent.** SaudaSulf's shopkeeper screens are only for shops that pay for SaudaSulf (replaces the design spec's rule that a WhatsApp-only shop could use them).
+- ✅ **Khata is shown in both apps.** The same records; an entry made in either app shows in the other.
+- ✅ **Chat is in both apps.** The AI answers app customers first; when a person steps in, the shopkeeper replies in SaudaSulf (only app customers' chats, beside their orders) or in CoAgent (every chat).
 
 ---
 
@@ -254,7 +263,7 @@ Discuss in the team meeting and fill in the **Owner** column.
 | **A. WhatsApp AI + backend** | Reply quality, model tests (section 7), new trades, launch support | | — |
 | **B. Web dashboard** | Business, Franchise holder, Trade Partner and Admin dashboards; the rename | | A |
 | **C. CoAgent app** | Store release, Trade Partner screens in the app, Bluetooth printing (hardware #3) | | A |
-| **D. SaudaSulf app** | Build from the design (`salesagent-backend/docs/superpowers/specs/2026-11-13-grocery-app-design.md`) | | A, C |
+| **D. SaudaSulf app** | Build from the design (`salesagent-backend/docs/superpowers/specs/2026-11-13-grocery-app-design.md`), updated by the 2026-11-16 decisions in section 3 (every trade, the order rule, chat and khata in both apps). Code in `saudasulf` | | A, C |
 | **E. Payments** | Merchant accounts, then automatic JazzCash / Easypaisa | | Section 5 |
 | **F. Sales network** | Recruit Trade Partners and Franchise holders, contracts, franchise kit, training | | Section 4 numbers |
 | **G. Hardware** | Stock partners, PTA approvals, QR stands and printers first, AI speaker prototype | | Investor partner |
@@ -293,3 +302,7 @@ Discuss in the team meeting and fill in the **Owner** column.
 | 2026-11-14 | AgentCraftr will sell its own hardware: designed by us, no stock (Franchise holders pre-order), an investor partner funds development, PTA approval per model |
 | 2026-11-14 | The AI speaker builds on the Inkabots Kiitab speaker design |
 | 2026-11-14 | The model will be copied to other countries after Pakistan works |
+| 2026-11-16 | One hub (CoAgent: communication, analytics, marketing, leads) and dedicated apps for specific jobs, each sold after the WhatsApp package |
+| 2026-11-16 | SaudaSulf serves every trade that sells from a product list, not only grocery; restaurants go to a separate food app later; own codebase `saudasulf` |
+| 2026-11-16 | Order rule: orders are worked in CoAgent until the shop buys SaudaSulf, then every order (WhatsApp and app) is worked in SaudaSulf; CoAgent always shows them |
+| 2026-11-16 | Khata and chat are in both apps (same data) |
