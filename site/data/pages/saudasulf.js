@@ -44,7 +44,9 @@ Docs.page({
 <tr><td>SaudaSulf packages and payments on our side</td><td>Built (waiting for the database update)</td></tr>
 <tr><td>Shop code &amp; QR, customer sign-up (name + number), Add a shop, My shops</td><td>Built (<a href="#/screen/saudasulf-shop-code">shop code</a>, <a href="#/screen/saudasulf-onboarding">sign-up</a>)</td></tr>
 <tr><td>App customers: confirm, not this person, block</td><td>Built (<a href="#/screen/saudasulf-app-customers">screen</a>)</td></tr>
-<tr><td>Catalogue, cart, orders, chat, khata in the app</td><td>Next</td></tr>
+<tr><td>Catalogue, cart and checkout (prices from our side), My orders, cancel while new</td><td>Built (<a href="#/screen/saudasulf-shop-catalogue">catalogue</a>, <a href="#/screen/saudasulf-cart">cart</a>, <a href="#/screen/saudasulf-customer-order">order</a>)</td></tr>
+<tr><td>Shop: Orders (pack, out for delivery, delivered, payment received), Products (price, stock), order updates setting</td><td>Built (<a href="#/screen/saudasulf-shop-orders">orders</a>, <a href="#/screen/saudasulf-shop-products">products</a>)</td></tr>
+<tr><td>Chat in the app, notifications, message counting and limits, khata in the app</td><td>Next</td></tr>
 </table>
 <p class="muted">Decisions as of 16 November 2026. Source: MASTER-PLAN.md, section 3.</p>`,
 });

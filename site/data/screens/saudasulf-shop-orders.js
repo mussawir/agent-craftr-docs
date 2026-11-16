@@ -9,27 +9,54 @@ Docs.screen({
     "owner",
     "staff"
   ],
-  "summary": "Where the shop will work every order, from the app and from WhatsApp, once it has SaudaSulf. Being built.",
+  "summary": "Where the shop works every order, from the app and from WhatsApp. Pick a status to see its orders; the number is how many are still open.",
   "image": "images/saudasulf/shop-orders.png",
   "width": 1080,
   "height": 2400,
   "marks": [
     {
-      "id": "soon",
+      "id": "chips",
       "n": 1,
       "box": [
-        349,
-        1182,
-        382,
-        96
+        42,
+        186,
+        323,
+        132
       ],
       "kind": "info",
-      "label": "Coming next",
-      "text": "Orders, Products, Khata and Chats are being built. Each order will be packed, sent and marked paid here."
+      "label": "Status",
+      "text": "One status at a time: New, Packed, Out for delivery, Delivered, Cancelled. The number on a chip is how many orders are open in it."
+    },
+    {
+      "id": "call",
+      "n": 2,
+      "box": [
+        66,
+        516,
+        364,
+        60
+      ],
+      "kind": "info",
+      "label": "New — call to confirm",
+      "text": "An app order from a customer you have not confirmed yet. Call them, then confirm them in App customers."
+    },
+    {
+      "id": "order",
+      "n": 3,
+      "box": [
+        0,
+        330,
+        1092,
+        276
+      ],
+      "kind": "action",
+      "label": "An order",
+      "text": "Tap an order to work it: pack it, send it out, take payment.",
+      "go": "saudasulf-shop-order"
     },
     {
       "id": "tabs",
-      "n": 2,
+      "n": 4,
       "box": [
         0,
         2154,
@@ -42,7 +69,7 @@ Docs.screen({
     },
     {
       "id": "more",
-      "n": 3,
+      "n": 5,
       "box": [
         858,
         2154,
@@ -55,5 +82,14 @@ Docs.screen({
       "go": "saudasulf-shop-more"
     }
   ],
-  "arrows": []
+  "arrows": [
+    {
+      "from": "chips",
+      "to": "call"
+    },
+    {
+      "from": "call",
+      "to": "order"
+    }
+  ]
 });
