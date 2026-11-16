@@ -38,7 +38,7 @@ Docs.screen({
       ],
       "kind": "action",
       "label": "Confirm",
-      "text": "It is them: they now see their own orders and khata."
+      "text": "It is them: they then see their own orders, and their khata if you switch it on for your shop."
     },
     {
       "id": "notthis",
