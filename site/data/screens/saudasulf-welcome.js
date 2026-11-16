@@ -18,9 +18,9 @@ Docs.screen({
       "id": "lang",
       "n": 1,
       "box": [
-        766,
+        778,
         30,
-        248,
+        236,
         156
       ],
       "kind": "action",

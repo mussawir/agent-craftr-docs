@@ -11,7 +11,10 @@
     mobile: { label: "Mobile app", icon: "📱", blurb: "The same business on the phone: today, chats, orders, teaching the agent." },
     partner: { label: "Partner", icon: "🤝", blurb: "For partners who bring businesses in their cities and trades." },
     admin: { label: "Admin (our team)", icon: "🛠️", blurb: "AgentCraftr's own team: tenants, numbers, payments." },
+    saudasulf: { label: "SaudaSulf app", icon: "🛒", blurb: "The ordering app: customers add their shops and order; shopkeepers run orders, khata and chats." },
   };
+  // Apps whose screenshots are phone-sized: shown in a phone frame.
+  const PHONE_APPS = new Set(["mobile", "saudasulf"]);
   const LANE_COLORS = ["#0d9488", "#e11d74", "#6d28d9", "#b45309", "#0369a1", "#16a34a", "#be123c"];
 
   // ───── registry (called by data files) ─────
@@ -151,7 +154,7 @@
         <div class="cards">${Object.entries(APPS).map(([app, a]) => {
           const list = screensOf(app); const first = S.screens[(site.covers || {})[app]] || list[0];
           const ready = list.filter((s) => s.image && !s.pending).length;
-          return `<a class="card" href="#/app/${app}">${first && first.image && !first.pending ? `<div class="thumb ${app === "mobile" ? "phone" : ""}" style="background-image:url('${esc(first.image)}')"></div>` : ""}
+          return `<a class="card" href="#/app/${app}">${first && first.image && !first.pending ? `<div class="thumb ${PHONE_APPS.has(app) ? "phone" : ""}" style="background-image:url('${esc(first.image)}')"></div>` : ""}
             <h3>${a.icon} ${esc(a.label)}</h3><p>${esc(a.blurb)}</p><span class="meta">${list.length} screens${ready < list.length ? ` · ${list.length - ready} need screenshots` : ""}</span></a>`;
         }).join("")}</div></div>
       ${nFlows ? `<div class="section"><h2>Workflows</h2><p class="lede">Who does what, in order: the customer, the AI, your team, and the system checks in between.</p>
@@ -172,7 +175,7 @@
       ${app === "mobile" ? `<div class="callout" style="margin-bottom:20px"><b>Adding phone screenshots</b>Take a screenshot on the phone, open the <a href="editor.html">marking editor</a>, paste it, draw boxes on the buttons and save the file into <code>site/data/screens/</code>.</div>` : ""}
       ${Object.entries(bySec).map(([sec, items]) => `<div class="section" style="margin-top:28px"><h2>${esc(sec)}</h2>
         <div class="cards" style="margin-top:14px">${items.map((s) => `<a class="card" href="#/screen/${s.id}">
-          ${s.image && !s.pending ? `<div class="thumb ${app === "mobile" ? "phone" : ""}" style="background-image:url('${esc(s.image)}')"></div>` : `<div class="thumb ${app === "mobile" ? "phone" : ""}" style="display:grid;place-items:center;font-size:13px;color:var(--muted)">Screenshot needed</div>`}
+          ${s.image && !s.pending ? `<div class="thumb ${PHONE_APPS.has(app) ? "phone" : ""}" style="background-image:url('${esc(s.image)}')"></div>` : `<div class="thumb ${PHONE_APPS.has(app) ? "phone" : ""}" style="display:grid;place-items:center;font-size:13px;color:var(--muted)">Screenshot needed</div>`}
           <h3>${esc(s.title)}</h3><p>${esc(s.summary || "")}</p><span class="meta">${(s.marks || []).length} actions${s.roles ? " · " + s.roles.join(", ") : ""}</span></a>`).join("")}</div></div>`).join("")}
     </div>`));
   }
@@ -182,7 +185,7 @@
     const s = S.screens[id];
     if (!s) { c.appendChild(h(`<div class="empty">This screen isn't documented yet. <a href="#/">Back to the start</a>.</div>`)); return; }
     const marks = sortedMarks(s);
-    const isPhone = s.app === "mobile";
+    const isPhone = PHONE_APPS.has(s.app);
     const app = APPS[s.app] || { label: s.app };
     const list = screensOf(s.app);
     const idx = list.indexOf(s);
@@ -393,7 +396,7 @@
     const W = s.width, H = s.height;
     let [x, y, w, hh] = m ? m.box : [0, 0, W, Math.min(H, W * 0.6)];
     // add context around the box so the reader can find it on the real screen
-    const cw = Math.min(W, Math.max(w * 2.2, s.app === "mobile" ? W : 560)), ch = Math.min(H, Math.max(hh * 2.6, cw * 0.42));
+    const cw = Math.min(W, Math.max(w * 2.2, PHONE_APPS.has(s.app) ? W : 560)), ch = Math.min(H, Math.max(hh * 2.6, cw * 0.42));
     const cx = Math.min(Math.max(0, x + w / 2 - cw / 2), W - cw), cy = Math.min(Math.max(0, y + hh / 2 - ch / 2), H - ch);
     const k = width / cw;
     return `<a class="crop" href="#/screen/${s.id}${m ? "/" + ((sortedMarks(s).indexOf(m)) + 1) : ""}" title="Open ${esc(s.title)}"
