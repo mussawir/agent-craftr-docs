@@ -64,6 +64,7 @@ The chain: **AgentCraftr → Trade Partner → Franchise holder → Business →
 | **Franchise holder dashboard** | Franchise holders | Their businesses, setup help, leads, earnings | web `/partner` + inside CoAgent | ✅ Built (to rename) |
 | **Trade Partner dashboard** | Trade Partners | Their area, Franchise holders, businesses, earnings, "cities with no Franchise holder yet" | web `/holder` | ✅ Built (to rename); not in the app yet |
 | **Admin** | AgentCraftr staff | Businesses, payments, numbers, verification, Trade Partners, activity log | web `/admin` | ✅ Built |
+| **Personal WhatsApp app** (name ❓) | People on a normal WhatsApp number with many groups | Analysis of their chats and groups; AI replies they control (see "Personal WhatsApp" below) | not started | 🟡 Planned, after launch |
 
 **Decisions on the apps:**
 - ✅ Only **two store apps at launch**: CoAgent and SaudaSulf. The "Ac Khata" edition is parked (khata is inside CoAgent).
@@ -79,6 +80,29 @@ The chain: **AgentCraftr → Trade Partner → Franchise holder → Business →
 - ✅ **A WhatsApp-only shop works its orders in CoAgent.** SaudaSulf's shopkeeper screens are only for shops that pay for SaudaSulf (replaces the design spec's rule that a WhatsApp-only shop could use them).
 - ✅ **Khata is shown in both apps.** The same records; an entry made in either app shows in the other.
 - ✅ **Chat is in both apps.** The AI answers app customers first; when a person steps in, the shopkeeper replies in SaudaSulf (only app customers' chats, beside their orders) or in CoAgent (every chat).
+
+**Personal WhatsApp: normal numbers with many groups (decided 2026-11-16):**
+
+Some people want AI help with their **normal WhatsApp** (not a business number) and are in many groups. They want their messages analysed and want the AI to reply for them.
+
+Why our current product can't do it:
+- Our system uses Meta's official WhatsApp Cloud API. It only works for a business number, and that number then can't be used in the phone app.
+- Meta's **Groups API** doesn't fit either. It needs an Official Business Account (green badge), allows at most **8 people per group**, joins by invite link only, and doesn't support buttons or lists. Groups made in the phone app never reach the API, even with coexistence.
+
+What we will build, using only WhatsApp's own features, so numbers are not banned and our standing with Meta is not put at risk:
+
+1. ✅ **Analysis from chat exports.** In WhatsApp, the user exports a chat or group (*More → Export chat*) and shares the file to our app. The AI gives summaries, unanswered questions, action items, who said what, mood and trends across groups. Works on Android and iPhone. Limits: manual, one chat at a time, not live, no replies, and roughly 40,000 messages per export.
+2. ✅ **Live AI replies on Android (notification reader).** With the user's permission, the app reads incoming WhatsApp notifications, sends them to our AI and replies through the notification's own **Reply** button, so the user's real WhatsApp sends it.
+   - Rules per chat and group, for example "reply only when I'm mentioned or asked directly".
+   - A **"draft only, I approve"** mode.
+   - Limits: Android only (iPhone doesn't allow it); muted chats are not seen; no past history (exports fill the gap); text only; the phone must be on and online; some phone makers stop background apps.
+   - The Play Store listing must explain honestly why the app needs notification access.
+3. ✅ **No unofficial linked-device bots.** Baileys, whatsapp-web.js, WAHA and Evolution API connect as a WhatsApp Web device. They are more powerful but break WhatsApp's terms, get numbers banned, and could cost us our standing with Meta, which our main business depends on. If this is ever reconsidered, it must be a separate brand, company and server, with users agreeing in writing to the ban risk, and limited to reading and AI drafts the user sends.
+
+Product rules:
+- ✅ **A separate app**, not a mode inside CoAgent. CoAgent is the business hub on the official API, and the stores may question an app that mixes both. It still uses the same backend, AI and login.
+- ✅ **Group etiquette and privacy.** The AI reads other members' messages and writes as the user. The app says so clearly, and in groups auto-reply is off by default or limited to "only when I'm mentioned or asked directly", so it never floods a group.
+- ❓ Name, price and when to build: see section 13.
 
 ---
 
@@ -269,6 +293,7 @@ Discuss in the team meeting and fill in the **Owner** column.
 | **G. Hardware** | Stock partners, PTA approvals, QR stands and printers first, AI speaker prototype | | Investor partner |
 | **H. Documentation & training** | This repo: user guides, workflows, Franchise holder handbook, training videos | | All |
 | **I. Investors** | Hardware investor partner; pitch from this document | | Section 8 |
+| **J. Personal WhatsApp app** | Chat-export analysis, then the Android notification reader with AI replies (section 3). Start with a proof of concept on one Android phone | | A |
 
 ---
 
@@ -281,6 +306,7 @@ Discuss in the team meeting and fill in the **Owner** column.
 5. Which **hardware** items go first, and which stock partner?
 6. Which **investor** to approach for hardware, and what share?
 7. When to start the **second country**, and which one (Bangladesh suggested)?
+8. **Personal WhatsApp app**: its name, its price, and when to build it (before or after the SaudaSulf release)?
 
 ---
 
@@ -306,3 +332,4 @@ Discuss in the team meeting and fill in the **Owner** column.
 | 2026-11-16 | SaudaSulf serves every trade that sells from a product list, not only grocery; restaurants go to a separate food app later; own codebase `saudasulf` |
 | 2026-11-16 | Order rule: orders are worked in CoAgent until the shop buys SaudaSulf, then every order (WhatsApp and app) is worked in SaudaSulf; CoAgent always shows them |
 | 2026-11-16 | Khata and chat are in both apps (same data) |
+| 2026-11-16 | Personal WhatsApp (normal numbers, many groups): a separate app using chat-export analysis plus an Android notification reader for AI replies; no unofficial linked-device bots; Meta's Groups API rejected (needs OBA, 8 people per group) |
