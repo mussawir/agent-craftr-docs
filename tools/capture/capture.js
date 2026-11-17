@@ -35,7 +35,7 @@ async function startVite() {
   const viteBin = path.join(FRONTEND, "node_modules", "vite", "bin", "vite.js");
   if (!fs.existsSync(viteBin)) throw new Error(`Vite not found at ${viteBin} - run npm install in the frontend first.`);
   // Process env wins over the frontend's .env files, so nothing is written in that repo.
-  const env = { ...process.env, VITE_API_BASE_URL: "http://mock.api/api/v1/web", VITE_BASE: "/", BROWSER: "none" };
+  const env = { ...process.env, VITE_API_BASE_URL: "http://mock.api/api/v1/web", VITE_BASE: "/", VITE_META_APP_ID: "100000000000000", BROWSER: "none" };
   const child = spawn(process.execPath, [viteBin, "--port", String(port), "--strictPort", "--host", "127.0.0.1"], {
     cwd: FRONTEND, env, stdio: ["ignore", "pipe", "pipe"],
   });

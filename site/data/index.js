@@ -7,7 +7,8 @@ window.DOCS_FILES = {
     "web-signup", "web-login",
     /* web — owner */
     "web-home", "web-setup", "web-items", "web-item-knowledge", "web-item-files", "web-item-products", "web-channels",
-    "web-inbox", "web-customers", "web-customer-profile",
+    "web-inbox", "web-customers", "web-customer-profile", "web-followups", "web-khata", "web-customer-fields",
+    "web-deals", "web-lead-ads", "web-approvals",
     "web-orders", "web-order-detail", "web-payments", "web-requests", "web-appointments",
     "web-broadcasts", "web-team", "web-billing",
     /* partner */
