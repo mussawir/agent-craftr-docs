@@ -4,11 +4,11 @@ Docs.screen({
   "app": "saudasulf",
   "section": "Customer",
   "title": "Add a shop",
-  "route": "Customer · My shops → Add a shop",
+  "route": "Customer · My shops → Add a shop (or a shop link)",
   "roles": [
     "customer"
   ],
-  "summary": "Add a shop with the 6-character code the shop gives you. Scanning the shop's QR opens this screen with the code filled in.",
+  "summary": "Add a shop with the 6-character code the shop gives you. A shop's QR or link, or installing the app from a shop's link, opens this screen with the code already filled in.",
   "image": "images/saudasulf/add-shop.png",
   "width": 1080,
   "height": 2400,
@@ -17,10 +17,10 @@ Docs.screen({
       "id": "code",
       "n": 1,
       "box": [
-        66,
-        234,
-        948,
-        288
+        54,
+        204,
+        972,
+        357
       ],
       "kind": "action",
       "label": "Shop code",
@@ -30,9 +30,9 @@ Docs.screen({
       "id": "add",
       "n": 2,
       "box": [
-        66,
-        582,
-        948,
+        54,
+        2166,
+        972,
         168
       ],
       "kind": "action",

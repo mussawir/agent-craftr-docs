@@ -18,10 +18,10 @@ Docs.screen({
       "id": "email",
       "n": 1,
       "box": [
-        66,
-        510,
-        948,
-        180
+        54,
+        912,
+        972,
+        198
       ],
       "kind": "action",
       "label": "Email",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "password",
       "n": 2,
       "box": [
-        66,
-        714,
-        948,
-        180
+        54,
+        1140,
+        972,
+        198
       ],
       "kind": "action",
       "label": "Password",
@@ -44,9 +44,9 @@ Docs.screen({
       "id": "signin",
       "n": 3,
       "box": [
-        66,
-        954,
-        948,
+        54,
+        2166,
+        972,
         168
       ],
       "kind": "action",

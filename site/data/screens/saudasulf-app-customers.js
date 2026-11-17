@@ -18,10 +18,10 @@ Docs.screen({
       "id": "match",
       "n": 1,
       "box": [
-        78,
-        684,
-        619,
-        72
+        132,
+        816,
+        816,
+        69
       ],
       "kind": "info",
       "label": "Matches a customer",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "confirm",
       "n": 2,
       "box": [
-        78,
-        768,
-        924,
-        168
+        102,
+        933,
+        243,
+        96
       ],
       "kind": "action",
       "label": "Confirm",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "notthis",
       "n": 3,
       "box": [
-        78,
-        936,
-        924,
-        168
+        357,
+        933,
+        381,
+        96
       ],
       "kind": "action",
       "label": "Not this person",
@@ -57,10 +57,10 @@ Docs.screen({
       "id": "block",
       "n": 4,
       "box": [
-        78,
-        1104,
-        204,
-        156
+        751,
+        933,
+        197,
+        96
       ],
       "kind": "action",
       "label": "Block",

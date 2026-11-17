@@ -226,6 +226,58 @@ function customerProfile(id) {
   };
 }
 
+const dealRow = (id, contact_id, item_id, stage, amount, source, ageH, extra = {}) => ({
+  id, company_id: 501, contact_id, item_id, conversation_id: 30 + (id % 5), stage, quoted_amount: amount, currency: amount ? "PKR" : null,
+  source, lost_reason: null, owner_user_id: 102, expected_close_on: null, created_at: hours(ageH + 30), updated_at: hours(ageH), ...extra,
+});
+const DEALS = [
+  dealRow(301, 203, 12, "enquiry", null, "ai", 3),
+  dealRow(302, 205, 11, "enquiry", null, "ai", 6),
+  dealRow(303, 211, 12, "enquiry", null, "manual", 20),
+  dealRow(304, 208, 13, "quoted", "185000.00", "ai", 5, { expected_close_on: ymd(6) }),
+  dealRow(305, 201, 14, "quoted", "12500.00", "ai", 26),
+  dealRow(306, 207, 14, "quoted", "6800.00", "ai", 50),
+  dealRow(307, 204, 13, "invoiced", "48500.00", "manual", 30),
+  dealRow(308, 209, 11, "paid", "22900.00", "ai", 72),
+  dealRow(309, 202, 11, "paid", "3240.00", "ai", 96),
+  dealRow(310, 212, 13, "lost", "9500.00", "ai", 140, { lost_reason: "Found a cheaper price" }),
+];
+
+const KHATA_ROWS = [
+  { contact_id: 204, name: "Kamran Butt", phone: "+92 300 0000204", balance: { PKR: "18400.00" }, over_limit: true, last_payment_at: days(21), since: days(48) },
+  { contact_id: 201, name: "Sadia Malik", phone: "+92 300 0000201", balance: { PKR: "9350.00" }, over_limit: false, last_payment_at: days(6), since: days(12) },
+  { contact_id: 209, name: "Hina Farooq", phone: "+92 300 0000209", balance: { PKR: "6200.00" }, over_limit: false, last_payment_at: days(15), since: days(30) },
+  { contact_id: 207, name: "Rabia Anwar", phone: "+92 300 0000207", balance: { PKR: "2750.00" }, over_limit: false, last_payment_at: null, since: days(4) },
+  { contact_id: 206, name: "Faisal Mehmood", phone: "+92 300 0000206", balance: { PKR: "1500.00" }, over_limit: false, last_payment_at: days(60), since: days(75) },
+];
+const LEAD_SOURCES = [
+  { id: 1, page_id: "100200300400500", page_name: "Al-Noor Family Clinic", item_id: 12, item_name: "Al-Noor Family Clinic", assign_user_id: 102,
+    assign_name: "Ayesha Khan", is_active: true, subscribed: true, last_sync_at: hours(1), last_error: null },
+  { id: 2, page_id: "100200300400600", page_name: "Al-Noor Bulk & Party Orders", item_id: 13, item_name: "Bulk & Party Orders", assign_user_id: null,
+    assign_name: null, is_active: true, subscribed: false, last_sync_at: hours(26), last_error: "Meta has not confirmed the connection yet. This can take a few minutes." },
+];
+const META_LEADS = [
+  { id: 1, contact_id: 203, name: "Nadia Hussain", form_name: "Free BP check-up", ad_name: "Check-up offer, Johar Town", campaign_name: "November health camp", platform: "fb", answers: {}, deal_id: 301, lead_at: ago(180), received_at: ago(178) },
+  { id: 2, contact_id: 211, name: "Mehwish Iqbal", form_name: "Free BP check-up", ad_name: "Check-up offer, Johar Town", campaign_name: "November health camp", platform: "ig", answers: {}, deal_id: 303, lead_at: hours(20), received_at: hours(20) },
+  { id: 3, contact_id: 208, name: "Tariq Javed", form_name: "Wedding quote request", ad_name: "Dawat rice and oil", campaign_name: "Wedding season", platform: "fb", answers: {}, deal_id: 304, lead_at: days(2), received_at: days(2) },
+  { id: 4, contact_id: null, name: "Saima Rafiq", form_name: "Wedding quote request", ad_name: "Dawat rice and oil", campaign_name: "Wedding season", platform: "ig", answers: {}, deal_id: null, lead_at: days(3), received_at: days(3) },
+];
+const APPROVALS = [
+  { id: 1, kind: "cancel_order", title: "Cancel order #1041 (PKR 3,780)", reason: "Customer is not at home and not picking up the phone. Tried twice.",
+    status: "pending", requested_by_name: "Hamza Riaz", decided_by_name: null, decision_note: null, created_at: hours(1) },
+  { id: 2, kind: "refund", title: "Refund PKR 1,200 to Imran Qureshi", reason: "Two milk packs arrived leaking.",
+    status: "pending", requested_by_name: "Ayesha Khan", decided_by_name: null, decision_note: null, created_at: hours(4) },
+  { id: 3, kind: "discount", title: "10% off order #1038 for Kamran Butt", reason: "Regular customer, bulk of 6 oil cartons.",
+    status: "pending", requested_by_name: "Ayesha Khan", decided_by_name: null, decision_note: null, created_at: hours(9) },
+];
+const FOLLOWUPS = [
+  { id: 82, contact_id: 204, deal_id: 307, title: "Collect pending khata payment", due_at: days(1), assigned_user_id: 102, assigned_name: "Ayesha Khan", status: "open", created_by_name: "Bilal Ahmed", done_at: null, done_by_name: null, customer_name: "Kamran Butt", when: "overdue" },
+  { id: 83, contact_id: 208, deal_id: 304, title: "Call about wedding quote", due_at: hours(-1), assigned_user_id: 102, assigned_name: "Ayesha Khan", status: "open", created_by_name: "Ayesha Khan", done_at: null, done_by_name: null, customer_name: "Tariq Javed", when: "today" },
+  { id: 81, contact_id: 201, deal_id: null, title: "Offer December ration pack", due_at: at(0, "19:00"), assigned_user_id: 102, assigned_name: "Ayesha Khan", status: "open", created_by_name: "Bilal Ahmed", done_at: null, done_by_name: null, customer_name: "Sadia Malik", when: "today" },
+  { id: 84, contact_id: 203, deal_id: 301, title: "Confirm clinic visit for Thursday", due_at: at(0, "20:30"), assigned_user_id: 102, assigned_name: "Ayesha Khan", status: "open", created_by_name: "Ayesha Khan", done_at: null, done_by_name: null, customer_name: "Nadia Hussain", when: "today" },
+  { id: 85, contact_id: 207, deal_id: null, title: "Ask if ration pack arrived fine", due_at: at(2, "12:00"), assigned_user_id: 102, assigned_name: "Ayesha Khan", status: "open", created_by_name: "Ayesha Khan", done_at: null, done_by_name: null, customer_name: "Rabia Anwar", when: "upcoming" },
+];
+
 const PAYMENTS_ME = [
   { id: 905, amount: "4999.00", currency: "PKR", status: "confirmed", provider: "manual_bank", reference: "AC-501-1105", period_start: "2026-11-05", period_end: "2026-12-05", created_at: days(6) },
   { id: 871, amount: "4999.00", currency: "PKR", status: "confirmed", provider: "manual_bank", reference: "AC-501-1005", period_start: "2026-10-05", period_end: "2026-11-05", created_at: days(37) },
@@ -301,6 +353,17 @@ const handlers = [
   // Customers (CRM)
   { path: "crm/customers", reply: ({ query }) => ok(customersList(query)) },
   { path: "crm/customers/:id", reply: ({ params }) => ok(customerProfile(Number(params.id))) },
+  { path: "deals", reply: ({ query }) => ok(DEALS.filter((d) => (!query.stage || d.stage === query.stage) && (!query.item_id || d.item_id === Number(query.item_id)))) },
+  { path: "deals/:id", reply: ({ params }) => ok(DEALS.find((d) => d.id === Number(params.id)) || DEALS[0]) },
+  { path: "khata", reply: ({ query }) => {
+    const rows = KHATA_ROWS.filter((r) => !query.q || r.name.toLowerCase().includes(String(query.q).toLowerCase()));
+    return ok({ totals: { PKR: "38200.00" }, count: rows.length, rows });
+  } },
+  { path: "lead-ads/sources", reply: () => ok(LEAD_SOURCES) },
+  { path: "lead-ads/leads", reply: () => ok(META_LEADS) },
+  { path: "ops/approvals", reply: ({ query }) => ok({ rows: query.status === "all" ? APPROVALS : APPROVALS.filter((a) => a.status === "pending") }) },
+  { path: "crm/followups", reply: () => ok({ counts: { overdue: 1, today: 3, upcoming: 1 }, rows: FOLLOWUPS }) },
+  { path: "crm/fields/suggested", reply: () => ok([]) },
   { path: "crm/views", reply: () => ok([{ id: 1, name: "VIPs gone quiet", filters: { tag: "VIP", quiet_days: "30" }, shared: true },
                                         { id: 2, name: "Clinic leads", filters: { stage: "lead", tag: "Clinic" }, shared: false }]) },
   { path: "crm/fields", reply: () => ok(customerProfile(201).fields) },

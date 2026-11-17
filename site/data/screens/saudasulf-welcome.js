@@ -19,9 +19,9 @@ Docs.screen({
       "n": 1,
       "box": [
         778,
-        30,
-        236,
-        156
+        18,
+        248,
+        120
       ],
       "kind": "action",
       "label": "اردو / English",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "order",
       "n": 2,
       "box": [
-        66,
-        882,
-        948,
-        420
+        54,
+        1629,
+        972,
+        369
       ],
       "kind": "action",
       "label": "I want to order",
@@ -45,10 +45,10 @@ Docs.screen({
       "id": "shop",
       "n": 3,
       "box": [
-        66,
-        1326,
-        948,
-        360
+        54,
+        2022,
+        972,
+        312
       ],
       "kind": "action",
       "label": "I run a shop",

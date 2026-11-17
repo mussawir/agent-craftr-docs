@@ -18,9 +18,9 @@ Docs.screen({
       "id": "chips",
       "n": 1,
       "box": [
-        42,
-        186,
-        323,
+        54,
+        168,
+        254,
         132
       ],
       "kind": "info",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "call",
       "n": 2,
       "box": [
-        66,
-        516,
-        364,
-        60
+        482,
+        542,
+        373,
+        57
       ],
       "kind": "info",
       "label": "New — call to confirm",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "order",
       "n": 3,
       "box": [
-        0,
-        330,
-        1092,
-        276
+        54,
+        324,
+        972,
+        327
       ],
       "kind": "action",
       "label": "An order",
@@ -59,9 +59,9 @@ Docs.screen({
       "n": 4,
       "box": [
         0,
-        2154,
+        2190,
         1092,
-        252
+        216
       ],
       "kind": "action",
       "label": "Orders · Products · Khata · Chats · More",
@@ -72,9 +72,9 @@ Docs.screen({
       "n": 5,
       "box": [
         858,
-        2154,
+        2190,
         228,
-        252
+        216
       ],
       "kind": "action",
       "label": "More",

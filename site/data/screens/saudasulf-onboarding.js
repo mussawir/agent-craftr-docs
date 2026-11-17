@@ -17,10 +17,10 @@ Docs.screen({
       "id": "name",
       "n": 1,
       "box": [
-        66,
-        234,
-        948,
-        180
+        54,
+        732,
+        972,
+        198
       ],
       "kind": "action",
       "label": "Your name",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "phone",
       "n": 2,
       "box": [
-        66,
-        450,
-        948,
-        240
+        54,
+        960,
+        972,
+        318
       ],
       "kind": "action",
       "label": "Your phone number",
@@ -43,9 +43,9 @@ Docs.screen({
       "id": "continue",
       "n": 3,
       "box": [
-        66,
-        750,
-        948,
+        54,
+        2166,
+        972,
         168
       ],
       "kind": "action",

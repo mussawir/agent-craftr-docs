@@ -18,9 +18,9 @@ Docs.screen({
       "id": "shop",
       "n": 1,
       "box": [
-        0,
-        162,
-        1092,
+        54,
+        174,
+        972,
         228
       ],
       "kind": "info",
@@ -28,13 +28,41 @@ Docs.screen({
       "text": "The shop and the person signed in on this phone."
     },
     {
-      "id": "lang",
+      "id": "package",
       "n": 2,
       "box": [
-        0,
-        882,
-        1092,
-        180
+        54,
+        603,
+        972,
+        186
+      ],
+      "kind": "action",
+      "label": "Package & messages",
+      "text": "How many messages you have used this month, and (owner only) buying more.",
+      "go": "saudasulf-package"
+    },
+    {
+      "id": "khata",
+      "n": 3,
+      "box": [
+        54,
+        1146,
+        972,
+        393
+      ],
+      "kind": "action",
+      "label": "Customers can see their khata",
+      "text": "The owner's switch. Off by default.",
+      "go": "saudasulf-khata-switch"
+    },
+    {
+      "id": "lang",
+      "n": 4,
+      "box": [
+        54,
+        1530,
+        972,
+        186
       ],
       "kind": "action",
       "label": "Language",
@@ -42,12 +70,12 @@ Docs.screen({
     },
     {
       "id": "out",
-      "n": 3,
+      "n": 5,
       "box": [
-        0,
-        1098,
-        1092,
-        180
+        54,
+        1740,
+        972,
+        186
       ],
       "kind": "action",
       "label": "Sign out",

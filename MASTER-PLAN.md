@@ -38,7 +38,7 @@ Everything is built for businesses where the technology is still simple. We star
 | Name | What it is | Don't call it |
 |---|---|---|
 | **AgentCraftr** | The company and the WhatsApp AI service with its web dashboard | — |
-| **CoAgent** 🟡 | The mobile app for every business (store name "CoAgent by AgentCraftr"): the WhatsApp communication and analytics hub. The AI agent answers; you work alongside it. | "the owner app", "Ac app" |
+| **CoAgent** | The mobile app for every business (store name "CoAgent" in the Play Store and App Store): the WhatsApp communication and analytics hub. The AI agent answers; you work alongside it. Full feature list: [COAGENT.md](COAGENT.md) | "the owner app", "Ac app" |
 | **SaudaSulf** (سودا سلف) | The ordering app for shops and their customers, for every trade that sells from a product list (grocery first) | "customer app", "grocery app" |
 | **Trade Partner** | The top level of the sales network: holds trades or sectors in an area | Friend, Sector Manager, Trade Manager, Trade Holder |
 | **Franchise holder** | The level below: holds a **franchise** (city + trade), brings in and sets up businesses | Partner, Associate |
@@ -47,7 +47,7 @@ Everything is built for businesses where the technology is still simple. We star
 
 The chain: **AgentCraftr → Trade Partner → Franchise holder → Business → their customers**
 
-❓ **CoAgent** is proposed and still needs a final yes. Before printing it on stands or boxes, register it as a trademark with IPO Pakistan. Developer tools with the same name exist, but no consumer app for businesses.
+✅ **CoAgent** is the approved name (2026-11-17), the same in the Play Store and App Store. Before printing it on stands or boxes, register it as a trademark with IPO Pakistan. Developer tools with the same name exist, but no consumer app for businesses.
 
 🔧 **Code rename needed.** The code still says `trade_holder` (role 31) and `partner` (role 30). Neither is deployed yet, so renaming now is cheap.
 
@@ -59,7 +59,7 @@ The chain: **AgentCraftr → Trade Partner → Franchise holder → Business →
 |---|---|---|---|---|
 | **AgentCraftr (WhatsApp AI)** | Businesses' customers, on WhatsApp | Answers text, voice notes and pictures; takes orders, bookings and requests; reads payment screenshots; hands a chat to a person | `salesagent-backend` | ✅ Built |
 | **Web dashboard** | Owners and staff | Inbox, orders, payments, customers (CRM), khata, marketing, reports, setup | `salesagent-frontend` (`/app`) | ✅ Built |
-| **CoAgent app** | Every business; Franchise holders also log in here | Inbox, orders, customers, khata, staff tasks with photo/video proof, approvals, "Ask your business", teach the agent | `agentcraftr-app` | ✅ Built (not in the stores yet) |
+| **CoAgent app** | Every business; Franchise holders also log in here | Inbox, orders, customers, khata, staff tasks with photo/video proof, approvals, "Ask your business", teach the agent ([COAGENT.md](COAGENT.md)) | `co-agent` (GitHub `agentcraftr-app`) | ✅ Built (not in the stores yet) |
 | **SaudaSulf app** | Shops of every trade that sells from a product list, and their customers | Customers add a shop by code/QR, browse its catalogue, order, chat and see their orders, payments and khata; the shop runs catalogue, orders (from the app **and** WhatsApp), payments, khata and app chats | `saudasulf` | ✅ Designed, coding started |
 | **Franchise holder dashboard** | Franchise holders | Their businesses, setup help, leads, earnings | web `/partner` + inside CoAgent | ✅ Built (to rename) |
 | **Trade Partner dashboard** | Trade Partners | Their area, Franchise holders, businesses, earnings, "cities with no Franchise holder yet" | web `/holder` | ✅ Built (to rename); not in the app yet |
@@ -103,6 +103,31 @@ Product rules:
 - ✅ **A separate app**, not a mode inside CoAgent. CoAgent is the business hub on the official API, and the stores may question an app that mixes both. It still uses the same backend, AI and login.
 - ✅ **Group etiquette and privacy.** The AI reads other members' messages and writes as the user. The app says so clearly, and in groups auto-reply is off by default or limited to "only when I'm mentioned or asked directly", so it never floods a group.
 - ❓ Name, price and when to build: see section 13.
+
+### CRM ("Customers"): a CRM that fills itself from WhatsApp
+
+✅ Built (web 10 November, not deployed; CoAgent has the Customers list, profile and follow-ups). Design: `agentcraftr-backend/docs/superpowers/specs/2026-11-10-tenant-crm-design.md`. Screens: docs site → Web dashboard → Customers.
+
+**Why:** Pakistani shops and offices keep customers in Zoho, Bitrix24, HubSpot or a register, mainly for the customer list, notes, follow-ups and a sales pipeline. We already have the WhatsApp side: every sender becomes a customer automatically, with their orders, payments, bookings and requests attached. The CRM adds the layer a business works in every day. PKR, Urdu-friendly, no card payments, no typing customers in.
+
+| Part | What the business gets | Where |
+|---|---|---|
+| Customer list | Search; filter by stage, tag, owner, city, source, quiet for N days, follow-up due, own fields; sort; saved views; CSV export (admin) | Web Customers · CoAgent Customers |
+| Customer profile (360°) | Who they are, what they have paid (per currency, never mixed with pipeline), stage, and ONE timeline: chats, orders, payments, bookings, stays, requests, deals, notes, follow-ups | Web profile · CoAgent customer |
+| Stage, computed | Lead → Customer (1 purchase) → Repeat (2+) → Inactive (no purchase in 60 days). Never typed, so it can't go stale | Everywhere |
+| Notes | Many per customer, with author and time; never silently rewritten | Profile |
+| Follow-ups | "Call Ali about the quote, Thursday 4 pm, Sara"; overdue / today / upcoming; push to the person assigned when due | Web profile · CoAgent Follow-ups |
+| Own fields | Text, number, date, choice, yes/no ("Car model", "Budget"); suggested sets per trade | Web Customer fields |
+| Owner and deals | A staff owner per customer; deals with owner and expected close date on a board by stage | Web Deals |
+| Add by hand | Walk-in or phone customers, on a chosen WhatsApp number | Web Customers |
+| Khata | Udhaar per customer, gave/got, statements; shown in CoAgent and (when the shop allows) to the customer in SaudaSulf | Web Khata · CoAgent Khata · SaudaSulf |
+| AI customer notes | The agent keeps short notes about each customer and uses them in replies | Profile (changes live replies once deployed) |
+| Lead ads | Leads from Facebook/Instagram lead ads arrive as customers | Web Lead ads |
+
+**Rules:** one customer record (`contacts`), never a second table; the CRM never merges customers on its own; revenue is never added to pipeline value or across currencies; one "Customers" menu, one profile, one follow-ups list.
+
+**Not built yet:** quotes and invoices as documents, email campaigns, AI filling fields automatically.
+
 
 ---
 
@@ -299,7 +324,7 @@ Discuss in the team meeting and fill in the **Owner** column.
 
 ## 13. Open questions
 
-1. Is **CoAgent** the final app name?
+1. ~~Is **CoAgent** the final app name?~~ ✅ Yes, decided 2026-11-17.
 2. **Franchise fee**: amount, and does it include the starter kit?
 3. **Franchise holder earnings**: bonus, %, months.
 4. **Trade Partner earnings**: % of sales.
@@ -333,3 +358,4 @@ Discuss in the team meeting and fill in the **Owner** column.
 | 2026-11-16 | Order rule: orders are worked in CoAgent until the shop buys SaudaSulf, then every order (WhatsApp and app) is worked in SaudaSulf; CoAgent always shows them |
 | 2026-11-16 | Khata and chat are in both apps (same data) |
 | 2026-11-16 | Personal WhatsApp (normal numbers, many groups): a separate app using chat-export analysis plus an Android notification reader for AI replies; no unofficial linked-device bots; Meta's Groups API rejected (needs OBA, 8 people per group) |
+| 2026-11-17 | **CoAgent** is the approved app name, the same in the Play Store and App Store; its features are collected in COAGENT.md |
