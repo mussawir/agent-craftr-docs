@@ -11,6 +11,8 @@ khata (credit), marketing, staff tasks and reports. It has a web dashboard and a
 **Direction and decisions:** see [MASTER-PLAN.md](MASTER-PLAN.md): names, products, money, payments, prices,
 AI models, hardware, countries, launch tasks and who does what.
 
+**CoAgent (the mobile app):** see [COAGENT.md](COAGENT.md): every feature and its status, who uses it, screens and what comes next.
+
 ## Open the interactive docs
 
 **Open `site/index.html` in a browser.** There's no build step and no server: it works straight from the folder.
