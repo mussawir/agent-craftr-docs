@@ -18,10 +18,10 @@ Docs.screen({
       "id": "price",
       "n": 1,
       "box": [
-        42,
-        1326,
-        996,
-        180
+        54,
+        1503,
+        477,
+        198
       ],
       "kind": "action",
       "label": "Price",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "stock",
       "n": 2,
       "box": [
-        42,
-        1530,
-        996,
-        240
+        549,
+        1503,
+        477,
+        198
       ],
       "kind": "action",
       "label": "Stock",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "out",
       "n": 3,
       "box": [
-        42,
-        1758,
-        996,
-        180
+        54,
+        1776,
+        972,
+        186
       ],
       "kind": "action",
       "label": "Out of stock",
@@ -57,9 +57,9 @@ Docs.screen({
       "id": "save",
       "n": 4,
       "box": [
-        42,
-        1950,
-        996,
+        54,
+        1974,
+        972,
         168
       ],
       "kind": "action",

@@ -18,10 +18,10 @@ Docs.screen({
       "id": "warn",
       "n": 1,
       "box": [
-        42,
-        210,
-        996,
-        240
+        54,
+        180,
+        972,
+        198
       ],
       "kind": "warn",
       "label": "Warning",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "used",
       "n": 2,
       "box": [
-        42,
-        438,
-        996,
-        420
+        54,
+        402,
+        972,
+        414
       ],
       "kind": "info",
       "label": "Messages used",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "pack",
       "n": 3,
       "box": [
-        42,
-        894,
-        996,
-        168
+        276,
+        882,
+        708,
+        108
       ],
       "kind": "action",
       "label": "Buy a pack",
@@ -57,9 +57,9 @@ Docs.screen({
       "id": "renew",
       "n": 4,
       "box": [
-        42,
-        1398,
-        996,
+        54,
+        1962,
+        972,
         168
       ],
       "kind": "action",

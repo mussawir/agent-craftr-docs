@@ -18,10 +18,10 @@ Docs.screen({
       "id": "balance",
       "n": 1,
       "box": [
-        42,
-        210,
-        313,
-        96
+        108,
+        228,
+        864,
+        120
       ],
       "kind": "info",
       "label": "Balance",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "gave",
       "n": 2,
       "box": [
-        42,
-        330,
-        486,
-        168
+        108,
+        378,
+        423,
+        132
       ],
       "kind": "action",
       "label": "Gave on credit",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "got",
       "n": 3,
       "box": [
-        552,
-        330,
-        486,
-        168
+        549,
+        378,
+        423,
+        132
       ],
       "kind": "action",
       "label": "Got payment",
@@ -57,10 +57,10 @@ Docs.screen({
       "id": "entry",
       "n": 4,
       "box": [
-        0,
-        537,
-        1092,
-        252
+        54,
+        588,
+        972,
+        273
       ],
       "kind": "info",
       "label": "An entry",
@@ -70,10 +70,10 @@ Docs.screen({
       "id": "void",
       "n": 5,
       "box": [
-        0,
-        1017,
-        1092,
-        252
+        54,
+        1116,
+        972,
+        354
       ],
       "kind": "info",
       "label": "Cancelled entry",

@@ -18,10 +18,10 @@ Docs.screen({
       "id": "status",
       "n": 1,
       "box": [
+        754,
         42,
-        210,
-        236,
-        84
+        284,
+        90
       ],
       "kind": "info",
       "label": "Where the order is",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "call",
       "n": 2,
       "box": [
-        42,
-        1146,
-        996,
-        168
+        732,
+        231,
+        252,
+        108
       ],
       "kind": "action",
       "label": "Call the customer",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "paid",
       "n": 3,
       "box": [
-        42,
-        1386,
-        996,
-        168
+        54,
+        1227,
+        477,
+        126
       ],
       "kind": "action",
       "label": "Payment received",
@@ -57,10 +57,10 @@ Docs.screen({
       "id": "khata",
       "n": 4,
       "box": [
-        42,
-        1566,
-        996,
-        168
+        549,
+        1227,
+        477,
+        126
       ],
       "kind": "action",
       "label": "Put on khata",

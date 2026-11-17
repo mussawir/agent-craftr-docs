@@ -18,10 +18,10 @@ Docs.screen({
       "id": "banner",
       "n": 1,
       "box": [
-        0,
-        162,
-        1092,
-        300
+        54,
+        174,
+        972,
+        276
       ],
       "kind": "warn",
       "label": "Messages almost used",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "see",
       "n": 2,
       "box": [
-        686,
-        240,
-        328,
-        156
+        590,
+        324,
+        400,
+        96
       ],
       "kind": "action",
       "label": "See package",

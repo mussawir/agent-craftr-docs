@@ -17,10 +17,10 @@ Docs.screen({
       "id": "default",
       "n": 1,
       "box": [
-        42,
-        210,
-        84,
-        84
+        330,
+        350,
+        51,
+        51
       ],
       "kind": "info",
       "label": "Default shop",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "shop",
       "n": 2,
       "box": [
-        0,
-        330,
-        1092,
-        228
+        54,
+        492,
+        972,
+        294
       ],
       "kind": "info",
       "label": "A shop",
@@ -43,9 +43,9 @@ Docs.screen({
       "id": "add",
       "n": 3,
       "box": [
-        607,
+        569,
         2178,
-        431,
+        469,
         180
       ],
       "kind": "action",
@@ -58,7 +58,7 @@ Docs.screen({
       "n": 4,
       "box": [
         930,
-        6,
+        9,
         156,
         156
       ],

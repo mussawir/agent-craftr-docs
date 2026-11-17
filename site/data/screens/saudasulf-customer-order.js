@@ -18,9 +18,9 @@ Docs.screen({
       "n": 1,
       "box": [
         534,
-        294,
-        258,
-        60
+        342,
+        237,
+        102
       ],
       "kind": "info",
       "label": "Where it is",
@@ -30,9 +30,9 @@ Docs.screen({
       "id": "cancel",
       "n": 2,
       "box": [
-        42,
-        1122,
-        996,
+        54,
+        1416,
+        972,
         168
       ],
       "kind": "action",

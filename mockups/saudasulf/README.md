@@ -1,9 +1,11 @@
 # SaudaSulf redesign mockups
 
+**Chosen: B Neela, 2026-11-17.** The app now uses this palette (`lib/core/theme.dart` in `G:\saudasulf`), and the page opens on it.
+
 High-fidelity HTML mockups of every current screen in the SaudaSulf Flutter app (`G:\saudasulf`), in a new look that replaces the brown/terracotta Material 3 theme.
 
 - `index.html` is one self-contained page: inline CSS and SVG icons, with a small inline script for the switchers. The only external resource is Google Fonts (Plus Jakarta Sans and Noto Nastaliq Urdu). Open it in a browser.
-  - Palette switcher: **A · Sabz** (green with a saffron accent, the default), **B · Neela** (indigo with an orange accent), **C · Anaar** (pomegranate with a gold accent). There is also a Light / Dark toggle.
+  - Palette switcher: **A · Sabz** (green with a saffron accent), **B · Neela** (indigo with an orange accent, the default), **C · Anaar** (pomegranate with a gold accent). There is also a Light / Dark toggle.
   - You can also pick these in the URL: `index.html?theme=neela&mode=dark`.
   - Customer: 10 frames (C1–C9, with My shops in both its list and empty states). Shopkeeper: 13 frames (S1–S12, plus S13, the Orders screen in Urdu, right-to-left).
   - The **Design system** panel at the end maps every token to a Material 3 `ColorScheme` role or to a `SaudaColors` ThemeExtension. It also gives the type scale, radius, spacing, elevation and component specs.

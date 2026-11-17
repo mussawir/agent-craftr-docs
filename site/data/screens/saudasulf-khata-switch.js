@@ -17,10 +17,10 @@ Docs.screen({
       "id": "switch",
       "n": 1,
       "box": [
-        0,
-        1050,
-        1092,
-        384
+        54,
+        1146,
+        972,
+        393
       ],
       "kind": "action",
       "label": "Customers can see their khata",

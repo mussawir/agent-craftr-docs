@@ -17,10 +17,10 @@ Docs.screen({
       "id": "code",
       "n": 1,
       "box": [
-        66,
-        234,
-        948,
-        288
+        54,
+        204,
+        972,
+        357
       ],
       "kind": "action",
       "label": "Shop code",
@@ -30,9 +30,9 @@ Docs.screen({
       "id": "add",
       "n": 2,
       "box": [
-        66,
-        582,
-        948,
+        54,
+        2166,
+        972,
         168
       ],
       "kind": "action",

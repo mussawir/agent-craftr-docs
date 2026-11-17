@@ -18,9 +18,9 @@ Docs.screen({
       "id": "shop",
       "n": 1,
       "box": [
-        0,
-        162,
-        1092,
+        54,
+        174,
+        972,
         228
       ],
       "kind": "info",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "package",
       "n": 2,
       "box": [
-        0,
-        546,
-        1092,
-        180
+        54,
+        603,
+        972,
+        186
       ],
       "kind": "action",
       "label": "Package & messages",
@@ -45,10 +45,10 @@ Docs.screen({
       "id": "khata",
       "n": 3,
       "box": [
-        0,
-        1050,
-        1092,
-        384
+        54,
+        1146,
+        972,
+        393
       ],
       "kind": "action",
       "label": "Customers can see their khata",
@@ -59,10 +59,10 @@ Docs.screen({
       "id": "lang",
       "n": 4,
       "box": [
-        0,
-        1422,
-        1092,
-        180
+        54,
+        1530,
+        972,
+        186
       ],
       "kind": "action",
       "label": "Language",
@@ -72,10 +72,10 @@ Docs.screen({
       "id": "out",
       "n": 5,
       "box": [
-        0,
-        1638,
-        1092,
-        180
+        54,
+        1740,
+        972,
+        186
       ],
       "kind": "action",
       "label": "Sign out",

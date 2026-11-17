@@ -17,9 +17,9 @@ Docs.screen({
       "id": "search",
       "n": 1,
       "box": [
-        30,
-        522,
-        1020,
+        54,
+        576,
+        972,
         156
       ],
       "kind": "action",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "chips",
       "n": 2,
       "box": [
-        566,
-        720,
-        110,
-        72
+        517,
+        788,
+        118,
+        69
       ],
       "kind": "action",
       "label": "Categories",
@@ -43,10 +43,10 @@ Docs.screen({
       "id": "out",
       "n": 3,
       "box": [
-        743,
-        1245,
-        244,
-        72
+        126,
+        1722,
+        213,
+        60
       ],
       "kind": "info",
       "label": "Out of stock",
@@ -56,10 +56,10 @@ Docs.screen({
       "id": "cart",
       "n": 4,
       "box": [
-        30,
-        2202,
-        1020,
-        168
+        42,
+        2160,
+        996,
+        198
       ],
       "kind": "action",
       "label": "View cart",

@@ -18,10 +18,10 @@ Docs.screen({
       "id": "total",
       "n": 1,
       "box": [
-        42,
-        462,
-        350,
-        96
+        114,
+        480,
+        496,
+        120
       ],
       "kind": "info",
       "label": "Customers owe you",
@@ -31,9 +31,9 @@ Docs.screen({
       "id": "search",
       "n": 2,
       "box": [
-        42,
-        186,
-        996,
+        54,
+        174,
+        972,
         156
       ],
       "kind": "action",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "over",
       "n": 3,
       "box": [
-        0,
-        597,
-        1092,
-        228
+        54,
+        678,
+        972,
+        273
       ],
       "kind": "warn",
       "label": "Over the limit",
@@ -57,10 +57,10 @@ Docs.screen({
       "id": "row",
       "n": 4,
       "box": [
-        0,
-        1029,
-        1092,
-        228
+        54,
+        1206,
+        972,
+        216
       ],
       "kind": "action",
       "label": "A customer",

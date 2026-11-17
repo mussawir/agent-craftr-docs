@@ -17,10 +17,10 @@ Docs.screen({
       "id": "total",
       "n": 1,
       "box": [
-        30,
-        606,
-        832,
-        84
+        54,
+        2113,
+        716,
+        75
       ],
       "kind": "info",
       "label": "Total",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "how",
       "n": 2,
       "box": [
-        30,
-        726,
-        1020,
-        156
+        54,
+        651,
+        972,
+        174
       ],
       "kind": "action",
       "label": "Delivery or pickup",
@@ -43,10 +43,10 @@ Docs.screen({
       "id": "address",
       "n": 3,
       "box": [
-        30,
-        906,
-        1020,
-        180
+        54,
+        855,
+        972,
+        198
       ],
       "kind": "action",
       "label": "Delivery address",
@@ -56,9 +56,9 @@ Docs.screen({
       "id": "place",
       "n": 4,
       "box": [
-        30,
+        54,
         2202,
-        1020,
+        972,
         168
       ],
       "kind": "action",

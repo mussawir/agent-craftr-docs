@@ -17,10 +17,10 @@ Docs.screen({
       "id": "balance",
       "n": 1,
       "box": [
-        42,
-        210,
-        580,
-        96
+        114,
+        342,
+        822,
+        120
       ],
       "kind": "info",
       "label": "What you owe",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "paid",
       "n": 2,
       "box": [
-        0,
-        585,
-        1092,
-        228
+        54,
+        816,
+        972,
+        273
       ],
       "kind": "info",
       "label": "An entry",
