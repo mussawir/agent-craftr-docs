@@ -493,7 +493,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
       <div class="eyebrow">SaudaSulf · Flutter app · Redesign mockups</div>
       <h1>A lighter, friendlier SaudaSulf</h1>
       <p>Every current screen, redrawn with white and soft-grey surfaces, one confident brand colour, rounded 18px cards, bigger tap targets and colour-coded order statuses. It replaces today's brown/terracotta Material&nbsp;3 theme, which felt heavy and dated. The screens, fields, actions and strings are the app's real ones (from <code>lib/features</code> and <code>app_en.arb</code>); only the look has changed.</p>
-      <p style="margin-top:10px">After those, two <strong>planned</strong> sections show the 17 screens the design spec still needs and the app doesn't have yet: chat, notifications, scanning a QR, shop sign-up, paying with a screenshot, adding products and more. They are marked <span style="font-weight:800;color:var(--on-ac);background:var(--ac);padding:1px 7px;border-radius:6px;font-size:13px">PLANNED</span>, and each names the part of the spec it comes from.</p>
+      <p style="margin-top:10px">After those, two <strong>planned</strong> sections show the 12 screens the design spec still needs and the app doesn't have yet: chat, notifications, scanning a QR, shop sign-up, paying with a screenshot, adding products and more. They are marked <span style="font-weight:800;color:var(--on-ac);background:var(--ac);padding:1px 7px;border-radius:6px;font-size:13px">PLANNED</span>, and each names the part of the spec it comes from.</p>
     </div>
   </header>
 
@@ -1125,7 +1125,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
   </div>
 
   <!-- ===================================================== CUSTOMER · PLANNED -->
-  <div class="sec-h"><h2>Customer · planned</h2><span class="pill plan">7 frames · not built yet</span></div>
+  <div class="sec-h"><h2>Customer · planned</h2><span class="pill plan">5 frames · not built yet</span></div>
   <p class="sec-p">Screens the design spec (<code>2026-11-13-grocery-app-design.md</code>, §7–§8) calls for that the app doesn't have yet. Chat and notifications wait for plan 5 (in-app chat and push); the rest are smaller pieces. The section in the spec is named under each frame.</p>
 
   <div class="grid">
@@ -1197,7 +1197,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
         <div class="composer"><div class="ib" style="width:40px;height:40px;color:var(--text-2)"><svg class="i"><use href="#i-cam"/></svg></div><div class="in">Type a message</div><div class="send"><svg class="i"><use href="#i-mic"/></svg></div></div>
         <div class="hi"></div>
       </div></div>
-      <figcaption><b class="pl">C12</b><span class="pltag">Planned</span><strong>Chat with the shop.</strong> Opened from a Chat button on the shop card (C5). The AI answers first from the shop's own products and prices, and can show a product with Add. When a person steps in, a line says so and their name shows. Photo and voice note, like WhatsApp; the mic turns into Send once something is typed.<span class="why">Spec §8 Chat (the app as a new channel). Plan 5, not written yet.</span></figcaption>
+      <figcaption><b>C12</b><strong>Chat with the shop.</strong> Opened from a Chat button on the shop card (C5). The AI answers first from the shop's own products and prices, and can show a product with Add. When a person steps in, a line says so and their name shows. Photo and voice note, like WhatsApp; the mic turns into Send once something is typed.<span class="why">Built 2026-11-18. Spec §8 Chat (the app as a new channel). Plan 5.</span></figcaption>
     </figure>
 
     <!-- C13 Notifications -->
@@ -1212,7 +1212,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
         </div>
         <div class="hi" style="background:#fff"></div>
       </div></div>
-      <figcaption><b class="pl">C13</b><span class="pltag">Planned</span><strong>Notifications.</strong> Order updates the shop switched on (S11) and chat replies arrive as phone notifications, each named after the shop. Tapping one opens that order or chat.<span class="why">Spec §8 Order status and Chat. Plan 5 (push).</span></figcaption>
+      <figcaption><b>C13</b><strong>Notifications.</strong> Order updates the shop switched on (S11) and chat replies arrive as phone notifications, each named after the shop. Tapping one opens that order or chat.<span class="why">Built 2026-11-18. Spec §8 Order status and Chat. Plan 5 (push).</span></figcaption>
     </figure>
 
     <!-- C14 Shop not taking app orders -->
@@ -1292,7 +1292,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
   </div>
 
   <!-- ===================================================== SHOP · PLANNED -->
-  <div class="sec-h"><h2>Shopkeeper · planned</h2><span class="pill plan">10 frames · not built yet</span></div>
+  <div class="sec-h"><h2>Shopkeeper · planned</h2><span class="pill plan">7 frames · not built yet</span></div>
   <p class="sec-p">The shop side of the same gaps (spec §6a, §7, §8, §8a, §9): the real Chats tab, signing up a new shop, all customers, paying for the package, adding products, the messages-used-up states, a printable poster, the rider's view, and notifications.</p>
 
   <div class="grid">
@@ -1321,7 +1321,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
         <div class="nav"><div><span class="pi"><svg class="i"><use href="#i-receipt"/></svg></span>Orders</div><div><span class="pi"><svg class="i"><use href="#i-box"/></svg></span>Products</div><div><span class="pi"><svg class="i"><use href="#i-book"/></svg></span>Khata</div><div class="on"><span class="pi"><svg class="i"><use href="#i-chat"/></svg></span>Chats</div><div><span class="pi"><svg class="i"><use href="#i-hdots"/></svg></span>More</div></div>
         <div class="hi"></div>
       </div></div>
-      <figcaption><b class="pl">S14</b><span class="pltag">Planned</span><strong>Chats.</strong> Replaces the “Coming next” placeholder (S7). Only app customers' chats show here; WhatsApp chats stay in CoAgent. “Needs you” first, with the reason the AI handed the chat over.<span class="why">Spec §8 Chat, Master Plan “Chat is in both apps”. Plan 5.</span></figcaption>
+      <figcaption><b>S14</b><strong>Chats.</strong> Replaces the “Coming next” placeholder (S7). Only app customers' chats show here; WhatsApp chats stay in CoAgent. “Needs you” first, with the reason the AI handed the chat over.<span class="why">Built 2026-11-18. Spec §8 Chat, Master Plan “Chat is in both apps”. Plan 5.</span></figcaption>
     </figure>
 
     <!-- S15 One chat -->
@@ -1346,7 +1346,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
         <div class="composer"><div class="ib" style="width:40px;height:40px;color:var(--text-2)"><svg class="i"><use href="#i-cam"/></svg></div><div class="in">Reply to Sana</div><div class="send"><svg class="i"><use href="#i-mic"/></svg></div></div>
         <div class="hi"></div>
       </div></div>
-      <figcaption><b class="pl">S15</b><span class="pltag">Planned</span><strong>One chat.</strong> The AI's replies are tinted and labelled; staff replies show the person's name. Typing takes over from the AI, and “Hand back to AI” returns the chat. Shortcuts open the customer's order and khata, or send a product card.<span class="why">Spec §8 Chat: the same handover as WhatsApp. Plan 5.</span></figcaption>
+      <figcaption><b>S15</b><strong>One chat.</strong> The AI's replies are tinted and labelled; staff replies show the person's name. Typing takes over from the AI, and “Hand back to AI” returns the chat. Shortcuts open the customer's order and khata, or send a product card.<span class="why">Built 2026-11-18. Spec §8 Chat: the same handover as WhatsApp. Plan 5.</span></figcaption>
     </figure>
 
     <!-- S16 Create your shop -->
@@ -1520,7 +1520,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
         </div>
         <div class="hi" style="background:#fff"></div>
       </div></div>
-      <figcaption><b class="pl">S23</b><span class="pltag">Planned</span><strong>Shop notifications.</strong> New orders, chats handed to a person, and message warnings (80%, 95%, 3 days before the end, used up) reach the owner and staff. Notifications to the shop never count as messages.<span class="why">Spec §6a, §8 and plan 5 (push).</span></figcaption>
+      <figcaption><b>S23</b><strong>Shop notifications.</strong> New orders, chats handed to a person, and message warnings (80%, 95%, 3 days before the end, used up) reach the owner and staff. Notifications to the shop never count as messages.<span class="why">Built 2026-11-18. Spec §6a, §8 and plan 5 (push).</span></figcaption>
     </figure>
 
   </div>
