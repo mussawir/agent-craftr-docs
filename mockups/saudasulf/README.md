@@ -8,6 +8,7 @@ High-fidelity HTML mockups of every current screen in the SaudaSulf Flutter app 
   - Palette switcher: **A · Sabz** (green with a saffron accent), **B · Neela** (indigo with an orange accent, the default), **C · Anaar** (pomegranate with a gold accent). There is also a Light / Dark toggle.
   - You can also pick these in the URL: `index.html?theme=neela&mode=dark`.
   - Customer: 10 frames (C1–C9, with My shops in both its list and empty states). Shopkeeper: 13 frames (S1–S12, plus S13, the Orders screen in Urdu, right-to-left).
+  - **Planned (not built yet), added 2026-11-17:** 17 more frames for what the design spec (`G:/agentcraftr-backend/docs/superpowers/specs/2026-11-13-grocery-app-design.md`) needs and the app doesn't have. Customer C10–C16: scan a QR, order placed, chat with the shop, notifications, shop not taking app orders, waiting to be confirmed, my profile (with Delete my account). Shopkeeper S14–S23: chats, one chat, create your shop, customers, pay for your package (JazzCash / Easypaisa + screenshot), add a product, messages used up (grace), poster, rider, shop notifications. Each caption names the spec section it comes from.
   - The **Design system** panel at the end maps every token to a Material 3 `ColorScheme` role or to a `SaudaColors` ThemeExtension. It also gives the type scale, radius, spacing, elevation and component specs.
 - `overview-a-sabz.png`, `overview-b-neela.png`, `overview-c-anaar.png` are full-page exports per palette (light mode, 1600px wide, from headless Chrome).
 

@@ -28,7 +28,7 @@
   --bezel:#0B0D12;
 }
 html[data-mode="dark"]{
-  --doc-bg:#07090C; --doc-card:#11151B;
+  --doc-bg:#454A54; --doc-card:#383D46;
   --bg:#0E1116; --card:#171B22; --high:#1F242D;
   --text:#E9ECF1; --text-2:#A3ACB9; --text-3:#8B94A3;
   --line:#2B313B; --line-soft:#222730; --outline:#3A414D;
@@ -43,7 +43,7 @@ html[data-mode="dark"]{
   --sh:0 0 0 1px #232831;
   --sh-lg:0 0 0 1px #232831,0 18px 40px -12px rgba(0,0,0,.6);
   --scrim:rgba(0,0,0,.6);
-  --bezel:#2A2F38;
+  --bezel:#16191F;
 }
 /* A: Sabz */
 html[data-theme="sabz"]{--primary:#07803F;--on-primary:#FFFFFF;--pc:#E3F7EC;--on-pc:#04391D;--brand:#0FA958;
@@ -312,6 +312,70 @@ html[data-mode="dark"] .cartbar .bub{background:rgba(0,0,0,.14)}
 .ur .btn{font-family:'Noto Nastaliq Urdu',serif;font-size:13.5px;padding-top:4px}
 .ur .sb,.ur bdi,.ur .ltr{font-family:'Plus Jakarta Sans',sans-serif}
 
+/* ============ PLANNED SCREENS ============ */
+.sec-h .pill.plan{background:var(--ac);color:var(--on-ac)}
+figcaption b.pl{background:var(--accent);color:var(--on-accent)}
+figcaption .pltag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:6px;background:var(--ac);color:var(--on-ac);margin-right:6px;vertical-align:1px}
+figcaption .why{display:block;margin-top:8px;font-size:13.5px;color:var(--text-3)}
+/* chat */
+.msgs{display:flex;flex-direction:column;gap:8px}
+.mb{max-width:80%;padding:9px 12px 7px;border-radius:18px;font-size:14.5px;line-height:20px;background:var(--card);box-shadow:var(--sh);align-self:flex-start;border-bottom-left-radius:6px}
+.mb.me{align-self:flex-end;background:var(--primary);color:var(--on-primary);border-radius:18px;border-bottom-right-radius:6px;box-shadow:none}
+.mb.ai{background:var(--tint);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--primary) 22%,transparent)}
+.mb .tm{display:block;font-size:11px;opacity:.65;text-align:right;margin-top:2px;font-variant-numeric:tabular-nums}
+.who{font-size:11.5px;font-weight:700;color:var(--text-2);margin:2px 6px -4px;display:flex;align-items:center;gap:4px}
+.who.r{align-self:flex-end}
+.sysl{align-self:center;font-size:12px;font-weight:700;color:var(--text-2);background:var(--high);padding:5px 12px;border-radius:999px;display:flex;align-items:center;gap:6px;text-align:center}
+.composer{flex:none;display:flex;gap:6px;align-items:center;padding:10px 12px 30px;background:var(--card);border-top:1px solid var(--line-soft)}
+.composer .in{flex:1;height:46px;border-radius:999px;background:var(--high);display:flex;align-items:center;padding:0 16px;color:var(--text-3);font-size:15px}
+.send{width:46px;height:46px;border-radius:50%;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;flex:none}
+.qa{display:flex;gap:8px;padding:0 12px 8px;flex:none;overflow:hidden;white-space:nowrap}
+.qa .chip{height:34px;font-size:13px;padding:0 12px}
+.unread{min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:var(--primary);color:var(--on-primary);font-size:12px;font-weight:800;display:grid;place-items:center}
+/* lock screen */
+.lock{background:linear-gradient(165deg,var(--hero-a),var(--hero-b) 55%,#07080C);color:#fff}
+.lock .sb{color:#fff}
+.lock .clock{text-align:center;margin-top:34px}
+.lock .clock .d{font-size:17px;font-weight:600;opacity:.9}
+.lock .clock .t{font-size:84px;font-weight:700;letter-spacing:-.03em;line-height:1;margin-top:4px}
+.ntf{background:rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:22px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start;color:#fff}
+.ntf .ap{width:38px;height:38px;border-radius:11px;flex:none;display:grid;place-items:center;background:#fff;color:var(--hero-a)}
+.ntf .ap .i{width:22px;height:22px}
+.ntf .fx{flex:1;min-width:0}
+.ntf .hd{display:flex;justify-content:space-between;font-size:12.5px;font-weight:700;opacity:.75}
+.ntf .tt{font-weight:800;font-size:14.5px;margin-top:1px}
+.ntf .bd{font-size:14px;line-height:19px;opacity:.95}
+/* camera */
+.cam{background:#0B0D12;color:#fff}
+.cam .sb,.cam .appbar .ib,.cam .appbar h1{color:#fff}
+.camv{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 70%,#4a3a2a 0,transparent 55%),radial-gradient(ellipse at 75% 30%,#2e3a4a 0,transparent 50%),linear-gradient(180deg,#1b1f27,#2a2520);z-index:-1}
+.vf{width:250px;height:250px;margin:40px auto 0;position:relative;border-radius:28px;box-shadow:0 0 0 999px rgba(0,0,0,.55)}
+.vf>i{position:absolute;width:44px;height:44px;border:5px solid #fff}
+.vf>i:nth-child(1){left:-3px;top:-3px;border-right:0;border-bottom:0;border-top-left-radius:30px}
+.vf>i:nth-child(2){right:-3px;top:-3px;border-left:0;border-bottom:0;border-top-right-radius:30px}
+.vf>i:nth-child(3){left:-3px;bottom:-3px;border-right:0;border-top:0;border-bottom-left-radius:30px}
+.vf>i:nth-child(4){right:-3px;bottom:-3px;border-left:0;border-top:0;border-bottom-right-radius:30px}
+.vf .ln{position:absolute;left:18px;right:18px;top:46%;height:3px;border-radius:3px;background:var(--accent);box-shadow:0 0 18px 4px color-mix(in srgb,var(--accent) 60%,transparent)}
+.vf .ghost{position:absolute;inset:44px;border-radius:12px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.18) 0 9px,transparent 9px 16px),repeating-linear-gradient(0deg,rgba(255,255,255,.14) 0 9px,transparent 9px 18px);opacity:.7}
+/* misc planned */
+.dis{opacity:.45;filter:grayscale(.6)}
+.trade{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.trade>div{height:74px;border-radius:14px;background:var(--card);box-shadow:inset 0 0 0 1.5px var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:12.5px;font-weight:700;text-align:center;line-height:15px}
+.trade>div span{font-size:22px;line-height:1}
+.trade>div.on{box-shadow:inset 0 0 0 2px var(--primary);background:var(--pc);color:var(--on-pc)}
+.steps{display:flex;gap:6px}.steps i{flex:1;height:5px;border-radius:5px;background:var(--line)}.steps i.on{background:var(--primary)}
+.photo-drop{height:150px;border-radius:18px;border:2px dashed var(--outline);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--text-2);font-weight:700;font-size:14px;background:var(--tint)}
+.pay-opt{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:16px;background:var(--card);box-shadow:inset 0 0 0 1.5px var(--line)}
+.pay-opt.on{box-shadow:inset 0 0 0 2px var(--primary)}
+.radio{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 2px var(--outline);flex:none}
+.radio.on{box-shadow:inset 0 0 0 7px var(--primary)}
+.wlogo{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-weight:800;font-size:12px;color:#fff;flex:none}
+.poster{background:#fff;color:#111;border-radius:14px;box-shadow:var(--sh-lg);padding:18px 18px 14px;text-align:center;width:250px;margin:0 auto}
+.poster .qr{width:150px;height:150px;padding:8px;box-shadow:none;border-radius:10px;border:1px solid #eee}
+.banner.err{background:var(--ec);color:var(--on-ec)}
+.banner.err .btn{color:#fff;background:var(--error)}
+html[data-mode="dark"] .banner.err .btn{color:#3B1414}
+
 /* ============ DESIGN SYSTEM PANEL ============ */
 .ds{margin-top:72px;background:var(--doc-card);border-radius:28px;box-shadow:var(--sh);padding:36px}
 .ds h2{font-size:28px;margin:0 0 6px;letter-spacing:-.02em;font-weight:800}
@@ -410,6 +474,16 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
   <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2z"/></symbol>
   <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M8 22h8"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+  <symbol id="i-flash" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+  <symbol id="i-img" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></symbol>
 </svg>
 
 <div class="wrap">
@@ -419,6 +493,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
       <div class="eyebrow">SaudaSulf · Flutter app · Redesign mockups</div>
       <h1>A lighter, friendlier SaudaSulf</h1>
       <p>Every current screen, redrawn with white and soft-grey surfaces, one confident brand colour, rounded 18px cards, bigger tap targets and colour-coded order statuses. It replaces today's brown/terracotta Material&nbsp;3 theme, which felt heavy and dated. The screens, fields, actions and strings are the app's real ones (from <code>lib/features</code> and <code>app_en.arb</code>); only the look has changed.</p>
+      <p style="margin-top:10px">After those, two <strong>planned</strong> sections show the 17 screens the design spec still needs and the app doesn't have yet: chat, notifications, scanning a QR, shop sign-up, paying with a screenshot, adding products and more. They are marked <span style="font-weight:800;color:var(--on-ac);background:var(--ac);padding:1px 7px;border-radius:6px;font-size:13px">PLANNED</span>, and each names the part of the spec it comes from.</p>
     </div>
   </header>
 
@@ -1045,6 +1120,407 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
         <div class="hi"></div>
       </div></div>
       <figcaption><b>S13</b><strong>Orders in Urdu (RTL).</strong> The same screen as S2, mirrored, in Noto Nastaliq Urdu with a taller 2.0 line height. Numbers, prices and phone numbers stay left-to-right in Plus Jakarta Sans (wrapped in <code>&lt;bdi&gt;</code>), so they read as they do on a receipt.</figcaption>
+    </figure>
+
+  </div>
+
+  <!-- ===================================================== CUSTOMER · PLANNED -->
+  <div class="sec-h"><h2>Customer · planned</h2><span class="pill plan">7 frames · not built yet</span></div>
+  <p class="sec-p">Screens the design spec (<code>2026-11-13-grocery-app-design.md</code>, §7–§8) calls for that the app doesn't have yet. Chat and notifications wait for plan 5 (in-app chat and push); the rest are smaller pieces. The section in the spec is named under each frame.</p>
+
+  <div class="grid">
+
+    <!-- C10 Scan a QR -->
+    <figure>
+      <div class="device"><div class="phone cam">
+        <div class="camv"></div>
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div><h1>Scan the shop's QR</h1><div class="ib"><svg class="i"><use href="#i-flash"/></svg></div></div>
+        <div class="body" style="padding-top:0;gap:0">
+          <div class="vf"><i></i><i></i><i></i><i></i><div class="ghost"></div><div class="ln"></div></div>
+          <p style="text-align:center;font-weight:700;font-size:16px;margin:26px 0 4px;position:relative;z-index:1">Point at the QR on the counter or poster</p>
+          <p style="text-align:center;font-size:14px;opacity:.75;margin:0;position:relative;z-index:1">The shop opens by itself.</p>
+          <div style="margin-top:auto"></div>
+          <div class="btn" style="background:rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(8px)"><svg class="i"><use href="#i-qr"/></svg>Type the code instead</div>
+        </div>
+        <div class="hi" style="background:#fff"></div>
+      </div></div>
+      <figcaption><b class="pl">C10</b><span class="pltag">Planned</span><strong>Scan a QR.</strong> Opened from a “Scan QR” button on Add a shop (C4) and My shops, empty (C3b). The camera reads the <code>agentcraftr.com/s/&lt;code&gt;</code> link and goes straight to C4 with the shop already checked.<span class="why">Spec §2, §7. Today the customer types the code or opens the link from outside the app.</span></figcaption>
+    </figure>
+
+    <!-- C11 Order placed -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><span style="flex:1"></span><div class="ib"><svg class="i"><use href="#i-hdots"/></svg></div></div>
+        <div class="body" style="gap:14px">
+          <div class="empty" style="flex:none;padding-top:20px">
+            <div class="illo" style="background:radial-gradient(circle at 50% 45%,var(--s-done-bg),var(--tint) 70%)"><div class="big" style="color:var(--ok)"><svg class="i" style="stroke-width:2.4"><use href="#i-check"/></svg></div>
+              <span class="sp" style="left:14px;top:30px"></span><span class="sp" style="right:20px;bottom:24px;width:10px;height:10px;background:var(--primary)"></span></div>
+            <h2 class="h-l">Order placed</h2>
+            <p class="sub" style="font-size:15px;line-height:22px;margin:0">Al-Noor Grocery has your order. They may call <span class="num" style="font-weight:700;color:var(--text)">0300 1234567</span> to confirm it.</p>
+          </div>
+          <div class="card" style="padding:4px 16px">
+            <div class="line"><svg class="i s" style="color:var(--text-2)"><use href="#i-receipt"/></svg><div class="fx t-s num">Order #15</div><span class="st new">New</span></div>
+            <div class="line"><svg class="i s" style="color:var(--text-2)"><use href="#i-truck"/></svg><div class="fx sub" style="color:var(--text);font-size:14px">Delivery · 5 items</div><div class="amt">PKR 1,480</div></div>
+          </div>
+          <div class="note"><svg class="i s" style="flex:none;margin-top:1px"><use href="#i-bell"/></svg>We'll let you know when it's on its way.</div>
+          <div style="margin-top:auto"></div>
+          <div class="btn primary">Track my order</div>
+          <div class="btn ghost" style="height:44px;margin-top:-6px">Back to the shop</div>
+        </div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">C11</b><span class="pltag">Planned</span><strong>Order placed.</strong> Shown after Place order (C6) instead of going straight back. It confirms the order number and total, says the shop may call, and offers Track my order (C8).<span class="why">Spec §8 Ordering. Today the app returns to the shop with a short message.</span></figcaption>
+    </figure>
+
+    <!-- C12 Chat with the shop -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div>
+          <div class="logo-tile" style="width:38px;height:38px;font-size:19px;border-radius:12px">🛒</div>
+          <div style="flex:1;min-width:0;margin-left:10px"><div class="t-s">Al-Noor Grocery</div><div class="cap" style="font-weight:600">Replies at once</div></div>
+          <div class="ib"><svg class="i"><use href="#i-call"/></svg></div></div>
+        <div class="body" style="padding:6px 14px 10px;gap:8px;background:var(--bg)">
+          <div class="sysl">Today</div>
+          <div class="mb me">Do you have Dalda 5 litre?<span class="tm">4:02 pm</span></div>
+          <div class="who"><svg class="i xs" style="width:13px;height:13px"><use href="#i-sparkle"/></svg>Shop assistant (AI)</div>
+          <div class="mb ai">Yes. Dalda Cooking Oil 5 L is PKR 2,950.
+            <div class="card" style="display:flex;align-items:center;gap:10px;padding:8px;margin:8px 0 2px;box-shadow:none;border-radius:13px"><div class="thumb g6" style="width:40px;height:40px;font-size:20px">🧴</div><div style="flex:1"><div class="t-s" style="font-size:13.5px">Dalda 5 L</div><div class="cap num">PKR 2,950</div></div><div class="add" style="height:32px;padding:0 10px;font-size:13px"><svg class="i xs" style="stroke-width:2.6"><use href="#i-plus"/></svg>Add</div></div>
+            <span class="tm">4:02 pm</span></div>
+          <div class="mb me">Can you deliver before 6?<span class="tm">4:03 pm</span></div>
+          <div class="sysl"><svg class="i xs"><use href="#i-user"/></svg>Imran from the shop joined</div>
+          <div class="who">Imran</div>
+          <div class="mb">Ji, your order will reach you by 5:30.<span class="tm">4:05 pm</span></div>
+        </div>
+        <div class="composer"><div class="ib" style="width:40px;height:40px;color:var(--text-2)"><svg class="i"><use href="#i-cam"/></svg></div><div class="in">Type a message</div><div class="send"><svg class="i"><use href="#i-mic"/></svg></div></div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">C12</b><span class="pltag">Planned</span><strong>Chat with the shop.</strong> Opened from a Chat button on the shop card (C5). The AI answers first from the shop's own products and prices, and can show a product with Add. When a person steps in, a line says so and their name shows. Photo and voice note, like WhatsApp; the mic turns into Send once something is typed.<span class="why">Spec §8 Chat (the app as a new channel). Plan 5, not written yet.</span></figcaption>
+    </figure>
+
+    <!-- C13 Notifications -->
+    <figure>
+      <div class="device"><div class="phone lock">
+        <div class="sb"><span></span><svg><use href="#sbar"/></svg></div>
+        <div class="clock"><div class="d">Tuesday, 17 November</div><div class="t num">5:12</div></div>
+        <div class="body" style="padding-top:40px;gap:10px">
+          <div class="ntf"><div class="ap"><svg class="i"><use href="#i-basket"/></svg></div><div class="fx"><div class="hd"><span>SaudaSulf</span><span>now</span></div><div class="tt">Al-Noor Grocery</div><div class="bd">Order #15 is out for delivery.</div></div></div>
+          <div class="ntf"><div class="ap"><svg class="i"><use href="#i-basket"/></svg></div><div class="fx"><div class="hd"><span>SaudaSulf</span><span>12 min ago</span></div><div class="tt">Al-Noor Grocery · Imran</div><div class="bd">Ji, your order will reach you by 5:30.</div></div></div>
+          <div class="ntf" style="opacity:.8"><div class="ap"><svg class="i"><use href="#i-basket"/></svg></div><div class="fx"><div class="hd"><span>SaudaSulf</span><span>Yesterday</span></div><div class="tt">Shifa Pharmacy</div><div class="bd">Order #3 delivered. Thank you!</div></div></div>
+        </div>
+        <div class="hi" style="background:#fff"></div>
+      </div></div>
+      <figcaption><b class="pl">C13</b><span class="pltag">Planned</span><strong>Notifications.</strong> Order updates the shop switched on (S11) and chat replies arrive as phone notifications, each named after the shop. Tapping one opens that order or chat.<span class="why">Spec §8 Order status and Chat. Plan 5 (push).</span></figcaption>
+    </figure>
+
+    <!-- C14 Shop not taking app orders -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div><h1>Lahore Bakers</h1><div class="ib"><svg class="i"><use href="#i-lang"/></svg></div></div>
+        <div class="body" style="padding-top:2px;gap:12px">
+          <div class="card" style="padding:18px;box-shadow:inset 0 0 0 1.5px var(--line),var(--sh)">
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <div class="lic" style="background:var(--ac);color:var(--on-ac)"><svg class="i"><use href="#i-clock"/></svg></div>
+              <div style="flex:1"><div class="t">Not taking app orders right now</div><div class="sub" style="margin-top:4px;font-size:14px">You can still call the shop to order.</div></div>
+            </div>
+            <div class="btn primary" style="margin-top:14px;height:48px"><svg class="i s"><use href="#i-call"/></svg>Call Lahore Bakers</div>
+          </div>
+          <div class="row2"><div class="btn xs outline" style="color:var(--text)"><svg class="i s" style="color:var(--primary)"><use href="#i-receipt"/></svg>My orders</div><div class="btn xs outline" style="color:var(--text)"><svg class="i s" style="color:var(--primary)"><use href="#i-book"/></svg>My khata</div></div>
+          <div class="pgrid dis">
+            <div class="pc"><div class="ptile g1">🍞</div><div class="nm">Bread, large</div><div class="un">piece</div><div class="pr"><span class="price">PKR 220</span></div></div>
+            <div class="pc"><div class="ptile g4">🎂</div><div class="nm">Cake, 1 pound</div><div class="un">piece</div><div class="pr"><span class="price">PKR 950</span></div></div>
+            <div class="pc"><div class="ptile g3">🥐</div><div class="nm">Rusk</div><div class="un">pack</div><div class="pr"><span class="price">PKR 180</span></div></div>
+            <div class="pc"><div class="ptile g5">🍪</div><div class="nm">Biscuits</div><div class="un">½ kg</div><div class="pr"><span class="price">PKR 400</span></div></div>
+          </div>
+        </div>
+        <div class="fade-b"></div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">C14</b><span class="pltag">Planned</span><strong>Shop not taking app orders.</strong> The catalogue stays visible but faded, with no Add buttons and no cart bar. Call is the one action. My orders and My khata still work. The customer is never told why (the shop's billing is private).<span class="why">Spec §8: after the grace period when messages run out, or when the shop's package lapses.</span></figcaption>
+    </figure>
+
+    <!-- C15 Waiting for the shop to confirm you -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div><h1>My khata</h1></div>
+        <div class="body">
+          <div class="empty">
+            <div class="illo"><div class="big"><svg class="i"><use href="#i-lock"/></svg></div>
+              <span class="sp" style="left:16px;top:32px"></span><span class="sp" style="right:20px;bottom:26px;width:10px;height:10px;background:var(--primary)"></span></div>
+            <h2 class="h-l">Waiting for the shop to confirm you</h2>
+            <p class="sub" style="font-size:15px;line-height:22px;margin:0 0 6px">Al-Noor Grocery already knows this number. To keep your khata and old orders private, they check it's really you first, usually with a quick call.</p>
+            <div class="note" style="text-align:left;margin-bottom:10px"><svg class="i s" style="flex:none;margin-top:1px"><use href="#i-checkc"/></svg>You can still order and chat now.</div>
+            <div class="btn outline" style="width:auto;padding:0 24px"><svg class="i s"><use href="#i-call"/></svg>Call the shop</div>
+          </div>
+        </div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">C15</b><span class="pltag">Planned</span><strong>Waiting to be confirmed.</strong> When the typed number matches a customer the shop already has, nothing from before (old orders, chats, khata) shows until the shopkeeper taps Confirm on App customers (S10). This explains why, instead of showing an empty khata.<span class="why">Spec §8 “Typed number that the shop already knows”.</span></figcaption>
+    </figure>
+
+    <!-- C16 Profile -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div><h1>My profile</h1></div>
+        <div class="body" style="padding-top:4px;gap:12px">
+          <div class="card" style="padding:16px;display:flex;gap:14px;align-items:center">
+            <div class="av" style="width:52px;height:52px;font-size:17px">SM</div>
+            <div style="flex:1"><div class="t">Sana Malik</div><div class="sub num">0300 1234567</div></div>
+            <div class="btn xs outline">Edit</div>
+          </div>
+          <div class="list">
+            <div class="li" style="min-height:58px;padding:10px 16px"><div class="lic p"><svg class="i"><use href="#i-store"/></svg></div><div class="fx t-s">My shops</div><span class="cap">3</span><svg class="i s chev flip"><use href="#i-chev"/></svg></div>
+            <div class="li" style="min-height:58px;padding:10px 16px"><div class="lic p"><svg class="i"><use href="#i-bell"/></svg></div><div class="fx t-s">Notifications</div><span class="sw2 on"></span></div>
+            <div class="li" style="min-height:58px;padding:10px 16px"><div class="lic"><svg class="i"><use href="#i-lang"/></svg></div><div class="fx t-s">Language</div><div class="lang" style="box-shadow:inset 0 0 0 1.5px var(--line)"><span class="u">اردو</span></div></div>
+            <div class="li" style="min-height:58px;padding:10px 16px"><div class="lic"><svg class="i"><use href="#i-help"/></svg></div><div class="fx t-s">Help</div><svg class="i s chev flip"><use href="#i-chev"/></svg></div>
+          </div>
+          <div class="list">
+            <div class="li" style="min-height:54px;padding:8px 16px"><div class="lic"><svg class="i"><use href="#i-out"/></svg></div><div class="fx t-s">Sign out</div></div>
+            <div class="li" style="min-height:54px;padding:8px 16px;color:var(--error)"><div class="lic" style="background:var(--ec);color:var(--on-ec)"><svg class="i"><use href="#i-trash"/></svg></div><div class="fx t-s">Delete my account</div></div>
+          </div>
+        </div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">C16</b><span class="pltag">Planned</span><strong>My profile.</strong> Opened from ⋮ on My shops. Change name or number, notifications, language, help, sign out. <strong>Delete my account</strong> is required by Google Play and the App Store for any app with sign-up.<span class="why">Spec §8 Customer account. Today the only account screen is Sign up (C2).</span></figcaption>
+    </figure>
+
+  </div>
+
+  <!-- ===================================================== SHOP · PLANNED -->
+  <div class="sec-h"><h2>Shopkeeper · planned</h2><span class="pill plan">10 frames · not built yet</span></div>
+  <p class="sec-p">The shop side of the same gaps (spec §6a, §7, §8, §8a, §9): the real Chats tab, signing up a new shop, all customers, paying for the package, adding products, the messages-used-up states, a printable poster, the rider's view, and notifications.</p>
+
+  <div class="grid">
+
+    <!-- S14 Chats list -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar big"><h1>Chats</h1><div class="ib"><svg class="i"><use href="#i-search"/></svg></div></div>
+        <div class="body" style="padding-top:2px;gap:12px">
+          <div class="chips"><div class="chip work on">Needs you <span class="n">2</span></div><div class="chip work">AI answering <span class="n">5</span></div><div class="chip work">All</div></div>
+          <div class="list">
+            <div class="li"><div class="av">SM</div><div class="fx"><div style="display:flex;gap:8px;align-items:center"><span class="t-s">Sana Malik</span><span style="flex:1"></span><span class="cap num">4:03 pm</span></div>
+              <div style="display:flex;gap:8px;align-items:center;margin-top:3px"><span class="sub" style="flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Can you deliver before 6?</span><span class="unread">1</span></div>
+              <div style="margin-top:6px"><span class="tag warn"><svg class="i xs" style="width:12px;height:12px"><use href="#i-hand"/></svg>Needs you · asked about delivery time</span></div></div></div>
+            <div class="li"><div class="av c">FN</div><div class="fx"><div style="display:flex;gap:8px;align-items:center"><span class="t-s">Fatima Noor</span><span style="flex:1"></span><span class="cap num">3:51 pm</span></div>
+              <div style="display:flex;gap:8px;align-items:center;margin-top:3px"><span class="sub" style="flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🎤 Voice note (0:12)</span><span class="unread">2</span></div>
+              <div style="margin-top:6px"><span class="tag warn"><svg class="i xs" style="width:12px;height:12px"><use href="#i-hand"/></svg>Needs you · complaint</span></div></div></div>
+            <div class="li"><div class="av b">AR</div><div class="fx"><div style="display:flex;gap:8px;align-items:center"><span class="t-s">Ahmed Raza</span><span style="flex:1"></span><span class="cap num">2:15 pm</span></div>
+              <div class="sub" style="margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">AI: Sugar is PKR 150 per kg. Shall I add it?</div>
+              <div style="margin-top:6px"><span class="tag"><svg class="i xs" style="width:12px;height:12px"><use href="#i-sparkle"/></svg>AI answering</span></div></div></div>
+            <div class="li"><div class="av e">#</div><div class="fx"><div style="display:flex;gap:8px;align-items:center"><span class="t-s num">0333 9876543</span><span style="flex:1"></span><span class="cap">Mon</span></div>
+              <div class="sub" style="margin-top:3px">AI: Your order #11 is packed.</div></div></div>
+          </div>
+        </div>
+        <div class="nav"><div><span class="pi"><svg class="i"><use href="#i-receipt"/></svg></span>Orders</div><div><span class="pi"><svg class="i"><use href="#i-box"/></svg></span>Products</div><div><span class="pi"><svg class="i"><use href="#i-book"/></svg></span>Khata</div><div class="on"><span class="pi"><svg class="i"><use href="#i-chat"/></svg></span>Chats</div><div><span class="pi"><svg class="i"><use href="#i-hdots"/></svg></span>More</div></div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">S14</b><span class="pltag">Planned</span><strong>Chats.</strong> Replaces the “Coming next” placeholder (S7). Only app customers' chats show here; WhatsApp chats stay in CoAgent. “Needs you” first, with the reason the AI handed the chat over.<span class="why">Spec §8 Chat, Master Plan “Chat is in both apps”. Plan 5.</span></figcaption>
+    </figure>
+
+    <!-- S15 One chat -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div>
+          <div class="av" style="width:38px;height:38px;font-size:13px">SM</div>
+          <div style="flex:1;min-width:0;margin-left:10px"><div class="t-s">Sana Malik</div><div class="cap" style="font-weight:600">App customer · confirmed</div></div>
+          <div class="ib"><svg class="i"><use href="#i-call"/></svg></div></div>
+        <div class="banner" style="margin:0 12px;padding:8px 8px 8px 12px"><svg class="i s"><use href="#i-hand"/></svg><div class="fx" style="font-size:13px">You're replying. The AI is paused here.</div><div class="btn xs" style="height:32px">Hand back to AI</div></div>
+        <div class="body" style="padding:10px 14px 8px;gap:8px">
+          <div class="mb">Do you have Dalda 5 litre?<span class="tm">4:02 pm</span></div>
+          <div class="who r"><svg class="i xs" style="width:13px;height:13px"><use href="#i-sparkle"/></svg>AI</div>
+          <div class="mb me" style="background:var(--pc);color:var(--on-pc)">Yes. Dalda Cooking Oil 5 L is PKR 2,950. Shall I add it to your cart?<span class="tm">4:02 pm</span></div>
+          <div class="mb">Can you deliver before 6?<span class="tm">4:03 pm</span></div>
+          <div class="sysl"><svg class="i xs"><use href="#i-hand"/></svg>Handed to you: asked about delivery time</div>
+          <div class="who r">Imran</div>
+          <div class="mb me">Ji, your order will reach you by 5:30.<span class="tm">4:05 pm</span></div>
+        </div>
+        <div class="qa"><div class="chip"><svg class="i xs"><use href="#i-receipt"/></svg>Order #15</div><div class="chip"><svg class="i xs"><use href="#i-book"/></svg>Khata · PKR 2,340</div><div class="chip"><svg class="i xs"><use href="#i-box"/></svg>Send a product</div></div>
+        <div class="composer"><div class="ib" style="width:40px;height:40px;color:var(--text-2)"><svg class="i"><use href="#i-cam"/></svg></div><div class="in">Reply to Sana</div><div class="send"><svg class="i"><use href="#i-mic"/></svg></div></div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">S15</b><span class="pltag">Planned</span><strong>One chat.</strong> The AI's replies are tinted and labelled; staff replies show the person's name. Typing takes over from the AI, and “Hand back to AI” returns the chat. Shortcuts open the customer's order and khata, or send a product card.<span class="why">Spec §8 Chat: the same handover as WhatsApp. Plan 5.</span></figcaption>
+    </figure>
+
+    <!-- S16 Create your shop -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div><span style="flex:1"></span><div class="lang"><svg class="i s"><use href="#i-lang"/></svg><span class="u">اردو</span></div></div>
+        <div class="body" style="padding-top:6px;gap:14px">
+          <div class="steps"><i class="on"></i><i></i><i></i></div>
+          <div><h2 class="h-l">Create your shop</h2><p class="sub" style="margin:6px 0 0;font-size:15px">Step 1 of 3 · about 2 minutes</p></div>
+          <div class="field"><svg class="i ico"><use href="#i-store"/></svg><div class="fx"><label>Shop name</label><div class="v">Al-Noor Grocery</div></div></div>
+          <div class="field"><svg class="i ico"><use href="#i-pin"/></svg><div class="fx"><label>City</label><div class="v">Lahore</div></div><svg class="i ico"><use href="#i-down"/></svg></div>
+          <div class="over" style="margin-top:2px">What do you sell?</div>
+          <div class="trade">
+            <div class="on"><span>🛒</span>Grocery / Kiryana</div><div><span>💊</span>Pharmacy</div><div><span>🍞</span>Bakery</div>
+            <div><span>🧴</span>Cosmetics</div><div><span>✏️</span>Stationery</div><div><span>🔩</span>Hardware</div>
+          </div>
+          <p class="help" style="margin-top:-6px">Restaurants and food delivery will get their own app.</p>
+          <div style="margin-top:auto"></div>
+          <div class="btn primary">Continue</div>
+        </div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">S16</b><span class="pltag">Planned</span><strong>Create your shop.</strong> Reached from “New shop? Create one” on Sign in (S1). Step 1: name, city and trade (only trades that sell from a product list). Step 2: owner's name, phone, email and password. Step 3: pick a package and pay (S18). The product catalogue is created automatically.<span class="why">Spec §9 Sign-up. Today a shop must already have an AgentCraftr account.</span></figcaption>
+    </figure>
+
+    <!-- S17 Customers -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div><h1>Customers</h1></div>
+        <div class="body" style="padding-top:2px;gap:12px">
+          <div class="search"><svg class="i"><use href="#i-search"/></svg>Search name or number</div>
+          <div class="chips"><div class="chip work on">All <span class="n">128</span></div><div class="chip work">App <span class="n">42</span></div><div class="chip work">WhatsApp <span class="n">74</span></div><div class="chip work">Owe khata <span class="n">18</span></div></div>
+          <div class="list">
+            <div class="li"><div class="av">SM</div><div class="fx"><div class="t-s">Sana Malik</div><div class="sub">12 orders · last Tue</div><div style="display:flex;gap:6px;margin-top:5px"><span class="tag">App</span><span class="tag">WhatsApp</span></div></div><div style="text-align:right"><div class="cap">Khata</div><div class="amt">PKR 2,340</div></div></div>
+            <div class="li"><div class="av b">AR</div><div class="fx"><div class="t-s">Ahmed Raza</div><div class="sub">31 orders · last Mon</div><div style="display:flex;gap:6px;margin-top:5px"><span class="tag">WhatsApp</span></div></div><div style="text-align:right"><div class="cap">Khata</div><div class="amt err">PKR 6,800</div></div></div>
+            <div class="li"><div class="av c">FN</div><div class="fx"><div class="t-s">Fatima Noor</div><div class="sub">4 orders · last 2 Nov</div><div style="display:flex;gap:6px;margin-top:5px"><span class="tag">App</span></div></div><div style="text-align:right"><div class="cap">Khata</div><div class="amt">PKR 1,250</div></div></div>
+            <div class="li"><div class="av d">UA</div><div class="fx"><div class="t-s">Usman Ali</div><div class="sub">Walk-in · 2 orders</div></div><div style="text-align:right"><div class="cap">Khata</div><div class="amt" style="color:var(--text-3)">—</div></div></div>
+          </div>
+        </div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">S17</b><span class="pltag">Planned</span><strong>Customers.</strong> Every customer of the shop (app, WhatsApp, walk-in), with order count, last order and khata balance. Opened from More. Tapping a customer shows their orders, khata and chat. Same records as CoAgent's Customers.<span class="why">Spec §9 lists Customers. Today SaudaSulf has only App customers (S10), the sign-ups waiting to be confirmed.</span></figcaption>
+    </figure>
+
+    <!-- S18 Pay for the package -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div><h1>Pay for your package</h1></div>
+        <div class="body" style="padding-top:2px;gap:12px">
+          <div class="card" style="padding:14px 16px;display:flex;align-items:center;gap:12px">
+            <div class="lic p"><svg class="i"><use href="#i-store"/></svg></div>
+            <div style="flex:1"><div class="t-s">Dukaan · 1 month</div><div class="cap">5,000 messages · 4 staff logins</div></div>
+            <div class="amt" style="font-size:18px">PKR 1,999</div>
+          </div>
+          <div class="pay-opt on"><div class="radio on"></div><div class="wlogo" style="background:#C8102E">Jazz</div><div style="flex:1"><div class="t-s">JazzCash</div><div class="sub num">Send to 0300 0000000</div></div></div>
+          <div class="pay-opt"><div class="radio"></div><div class="wlogo" style="background:#1BA64B">ep</div><div style="flex:1"><div class="t-s">Easypaisa</div><div class="sub num">Send to 0345 0000000</div></div></div>
+          <div class="note"><svg class="i s" style="flex:none;margin-top:1px"><use href="#i-note"/></svg><span>Write reference <b class="num" style="color:var(--text)">SS-4821</b> with the payment.</span></div>
+          <div class="photo-drop" style="height:104px"><svg class="i l"><use href="#i-upload"/></svg>Add the payment screenshot</div>
+          <div style="margin-top:auto"></div>
+          <div class="btn primary">Send for checking</div>
+          <p class="help" style="text-align:center;margin:-2px 0 0">We confirm payments by hand, usually within a few hours.</p>
+        </div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">S18</b><span class="pltag">Planned</span><strong>Pay for your package.</strong> From Renew or Buy on Package &amp; messages (S12) and the last step of sign-up (S16). Choose JazzCash or Easypaisa, see the number and reference, attach the screenshot, send. The package switches on when our team confirms it. The numbers shown are placeholders until ours are entered.<span class="why">Spec §9 Billing (“pay by JazzCash / Easypaisa, upload proof”). Today the app shows How to pay with a reference but takes no screenshot.</span></figcaption>
+    </figure>
+
+    <!-- S19 Add a product -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div><h1>Add a product</h1></div>
+        <div class="body" style="padding-top:2px;gap:12px">
+          <div class="photo-drop"><svg class="i l"><use href="#i-cam"/></svg>Take a photo<span class="cap" style="font-weight:600">or choose from gallery</span></div>
+          <div class="field focus"><div class="fx"><label>Name</label><div class="v">Dalda Cooking Oil 5 L<span class="caret"></span></div></div></div>
+          <div class="field"><div class="fx"><label>Category</label><div class="v">Oil &amp; ghee</div></div><svg class="i ico"><use href="#i-down"/></svg></div>
+          <div class="over">Unit</div>
+          <div class="chips" style="-webkit-mask-image:none;mask-image:none"><div class="chip">kg</div><div class="chip">1 L</div><div class="chip on">piece</div><div class="chip">pack</div><div class="chip">dozen</div></div>
+          <div class="row2">
+            <div class="field"><div class="fx"><label>Price (PKR)</label><div class="v num">2,950</div></div></div>
+            <div class="field"><div class="fx"><label>Stock (optional)</label><div class="v num">12</div></div></div>
+          </div>
+          <div style="margin-top:auto"></div>
+          <div class="btn primary">Add product</div>
+        </div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">S19</b><span class="pltag">Planned</span><strong>Add a product.</strong> From a “+ Add a product” button on Products (S4). Photo, name, category, unit, price and optional stock. It goes into the shop's catalogue, so WhatsApp and the AI see it too.<span class="why">Spec §8 Shop page (photos, categories). Today Products only edits price and stock; new products are added on the website.</span></figcaption>
+    </figure>
+
+    <!-- S20 Messages used up · grace -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar big"><h1>Orders</h1></div>
+        <div class="body" style="padding-top:2px;gap:12px">
+          <div class="banner col err"><div class="bt"><svg class="i"><use href="#i-warn"/></svg><div class="fx"><b>Messages used up.</b> Customers can still order for <b class="num">5 h 40 min</b>. Pay to keep taking orders. The AI has stopped replying, so chats come to you.</div></div><div class="btn xs">Pay now <svg class="i xs flip"><use href="#i-chev"/></svg></div></div>
+          <div class="chips"><div class="chip work on">New <span class="n">3</span></div><div class="chip work">Packed <span class="n">1</span></div><div class="chip work">Out for delivery <span class="n">2</span></div><div class="chip work">Delivered</div></div>
+          <div class="list">
+            <div class="li" style="align-items:flex-start"><div class="av">SM</div><div class="fx"><div style="display:flex;gap:8px;align-items:center"><span class="t-s num">#15</span><span class="t-s" style="font-weight:600">Sana Malik</span><span style="flex:1"></span><span class="st new">New</span></div><div class="sub num" style="margin-top:2px">5:05 pm · PKR 1,480</div><div style="display:flex;gap:6px;margin-top:8px"><span class="tag">App</span></div></div></div>
+            <div class="li" style="align-items:flex-start"><div class="av b">AR</div><div class="fx"><div style="display:flex;gap:8px;align-items:center"><span class="t-s num">#13</span><span class="t-s" style="font-weight:600">Ahmed Raza</span><span style="flex:1"></span><span class="st new">New</span></div><div class="sub num" style="margin-top:2px">3:40 pm · PKR 860</div><div style="display:flex;gap:6px;margin-top:8px"><span class="tag">WhatsApp</span></div></div></div>
+          </div>
+        </div>
+        <div class="nav"><div class="on"><span class="pi"><svg class="i"><use href="#i-receipt"/></svg></span>Orders</div><div><span class="pi"><svg class="i"><use href="#i-box"/></svg></span>Products</div><div><span class="pi"><svg class="i"><use href="#i-book"/></svg></span>Khata</div><div><span class="pi"><svg class="i"><use href="#i-chat"/></svg></span>Chats</div><div><span class="pi"><svg class="i"><use href="#i-hdots"/></svg></span>More</div></div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">S20</b><span class="pltag">Planned</span><strong>Messages used up.</strong> The 95% banner (S2) turns red at 100% with a grace countdown (6 hours by default), and Pay now goes to S18. When the grace time ends, the banner reads “App ordering is closed until you pay” and customers see C14. WhatsApp orders are not affected.<span class="why">Spec §8 “When messages run out”: warn, grace period, then close.</span></figcaption>
+    </figure>
+
+    <!-- S21 Print poster -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar"><div class="ib"><svg class="i flip"><use href="#i-back"/></svg></div><h1>Poster</h1></div>
+        <div class="body" style="padding-top:2px;gap:14px">
+          <div class="seg"><div class="on">A4</div><div>A5</div><div>Counter stand</div></div>
+          <div class="poster">
+            <div style="font-weight:800;font-size:19px">Al-Noor Grocery</div>
+            <div style="font-size:12.5px;color:#555;margin:2px 0 10px">Order from us on SaudaSulf</div>
+            <div class="qr" style="margin:0 auto"><svg viewBox="0 0 25 25" shape-rendering="crispEdges"><rect width="25" height="25" fill="#fff"/><path fill="#111" d="M0 0h7v7H0zM18 0h7v7h-7zM0 18h7v7H0z"/><path fill="#fff" d="M1 1h5v5H1zM19 1h5v5h-5zM1 19h5v5H1z"/><path fill="#111" d="M2 2h3v3H2zM20 2h3v3h-3zM2 20h3v3H2zM9 1h2v2H9zM12 2h1v3h-1zM9 5h3v1H9zM14 0h2v2h-2zM8 8h3v1H8zM12 8h2v2h-2zM16 9h2v1h-2zM19 8h3v2h-3zM9 10h1v3H9zM11 11h3v1h-3zM15 11h1v3h-1zM17 12h3v1h-3zM21 12h3v2h-3zM0 9h2v2H0zM3 10h2v1H3zM1 13h3v1H1zM5 12h2v2H5zM8 15h2v2H8zM11 14h2v1h-2zM13 16h3v1h-3zM17 15h1v2h-1zM19 16h3v1h-3zM23 15h2v3h-2zM9 19h2v2H9zM12 18h2v2h-2zM15 19h3v1h-3zM19 19h2v2h-2zM22 20h2v1h-2zM9 23h4v1H9zM14 22h1v3h-1zM16 22h3v2h-3zM20 23h3v2h-3z"/></svg></div>
+            <div style="font-weight:800;font-size:22px;letter-spacing:.14em;margin-top:8px">K7P M4X</div>
+            <div style="font-size:11.5px;color:#555;line-height:16px;margin-top:6px">1 · Scan with your phone camera<br>2 · Install SaudaSulf (free)<br>3 · Order, see your khata, chat</div>
+            <div class="ur" dir="rtl" style="font-size:11px;color:#555;line-height:1.9;margin-top:4px">کیمرہ سے اسکین کریں اور آرڈر کریں</div>
+          </div>
+          <div style="margin-top:auto"></div>
+          <div class="row2"><div class="btn primary"><svg class="i"><use href="#i-print"/></svg>Print</div><div class="btn outline"><svg class="i"><use href="#i-share"/></svg>Share</div></div>
+        </div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">S21</b><span class="pltag">Planned</span><strong>Poster.</strong> From “Print poster” on Shop code &amp; QR (S9). A ready poster with the shop's name, QR, code and three steps in English and Urdu. Print goes to a phone printer or a Bluetooth receipt printer (hardware #3), or saves a PDF. Share sends it as a picture.<span class="why">Spec §7 (“a printable poster”). Today S9 shares only the link.</span></figcaption>
+    </figure>
+
+    <!-- S22 Rider -->
+    <figure>
+      <div class="device"><div class="phone">
+        <div class="sb"><span>9:41</span><svg><use href="#sbar"/></svg></div>
+        <div class="appbar big"><h1>To deliver</h1><span class="tag" style="margin-right:12px">Rider · Bilal</span></div>
+        <div class="body" style="padding-top:2px;gap:12px">
+          <div class="card" style="padding:16px">
+            <div style="display:flex;gap:10px;align-items:center"><span class="t-s num">#12</span><span class="t-s" style="font-weight:600;flex:1">Sana Malik</span><span class="st ofd">Out for delivery</span></div>
+            <div class="kv" style="margin-top:10px"><svg class="i s"><use href="#i-pin"/></svg><span>House 12, Street 4, Gulberg</span></div>
+            <div class="kv" style="margin-top:6px"><svg class="i s"><use href="#i-wallet"/></svg><span>Collect cash <b class="num">PKR 1,480</b></span></div>
+            <div class="kv" style="margin-top:6px"><svg class="i s"><use href="#i-note"/></svg><span>Call when you reach</span></div>
+            <div class="row2" style="margin-top:14px"><div class="btn tonal" style="height:48px"><svg class="i s"><use href="#i-call"/></svg>Call</div><div class="btn primary" style="height:48px"><svg class="i s"><use href="#i-cam"/></svg>Delivered</div></div>
+            <div class="btn danger" style="height:40px;font-size:14px;margin-top:4px"><svg class="i s"><use href="#i-warn"/></svg>A problem</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div style="display:flex;gap:10px;align-items:center"><span class="t-s num">#10</span><span class="t-s" style="font-weight:600;flex:1">Fatima Noor</span><span class="st ofd">Out for delivery</span></div>
+            <div class="kv" style="margin-top:10px"><svg class="i s"><use href="#i-pin"/></svg><span>Flat 3, Model Town Block C</span></div>
+            <div class="kv" style="margin-top:6px"><svg class="i s"><use href="#i-wallet"/></svg><span>Paid already</span></div>
+          </div>
+        </div>
+        <div class="nav"><div class="on"><span class="pi"><svg class="i"><use href="#i-truck"/></svg></span>To deliver</div><div><span class="pi"><svg class="i"><use href="#i-checkc"/></svg></span>Done today</div><div><span class="pi"><svg class="i"><use href="#i-hdots"/></svg></span>More</div></div>
+        <div class="hi"></div>
+      </div></div>
+      <figcaption><b class="pl">S22</b><span class="pltag">Planned</span><strong>Rider.</strong> A rider's login opens on “To deliver”: address, cash to collect, the customer's note, Call, and Delivered, which takes a proof photo. A warehouse login gets the same layout as “To pack” with Packed. No prices to edit, no khata, no settings.<span class="why">Spec §8a (riders and warehouse follow the order rule, so their screen is in SaudaSulf), CoAgent F4. Today a field login sees the owner's Orders screen with fewer buttons.</span></figcaption>
+    </figure>
+
+    <!-- S23 Shop notifications -->
+    <figure>
+      <div class="device"><div class="phone lock">
+        <div class="sb"><span></span><svg><use href="#sbar"/></svg></div>
+        <div class="clock"><div class="d">Tuesday, 17 November</div><div class="t num">5:06</div></div>
+        <div class="body" style="padding-top:40px;gap:10px">
+          <div class="ntf"><div class="ap"><svg class="i"><use href="#i-receipt"/></svg></div><div class="fx"><div class="hd"><span>SaudaSulf · Al-Noor Grocery</span><span>now</span></div><div class="tt">New order #15 · PKR 1,480</div><div class="bd">Sana Malik · 5 items · delivery</div></div></div>
+          <div class="ntf"><div class="ap"><svg class="i"><use href="#i-hand"/></svg></div><div class="fx"><div class="hd"><span>SaudaSulf · Al-Noor Grocery</span><span>2 min ago</span></div><div class="tt">Sana Malik needs you</div><div class="bd">The AI handed over the chat: asked about delivery time.</div></div></div>
+          <div class="ntf"><div class="ap" style="color:#9A3412"><svg class="i"><use href="#i-warn"/></svg></div><div class="fx"><div class="hd"><span>SaudaSulf · Al-Noor Grocery</span><span>9:00 am</span></div><div class="tt">80% of your messages are used</div><div class="bd">Buy a message pack so app orders don't stop.</div></div></div>
+        </div>
+        <div class="hi" style="background:#fff"></div>
+      </div></div>
+      <figcaption><b class="pl">S23</b><span class="pltag">Planned</span><strong>Shop notifications.</strong> New orders, chats handed to a person, and message warnings (80%, 95%, 3 days before the end, used up) reach the owner and staff. Notifications to the shop never count as messages.<span class="why">Spec §6a, §8 and plan 5 (push).</span></figcaption>
     </figure>
 
   </div>
