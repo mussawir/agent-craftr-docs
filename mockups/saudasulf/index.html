@@ -493,7 +493,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
       <div class="eyebrow">SaudaSulf · Flutter app · Redesign mockups</div>
       <h1>A lighter, friendlier SaudaSulf</h1>
       <p>Every current screen, redrawn with white and soft-grey surfaces, one confident brand colour, rounded 18px cards, bigger tap targets and colour-coded order statuses. It replaces today's brown/terracotta Material&nbsp;3 theme, which felt heavy and dated. The screens, fields, actions and strings are the app's real ones (from <code>lib/features</code> and <code>app_en.arb</code>); only the look has changed.</p>
-      <p style="margin-top:10px">After those, two <strong>planned</strong> sections show the 12 screens the design spec still needs and the app doesn't have yet: chat, notifications, scanning a QR, shop sign-up, paying with a screenshot, adding products and more. They are marked <span style="font-weight:800;color:var(--on-ac);background:var(--ac);padding:1px 7px;border-radius:6px;font-size:13px">PLANNED</span>, and each names the part of the spec it comes from.</p>
+      <p style="margin-top:10px">After those, two <strong>planned</strong> sections show the 12 screens the design spec still needs and the app doesn't have yet: scanning a QR, shop sign-up, paying with a screenshot, adding products and more. They are marked <span style="font-weight:800;color:var(--on-ac);background:var(--ac);padding:1px 7px;border-radius:6px;font-size:13px">PLANNED</span>, and each names the part of the spec it comes from.</p>
     </div>
   </header>
 
@@ -1126,7 +1126,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
 
   <!-- ===================================================== CUSTOMER · PLANNED -->
   <div class="sec-h"><h2>Customer · planned</h2><span class="pill plan">5 frames · not built yet</span></div>
-  <p class="sec-p">Screens the design spec (<code>2026-11-13-grocery-app-design.md</code>, §7–§8) calls for that the app doesn't have yet. Chat and notifications wait for plan 5 (in-app chat and push); the rest are smaller pieces. The section in the spec is named under each frame.</p>
+  <p class="sec-p">Screens the design spec (<code>2026-11-13-grocery-app-design.md</code>, §7–§8) calls for that the app doesn't have yet. C12 and C13 (S14, S15 and S23 on the shop side) are now built. The rest are smaller pieces. The section in the spec is named under each frame.</p>
 
   <div class="grid">
 
@@ -1194,10 +1194,10 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
           <div class="who">Imran</div>
           <div class="mb">Ji, your order will reach you by 5:30.<span class="tm">4:05 pm</span></div>
         </div>
-        <div class="composer"><div class="ib" style="width:40px;height:40px;color:var(--text-2)"><svg class="i"><use href="#i-cam"/></svg></div><div class="in">Type a message</div><div class="send"><svg class="i"><use href="#i-mic"/></svg></div></div>
+        <div class="composer"><div class="in">Type a message</div><div class="send"><svg class="i"><use href="#i-send"/></svg></div></div>
         <div class="hi"></div>
       </div></div>
-      <figcaption><b>C12</b><strong>Chat with the shop.</strong> Opened from a Chat button on the shop card (C5). The AI answers first from the shop's own products and prices, and can show a product with Add. When a person steps in, a line says so and their name shows. Photo and voice note, like WhatsApp; the mic turns into Send once something is typed.<span class="why">Built 2026-11-18. Spec §8 Chat (the app as a new channel). Plan 5.</span></figcaption>
+      <figcaption><b>C12</b><strong>Chat with the shop.</strong> Opened from a Chat button on the shop card (C5). The AI answers first from the shop's own products and prices, and can show a product with Add. When a person steps in, a line says so and their name shows. Text only for now; photos and voice notes come later.<span class="why">Built 2026-11-18. Spec §8 Chat (the app as a new channel). Plan 5.</span></figcaption>
     </figure>
 
     <!-- C13 Notifications -->
@@ -1293,7 +1293,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
 
   <!-- ===================================================== SHOP · PLANNED -->
   <div class="sec-h"><h2>Shopkeeper · planned</h2><span class="pill plan">7 frames · not built yet</span></div>
-  <p class="sec-p">The shop side of the same gaps (spec §6a, §7, §8, §8a, §9): the real Chats tab, signing up a new shop, all customers, paying for the package, adding products, the messages-used-up states, a printable poster, the rider's view, and notifications.</p>
+  <p class="sec-p">The shop side of the same gaps (spec §6a, §7, §8, §8a, §9): signing up a new shop, all customers, paying for the package, adding products, the messages-used-up states, a printable poster, and the rider's view. S14, S15 and S23 are now built (C12 and C13 on the customer side).</p>
 
   <div class="grid">
 
@@ -1343,7 +1343,7 @@ td code,.ds code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font
           <div class="mb me">Ji, your order will reach you by 5:30.<span class="tm">4:05 pm</span></div>
         </div>
         <div class="qa"><div class="chip"><svg class="i xs"><use href="#i-receipt"/></svg>Order #15</div><div class="chip"><svg class="i xs"><use href="#i-book"/></svg>Khata · PKR 2,340</div><div class="chip"><svg class="i xs"><use href="#i-box"/></svg>Send a product</div></div>
-        <div class="composer"><div class="ib" style="width:40px;height:40px;color:var(--text-2)"><svg class="i"><use href="#i-cam"/></svg></div><div class="in">Reply to Sana</div><div class="send"><svg class="i"><use href="#i-mic"/></svg></div></div>
+        <div class="composer"><div class="in">Reply to Sana</div><div class="send"><svg class="i"><use href="#i-send"/></svg></div></div>
         <div class="hi"></div>
       </div></div>
       <figcaption><b>S15</b><strong>One chat.</strong> The AI's replies are tinted and labelled; staff replies show the person's name. Typing takes over from the AI, and “Hand back to AI” returns the chat. Shortcuts open the customer's order and khata, or send a product card.<span class="why">Built 2026-11-18. Spec §8 Chat: the same handover as WhatsApp. Plan 5.</span></figcaption>
