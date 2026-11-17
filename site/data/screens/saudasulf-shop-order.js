@@ -9,68 +9,69 @@ Docs.screen({
     "owner",
     "staff"
   ],
-  "summary": "One order as the shop works it: the customer, what they asked for, and the next step. Each button moves the order on and tells the customer if the shop has that update switched on.",
+  "summary": "One order as the shop works it: the customer, what they asked for, and the next step. Each button moves the order on; the customer sees the new status in their app.",
   "image": "images/saudasulf/shop-order.png",
   "width": 1080,
   "height": 2400,
   "marks": [
     {
-      "id": "link",
+      "id": "status",
       "n": 1,
       "box": [
         42,
-        1098,
-        996,
-        72
+        210,
+        236,
+        84
       ],
       "kind": "info",
-      "label": "Not confirmed yet",
-      "text": "This customer joined through your code and you have not confirmed them. Call the number, then confirm in App customers."
+      "label": "Where the order is",
+      "text": "Each step has its own button: Mark packed, Send out for delivery, Mark delivered (Mark collected for a pickup). The customer sees the new status in their app. A customer who joined through your code and is not confirmed yet shows \"Not confirmed yet\" here, with a link to App customers."
     },
     {
-      "id": "out",
+      "id": "call",
       "n": 2,
       "box": [
         42,
-        1350,
+        1146,
         996,
         168
       ],
       "kind": "action",
-      "label": "Send out for delivery",
-      "text": "The order has left the shop. The customer sees it in the app. A pickup order has Mark collected instead."
-    },
-    {
-      "id": "delivered",
-      "n": 3,
-      "box": [
-        42,
-        1530,
-        996,
-        168
-      ],
-      "kind": "action",
-      "label": "Mark delivered",
-      "text": "The order reached the customer."
+      "label": "Call the customer",
+      "text": "Opens the phone with the number."
     },
     {
       "id": "paid",
-      "n": 4,
+      "n": 3,
       "box": [
         42,
-        1890,
+        1386,
         996,
         168
       ],
       "kind": "action",
       "label": "Payment received",
       "text": "For cash on delivery: tap when the customer has paid. It cannot be undone."
+    },
+    {
+      "id": "khata",
+      "n": 4,
+      "box": [
+        42,
+        1566,
+        996,
+        168
+      ],
+      "kind": "action",
+      "label": "Put on khata",
+      "text": "The customer will pay later: the total is added to their khata, once. Offered only for an order that is not paid, from a confirmed customer. Once it is on the khata, the payment is recorded there, not here.",
+      "go": "saudasulf-khata-account"
     }
   ],
   "arrows": [
     {
-      "from": "out",
-      "to": "delivered"
+      "from": "paid",
+      "to": "khata"
     }
   ]
 });

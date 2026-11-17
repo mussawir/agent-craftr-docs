@@ -46,9 +46,9 @@ Docs.page({
 <tr><td>App customers: confirm, not this person, block</td><td>Built (<a href="#/screen/saudasulf-app-customers">screen</a>)</td></tr>
 <tr><td>Catalogue, cart and checkout (prices from our side), My orders, cancel while new</td><td>Built (<a href="#/screen/saudasulf-shop-catalogue">catalogue</a>, <a href="#/screen/saudasulf-cart">cart</a>, <a href="#/screen/saudasulf-customer-order">order</a>)</td></tr>
 <tr><td>Shop: Orders (pack, out for delivery, delivered, payment received), Products (price, stock), order updates setting</td><td>Built (<a href="#/screen/saudasulf-shop-orders">orders</a>, <a href="#/screen/saudasulf-shop-products">products</a>)</td></tr>
-<tr><td>Message counting: every message counted once, warnings at 80% and 95%, 6-hour grace then ordering closes, extra packs, the "Package &amp; messages" screen and the usage banner</td><td>Built (waiting for the database update)</td></tr>
-<tr><td>CoAgent "Open in SaudaSulf", khata in the app, install link opens Add a shop</td><td>Building</td></tr>
+<tr><td>Message counting: every message counted once, warnings at 80% and 95%, 6-hour grace then ordering closes, extra packs, the "Package &amp; messages" screen and the usage banner</td><td>Built (waiting for the database update) (<a href="#/screen/saudasulf-package">package</a>, <a href="#/screen/saudasulf-usage-banner">banner</a>)</td></tr>
+<tr><td>CoAgent "Open in SaudaSulf", khata in the app, install link opens Add a shop</td><td>Built (waiting for the database update) (<a href="#/screen/saudasulf-shop-khata">shop khata</a>, <a href="#/screen/saudasulf-khata-account">account</a>, <a href="#/screen/saudasulf-khata-switch">khata switch</a>, <a href="#/screen/saudasulf-my-khata">my khata</a>, <a href="#/screen/saudasulf-shop-order">put on khata</a>, <a href="#/screen/saudasulf-add-shop">install link</a>)</td></tr>
 <tr><td>Chat in the app, notifications</td><td>Next</td></tr>
 </table>
-<p class="muted">Decisions as of 16 November 2026. Source: MASTER-PLAN.md, section 3.</p>`,
+<p class="muted">Decisions as of 17 November 2026. Source: MASTER-PLAN.md, section 3.</p>`,
 });
