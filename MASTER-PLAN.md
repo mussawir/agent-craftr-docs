@@ -104,6 +104,31 @@ Product rules:
 - ✅ **Group etiquette and privacy.** The AI reads other members' messages and writes as the user. The app says so clearly, and in groups auto-reply is off by default or limited to "only when I'm mentioned or asked directly", so it never floods a group.
 - ❓ Name, price and when to build: see section 13.
 
+### CRM ("Customers"): a CRM that fills itself from WhatsApp
+
+✅ Built (web 10 November, not deployed; CoAgent has the Customers list, profile and follow-ups). Design: `agentcraftr-backend/docs/superpowers/specs/2026-11-10-tenant-crm-design.md`. Screens: docs site → Web dashboard → Customers.
+
+**Why:** Pakistani shops and offices keep customers in Zoho, Bitrix24, HubSpot or a register, mainly for the customer list, notes, follow-ups and a sales pipeline. We already have the WhatsApp side: every sender becomes a customer automatically, with their orders, payments, bookings and requests attached. The CRM adds the layer a business works in every day. PKR, Urdu-friendly, no card payments, no typing customers in.
+
+| Part | What the business gets | Where |
+|---|---|---|
+| Customer list | Search; filter by stage, tag, owner, city, source, quiet for N days, follow-up due, own fields; sort; saved views; CSV export (admin) | Web Customers · CoAgent Customers |
+| Customer profile (360°) | Who they are, what they have paid (per currency, never mixed with pipeline), stage, and ONE timeline: chats, orders, payments, bookings, stays, requests, deals, notes, follow-ups | Web profile · CoAgent customer |
+| Stage, computed | Lead → Customer (1 purchase) → Repeat (2+) → Inactive (no purchase in 60 days). Never typed, so it can't go stale | Everywhere |
+| Notes | Many per customer, with author and time; never silently rewritten | Profile |
+| Follow-ups | "Call Ali about the quote, Thursday 4 pm, Sara"; overdue / today / upcoming; push to the person assigned when due | Web profile · CoAgent Follow-ups |
+| Own fields | Text, number, date, choice, yes/no ("Car model", "Budget"); suggested sets per trade | Web Customer fields |
+| Owner and deals | A staff owner per customer; deals with owner and expected close date on a board by stage | Web Deals |
+| Add by hand | Walk-in or phone customers, on a chosen WhatsApp number | Web Customers |
+| Khata | Udhaar per customer, gave/got, statements; shown in CoAgent and (when the shop allows) to the customer in SaudaSulf | Web Khata · CoAgent Khata · SaudaSulf |
+| AI customer notes | The agent keeps short notes about each customer and uses them in replies | Profile (changes live replies once deployed) |
+| Lead ads | Leads from Facebook/Instagram lead ads arrive as customers | Web Lead ads |
+
+**Rules:** one customer record (`contacts`), never a second table; the CRM never merges customers on its own; revenue is never added to pipeline value or across currencies; one "Customers" menu, one profile, one follow-ups list.
+
+**Not built yet:** quotes and invoices as documents, email campaigns, AI filling fields automatically.
+
+
 ---
 
 ## 4. Money: how it flows

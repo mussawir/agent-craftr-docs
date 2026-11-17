@@ -1,7 +1,7 @@
 /* Every file the site loads. Add a name here when you add a file in screens/, flows/ or pages/.
    The order here is the order in the menu and of "Next →" between screens. */
 window.DOCS_FILES = {
-  pages: ["what-is-agentcraftr", "items", "agent-and-handover", "trades-and-features", "roles", "plans-and-limits", "saudasulf", "consent", "glossary"],
+  pages: ["what-is-agentcraftr", "items", "agent-and-handover", "trades-and-features", "roles", "plans-and-limits", "crm", "saudasulf", "consent", "glossary"],
   screens: [
     /* web — public */
     "web-signup", "web-login",
