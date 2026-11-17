@@ -49,7 +49,7 @@ Docs.screen({
       "box": [454, 641, 532, 91],
       "kind": "action",
       "label": "City",
-      "text": "Lets a local partner help you set up, if there is one in your city."
+      "text": "Lets a local Franchise holder help you set up, if there is one in your city."
     },
     {
       "id": "continue",

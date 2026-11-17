@@ -2,9 +2,9 @@
 Docs.screen({
   "id": "partner-home",
   "app": "partner",
-  "section": "Partner",
-  "title": "Partner home",
-  "route": "/partner",
+  "section": "Franchise holder",
+  "title": "Franchise holder home",
+  "route": "/franchise",
   "roles": ["partner"],
   "summary": "What you earned, the businesses you brought in, and which ones need you today.",
   "image": "images/partner/home.png",
@@ -25,7 +25,7 @@ Docs.screen({
       "box": [543, 98, 290, 138],
       "kind": "info",
       "label": "Waiting to be paid",
-      "text": "Earned but not paid out yet. AgentCraftr pays partners monthly."
+      "text": "Earned but not paid out yet. AgentCraftr pays Franchise holders monthly."
     },
     {
       "id": "needs",

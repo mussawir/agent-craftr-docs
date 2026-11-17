@@ -19,7 +19,9 @@ Docs.page({
 <tr><td>Broadcast</td><td>An offer sent with a template to opted-in customers</td></tr>
 <tr><td>Number health</td><td>Meta's quality rating and daily limit for a WhatsApp number</td></tr>
 <tr><td>Business verification</td><td>Proving the business to Meta; needed to message more than 250 new people a day</td></tr>
-<tr><td>Partner</td><td>Someone who brings businesses in their cities and trades and earns a share</td></tr>
+<tr><td>Franchise holder</td><td>Someone who holds one or more Franchises, brings businesses to them and earns a share</td></tr>
+<tr><td>Franchise</td><td>A city and a trade together, for example Lahore · Grocery. One Franchise holder holds each Franchise</td></tr>
+<tr><td>Trade Partner</td><td>A person who looks after one trade across the platform and helps its businesses</td></tr>
 <tr><td>Khata</td><td>Customer credit: what a customer owes the shop</td></tr>
 </table>`,
 });

@@ -33,7 +33,7 @@ Docs.screen({
       "box": [549, 409, 342, 66],
       "kind": "action",
       "label": "Log in",
-      "text": "Opens your Home page, or the partner pages if you are a partner.",
+      "text": "Opens your Home page, or the Franchise holder pages if you are a Franchise holder.",
       "go": "web-home"
     },
     {

@@ -25,7 +25,7 @@ window.DOCS_FILES = {
 
 Docs.site({
   headline: "Learn AgentCraftr by looking at it.",
-  intro: "Every screen of the web dashboard, the mobile app, the partner pages and our admin, with each action marked: a numbered box shows what you can click, an arrow shows what comes next. Workflows show who does what, from a customer's first message to a confirmed payment.",
+  intro: "Every screen of the web dashboard, the mobile app, the Franchise holder pages and our admin, with each action marked: a numbered box shows what you can click, an arrow shows what comes next. Workflows show who does what, from a customer's first message to a confirmed payment.",
   heroScreen: "web-inbox",
   covers: { web: "web-home", partner: "partner-home", admin: "admin-home", mobile: "mobile-today", saudasulf: "saudasulf-welcome" },
   roles: [
@@ -33,7 +33,7 @@ Docs.site({
     { icon: "💬", title: "I work for a business", text: "Answer handed-over chats, pack orders, check payments.", href: "#/screen/web-inbox" },
     { icon: "📱", title: "I use the phone app", text: "Today's work, chats and teaching the agent from your phone.", href: "#/app/mobile" },
     { icon: "🛒", title: "I order or sell on SaudaSulf", text: "The ordering app: add your shop by code, or run your shop's orders.", href: "#/page/saudasulf" },
-    { icon: "🤝", title: "I'm a partner", text: "Bring businesses in your cities and trades, and track earnings.", href: "#/flow/partner-business" },
+    { icon: "🤝", title: "I'm a Franchise holder", text: "Bring businesses to your Franchises (a city and a trade), and track earnings.", href: "#/flow/partner-business" },
     { icon: "🛠️", title: "I'm on the AgentCraftr team", text: "Onboard tenants, watch numbers, confirm payments.", href: "#/app/admin" },
     { icon: "📘", title: "I'm new to all this", text: "What AgentCraftr is, in plain words, in five minutes.", href: "#/page/what-is-agentcraftr" },
   ],

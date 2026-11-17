@@ -51,7 +51,7 @@ Docs.screen({
       ],
       "kind": "action",
       "label": "Sign in",
-      "text": "Opens your shop. Platform admins and partners are refused: they use the website.",
+      "text": "Opens your shop. Platform admins and Franchise holders are refused: they use the website.",
       "go": "saudasulf-shop-orders"
     }
   ],
