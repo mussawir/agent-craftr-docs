@@ -126,6 +126,7 @@ Docs.page({
 <tr><td>Pick the CoAgent colour palette (Firoza, Neela or Shaam) in the mockups</td><td>Mussawir</td></tr>
 <tr><td>iOS builds, store listings, deploy</td><td>Mussawir</td></tr>
 </table>
+<p>Problems found and fixed so far, and what is still open: <a href="#/page/issues">Issues and resolutions</a>.</p>
 <p><b>Later, not planned yet:</b> owners see delivery photos inside the order; an option to create a packing task for every new order automatically; Trade Partner screens in CoAgent.</p>
 `
 });

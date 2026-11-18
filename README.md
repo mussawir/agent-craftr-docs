@@ -13,6 +13,8 @@ AI models, hardware, countries, launch tasks and who does what.
 
 **CoAgent (the mobile app):** see [COAGENT.md](COAGENT.md): every feature and its status, who uses it, screens and what comes next.
 
+**Issues and resolutions:** see [ISSUES.md](ISSUES.md): every problem found so far, how it was fixed, and what is still open.
+
 ## Open the interactive docs
 
 **Open `site/index.html` in a browser.** There's no build step and no server: it works straight from the folder.
