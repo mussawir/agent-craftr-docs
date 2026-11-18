@@ -21,6 +21,7 @@ Docs.page({
 <tr><td>Sectors and trades: 157 trades in 22 sectors; Trade Partners hold trades only, chosen in a searchable box</td><td>✅ Built; loaded into the database (18 Nov)</td></tr>
 <tr><td>SaudaSulf quick order bar (cart bar opens the order, Delivery by default, “Send order”)</td><td>✅ Built and reviewed</td></tr>
 <tr><td>SaudaSulf order by voice (paid add-on, English and Urdu, voice clip reaches the shop with the order)</td><td>✅ Built and reviewed; ⏳ database change waits for real prices</td></tr>
+<tr><td>Barcode scanning, SaudaSulf shop side (scan or type a code in the Products tab; add a product with or without a barcode; an unknown code offers “Add this product”)</td><td>✅ Built; ⏳ real-scanner test pending. CoAgent none; warehouse, market barcode and QR later</td></tr>
 <tr><td>User guides for every login, system check, issues log</td><td>✅ In these docs</td></tr>
 <tr><td>Going live</td><td>⏳ Waits on the items under “Still open”</td></tr>
 </table>
