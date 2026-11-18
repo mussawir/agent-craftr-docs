@@ -81,6 +81,12 @@ The chain: **AgentCraftr → Trade Partner → Franchise holder → Business →
 - ✅ **Khata is shown in both apps.** The same records; an entry made in either app shows in the other.
 - ✅ **Chat is in both apps.** The AI answers app customers first; when a person steps in, the shopkeeper replies in SaudaSulf (only app customers' chats, beside their orders) or in CoAgent (every chat).
 
+**Quick order bar and Order by voice (decided 2026-11-18):**
+- ✅ **Quick order bar** (free, every shop): the bar at the bottom of the shop screen shows "N items · Rs total"; tapping it opens the order details in place (items, total, Delivery by default or Pickup, address, note) with **"Send order"**. It replaces the separate cart and checkout steps; old cart links still open it. Prices still come from our side when the order is sent.
+- ✅ **Order by voice** (paid SaudaSulf add-on): the customer holds the mic (up to 60 seconds) and says the list in English, Urdu, Roman Urdu or a mix; we turn it into items from **that shop's** catalogue with quantities and prices. Unclear items ask a short question with up to 3 choices; the customer can always fix things by hand, then taps "Send order". The shop gets the recording with the order and can play it.
+- ✅ Sold monthly with a cap of voice orders plus extra voice packs; placeholder **PKR 999 for 300 voice orders** (❓ real price: Mussawir). Paid and confirmed like other payments; Franchise holders and Trade Partners earn nothing on it. Warnings at 80% and 95%; when used up or not bought, customers don't see the mic.
+- ✅ The customer is told the recording goes to the shop. Recordings are deleted 30 days after the order is delivered or cancelled (Claude's call). Design: `agentcraftr-backend/docs/superpowers/specs/2026-11-18-saudasulf-quick-order-and-voice-design.md`; plan: `docs/superpowers/plans/2026-11-18-saudasulf-quick-order-and-voice.md`. 🟡 Planned.
+
 **Personal WhatsApp: normal numbers with many groups (decided 2026-11-16):**
 
 Some people want AI help with their **normal WhatsApp** (not a business number) and are in many groups. They want their messages analysed and want the AI to reply for them.

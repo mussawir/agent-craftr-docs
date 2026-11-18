@@ -36,6 +36,7 @@ Docs.page({
 <tr><td>Bara</td><td>3,499</td><td>12,000</td><td>8</td></tr>
 </table>
 <p>Extra messages: 500 for PKR 499, or 2,000 for PKR 1,499, valid to the end of the month. Every communication in the app is one message: the customer's text, the order, an AI reply, a staff reply, each status update. A plain order is about 5 messages. No free trial; no commission on orders. Paid by JazzCash, Easypaisa or bank transfer and confirmed by our team, as with WhatsApp plans. The shop's code and QR work only while its package is paid.</p>
+<p><b>Order by voice (add-on, planned):</b> customers hold a mic and say their list; it becomes an order from the shop's own catalogue, and the shop can play the recording. Placeholder price PKR 999 a month for 300 voice orders, with extra voice packs (real price to be set). Paid and confirmed like other payments; no partner earnings. When the voice orders run out, customers simply don't see the mic.</p>
 
 <h2>What is built so far</h2>
 <table>
@@ -49,6 +50,8 @@ Docs.page({
 <tr><td>Message counting: every message counted once, warnings at 80% and 95%, 6-hour grace then ordering closes, extra packs, the "Package &amp; messages" screen and the usage banner</td><td>Built (waiting for the database update) (<a href="#/screen/saudasulf-package">package</a>, <a href="#/screen/saudasulf-usage-banner">banner</a>)</td></tr>
 <tr><td>CoAgent "Open in SaudaSulf", khata in the app, install link opens Add a shop</td><td>Built (waiting for the database update) (<a href="#/screen/saudasulf-shop-khata">shop khata</a>, <a href="#/screen/saudasulf-khata-account">account</a>, <a href="#/screen/saudasulf-khata-switch">khata switch</a>, <a href="#/screen/saudasulf-my-khata">my khata</a>, <a href="#/screen/saudasulf-shop-order">put on khata</a>, <a href="#/screen/saudasulf-add-shop">install link</a>)</td></tr>
 <tr><td>Chat with the shop in the app (AI first, staff take over), phone notifications for chats, order updates and messages</td><td>Built (waiting for the database update)</td></tr>
+<tr><td>Quick order bar: "N items · Rs total" opens the order details in place with "Send order" (replaces cart and checkout)</td><td>Planned</td></tr>
+<tr><td>Order by voice add-on: hold to record, items matched from the shop's catalogue, tap-to-pick for unclear items, the shop plays the recording; voice packs and warnings</td><td>Planned</td></tr>
 </table>
-<p class="muted">Decisions as of 17 November 2026. Source: MASTER-PLAN.md, section 3.</p>`,
+<p class="muted">Decisions as of 18 November 2026. Source: MASTER-PLAN.md, section 3.</p>`,
 });
