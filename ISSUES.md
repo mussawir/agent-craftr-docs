@@ -28,7 +28,7 @@ One log for the whole AgentCraftr project (backend, web, CoAgent, SaudaSulf app,
 | ISS-020 | 2026-11-18 | Statement months used UTC; earnings 00:00-05:00 PKT on the 1st fell in the previous month | Wrong month totals | Statements use Pakistan time (UTC+5) | Fixed | d3811bc |
 | ISS-021 | 2026-11-18 | Two Owners could demote each other at the same instant and leave no Owner | No admin Owner | Owner rows locked (with_for_update); the test checks the lock call, not the real race | Fixed | d3811bc |
 | ISS-022 | 2026-11-18 | Confirming a payment screenshot could mark an on-khata order paid | Order paid twice | Refused with 409; proof stays pending | Fixed | d3811bc |
-| ISS-023 | 2026-11-18 | Backend still returns the shop code while SaudaSulf payment is pending (apps show 'Not live') | Code visible before payment | Being fixed by another agent | In progress | OVERNIGHT-REPORT follow-ups |
+| ISS-023 | 2026-11-18 | Backend still returns the shop code while SaudaSulf payment is pending (apps show 'Not live') | Code visible before payment | Code and QR hidden until the package is live; web and SaudaSulf app show 'Not live' | Fixed | backend f837d3b, web d488a52, saudasulf bfcd06c |
 | ISS-024 | 2026-11-17 | Parked minors in chat and push: identity row not repaired after a merge; push text English only; no repeat staff alert once a person owns a chat | Small gaps | Rulings recorded; decide later | Later | chat-and-push ledger |
 | ISS-025 | 2026-11-17 | Staff khata has no idempotency key; a blocked-after-confirm link can still be put on khata from CoAgent | Rare duplicate or wrong entry | Parked in ledger | Later | order-rule-khata ledger |
 | ISS-026 | 2026-11-18 | Renewal while used up: the rule is not signed off | Unclear billing rule | Waiting for sign-off | Open - needs Mussawir | SAUDASULF-HANDOFF |
@@ -42,8 +42,8 @@ One log for the whole AgentCraftr project (backend, web, CoAgent, SaudaSulf app,
 | ISS-029 | 2026-11-18 | Admin billing payout dialog showed only one month | Admin could not see everything a payout settles | Dialog shows the whole payout | Fixed | 1e1e9a0 |
 | ISS-030 | 2026-11-18 | Shop code and QR shown while SaudaSulf payment was pending | Code shown before the package is live | Shown only while paid | Fixed | cb0b92b |
 | ISS-031 | 2026-11-18 | Deals.test raised an unhandled Router error | Noisy test | Test renders inside a router | Fixed | 2b3edb5 |
-| ISS-032 | 2026-11-18 | SaudaSulf menu item shows for every tenant | Shops without SaudaSulf see it | Being fixed by another agent | In progress | OVERNIGHT-REPORT |
-| ISS-033 | 2026-11-18 | npm audit reports 15 existing issues | Possible vulnerable packages | Being reviewed by another agent | In progress | saudasulf-web-fixes-report |
+| ISS-032 | 2026-11-18 | SaudaSulf menu item shows for every tenant | Shops without SaudaSulf see it | Menu item only for subscribed tenants; Billing has 'Start SaudaSulf' | Fixed | web 8cd1323 |
+| ISS-033 | 2026-11-18 | npm audit reports 15 existing issues | Possible vulnerable packages | npm audit fix + React Router 6 to 7: 15 to 6. The 6 left are dev-only (need vite 8 / vitest 5) | Fixed | web db05ea0 |
 | ISS-034 | 2026-11-18 | Admin menu shows the role from sign-in until the next sign-in | Menu can be stale (the API enforces the live role) | Accepted | Later | OVERNIGHT-REPORT |
 | ISS-035 | 2026-11-18 | Admin tracked social links can point at any external site | Misuse by an admin | Noted | Later | OVERNIGHT-REPORT |
 | ISS-036 | 2026-11-18 | New admin screens not tested by clicking in a browser; two full-run tests hit 5 s timeouts under load (pass alone) | Hidden UI bugs | Test once on staging | Open - needs Mussawir | OVERNIGHT-REPORT |
@@ -58,7 +58,7 @@ One log for the whole AgentCraftr project (backend, web, CoAgent, SaudaSulf app,
 | ISS-040 | 2026-11-18 | Double tap on Delivered opened the camera twice (two queued actions) | Duplicate deliveries | Guard covers the camera | Fixed | b0c418b |
 | ISS-041 | 2026-11-18 | Offline queue could drop a delivery silently | Lost delivery updates | Temporary errors retry; refusals show Retry and Discard | Fixed | 9331726 |
 | ISS-042 | 2026-11-18 | App sent the duplicate-protection header under one name only (knowledge uploads retried twice) | Double uploads | Sent under both names the server uses | Fixed | OVERNIGHT-REPORT |
-| ISS-043 | 2026-11-18 | Urdu and dark mode of the Firoza redesign not checked by eye; Urdu line height may clip; Noto Nastaliq not bundled | Possible layout problems | Being checked by another agent | In progress | coagent-redesign-report |
+| ISS-043 | 2026-11-18 | Urdu and dark mode of the Firoza redesign not checked by eye; Urdu line height may clip; Noto Nastaliq not bundled | Possible layout problems | Checked from screenshots: fixed Today tile overflow, chat punctuation and qty/order-number direction in Urdu; dark mode fine | Fixed | co-agent 095573d, saudasulf 3ca1634 |
 | ISS-044 | 2026-11-18 | Native Urdu read of the new CoAgent strings not done | Wording may be off | Needs a native reader | Open - needs Mussawir | OVERNIGHT-REPORT |
 | ISS-045 | 2026-11-18 | Parked minors: owner cannot see proof thumbnails; small UI edge cases | Small gaps | Parked in ledger | Later | coagent ledger M-1..M-4 |
 
