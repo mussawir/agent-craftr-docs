@@ -30,11 +30,11 @@ const BUSINESSES = [
 ];
 
 const handlers = [
-  { path: "partner/me", reply: () => ok({ id: 61, name: "Usman Tariq", territory: "Lahore", code: "usman-lhr",
+  { path: "franchise/me", reply: () => ok({ id: 61, name: "Usman Tariq", territory: "Lahore", code: "usman-lhr",
     cities: [{ id: 1, name: "Lahore" }, { id: 8, name: "Kasur" }],
     trades: [{ id: 1, name: "Grocery / kiryana store" }, { id: 3, name: "General clinic" }, { id: 5, name: "Bakery & sweets" }, { id: 7, name: "Clothing boutique" }],
     phone: "923000000061", payout_details: "Meezan Bank · 0000-0000000-01", deal: DEAL }) },
-  { path: "partner/home", reply: () => ok({
+  { path: "franchise/home", reply: () => ok({
     name: "Usman Tariq", territory: "Lahore, Kasur", code: "usman-lhr", deal: DEAL, currency: "PKR",
     earned_this_month: "4599.20", owed: "6200.00", paid_out: "18400.00", paying: 4, trial: 2, open_leads: 3,
     needs: [
@@ -43,8 +43,8 @@ const handlers = [
       { company_id: 510, kind: "setup", name: "Fresh Fruit Corner", phone: "923000000510", text: "Trial ends in 2 days. Their number isn't answering for a product yet." },
     ],
   }) },
-  { path: "partner/businesses", reply: () => ok(BUSINESSES) },
-  { path: "partner/trades", reply: () => ok([{ id: 1, name: "Grocery / kiryana store" }, { id: 3, name: "General clinic" }]) },
+  { path: "franchise/businesses", reply: () => ok(BUSINESSES) },
+  { path: "franchise/trades", reply: () => ok([{ id: 1, name: "Grocery / kiryana store" }, { id: 3, name: "General clinic" }]) },
 ];
 
 module.exports = { handlers };

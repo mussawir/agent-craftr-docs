@@ -23,7 +23,7 @@ const COMPANY = { id: 501, name: "Al-Noor Kiryana Store", city: "Lahore", phone:
 
 const USERS = {
   owner: { id: 101, name: "Bilal Ahmed", email: "bilal@alnoor-demo.pk", role: "Company Admin", role_id: 21, company_id: 501 },
-  admin: { id: 1, name: "AgentCraftr Support", email: "support@agentcraftr-demo.com", role: "SuperAdmin", role_id: 7, company_id: null },
+  admin: { id: 1, name: "AgentCraftr Support", email: "support@agentcraftr-demo.com", role: "SuperAdmin", role_id: 7, company_id: null, admin_role: "owner" },
   partner: { id: 301, name: "Usman Tariq", email: "usman.partner@demo.pk", role: "Franchise holder", role_id: 30, company_id: null },
 };
 
