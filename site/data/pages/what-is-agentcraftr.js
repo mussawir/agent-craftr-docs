@@ -19,7 +19,7 @@ Docs.page({
 
 <h2>Who uses it</h2>
 <ul>
-<li><b>Business owners</b> set it up and watch the business: <a href="#/app/web">web dashboard</a> and <a href="#/app/mobile">phone app</a>.</li>
+<li><b>Business owners</b> set it up and watch the business: <a href="#/app/web">web dashboard</a> and <a href="#/app/mobile">phone app</a> (<a href="#/page/coagent">CoAgent</a>).</li>
 <li><b>Staff</b> answer handed-over chats, pack orders and check payments.</li>
 <li><b>Franchise holders</b> bring businesses to their Franchises (a city and a trade): <a href="#/app/partner">Franchise holder pages</a>.</li>
 <li><b>Our team</b> onboards businesses, watches numbers and confirms payments: <a href="#/app/admin">admin</a>.</li>
