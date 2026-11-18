@@ -108,6 +108,18 @@ Docs.page({
 <li>The database change (<code>partner_billing_crm.sql</code>: proof columns, where a lead came from, follow-up indexes) is written but <b>not applied yet</b>; apply it after a backup, before going live.</li>
 </ul>
 
+<h2>Bluetooth receipt printer (hardware #3)</h2>
+<p>The first hardware we can sell with both apps: a cheap 58 mm or 80 mm Bluetooth thermal printer. It needs no software change on the server.</p>
+<ul>
+<li><b>Set up once:</b> pair the printer in the phone&rsquo;s Bluetooth settings, then open <b>More → Receipt printer</b> (CoAgent) or the printer row in the shop&rsquo;s settings (SaudaSulf). Pick it, choose 58 or 80 mm, and press <b>Test print</b>.</li>
+<li><b>Print</b> on an order prints the receipt; <b>Print statement</b> on a khata account prints the statement. In SaudaSulf this is for the shop only, not customers.</li>
+<li>Urdu prints correctly: the receipt is printed as a picture, because these printers have no Urdu font. A long statement prints in one piece and is cut once at the end.</li>
+<li>If the printer is off or far away, the phone says so within 10 seconds and offers <b>Print another way</b> (the normal PDF print or share).</li>
+<li><b>Android only.</b> On iPhone, Print keeps the normal PDF print dialog, because most cheap printers don&rsquo;t work with iPhones.</li>
+<li>The printer is remembered per phone. Warehouse and rider logins don&rsquo;t see the printer setting.</li>
+<li>Not yet tried on a real printer: see “Still open”.</li>
+</ul>
+
 <h2>Decisions taken while building</h2>
 <ol>
 <li>Only what people see was renamed (and web addresses). Code and database names stay; a table in the backend <code>CLAUDE.md</code> maps old to new.</li>
@@ -124,6 +136,7 @@ Docs.page({
 <tr><td>Firebase set-up so SaudaSulf can send notifications</td><td>Mussawir</td></tr>
 <tr><td>A native speaker reads the new Urdu text in both apps</td><td>Team</td></tr>
 <tr><td>Pick the CoAgent colour palette (Firoza, Neela or Shaam) in the mockups</td><td>Mussawir</td></tr>
+<tr><td>Try the receipt printing on one real 58 mm and one 80 mm printer: test print, an order with Urdu names, a long khata statement, and Print with the printer switched off</td><td>Mussawir</td></tr>
 <tr><td>iOS builds, store listings, deploy</td><td>Mussawir</td></tr>
 </table>
 <p>Problems found and fixed so far, and what is still open: <a href="#/page/issues">Issues and resolutions</a>.</p>

@@ -238,7 +238,7 @@ A text reply's Meta fee (~PKR 4) is already far more than our AI cost (under PKR
 |---|---|---|---|---|
 | 1 | **QR stands, stickers, posters** | Customers scan to order and chat on WhatsApp / SaudaSulf | None (the app already makes the QR and poster) | At launch |
 | 2 | **Franchise starter kit**: stands, brochures, a demo printer, branded bag | The Franchise holder can demonstrate on day one | None | At launch, inside the franchise fee |
-| 3 | **Bluetooth receipt printer** (58/80 mm) | Prints receipts and khata statements from the phone | Small: direct printing in CoAgent and SaudaSulf | First month |
+| 3 | **Bluetooth receipt printer** (58/80 mm) | Prints receipts and khata statements from the phone | Small: direct printing in CoAgent and SaudaSulf (✅ built 2026-11-18, Android; real-printer test pending) | First month |
 | 4 | **Bluetooth barcode scanner** | Products into the catalogue and at checkout | Small: a scan field | First months |
 | 5 | **Counter tablet / kitchen screen** | New orders, today's bookings, clinic token screen | Medium: "counter mode" in CoAgent | After launch |
 | 6 | **AgentCraftr POS box** (Wi-Fi Android device with a built-in printer) | One branded counter device running our apps | Low: our apps preinstalled | After testing 2–3 models |
