@@ -18,10 +18,10 @@ Docs.screen({
       "id": "kind",
       "n": 1,
       "box": [
-        42,
-        210,
-        996,
-        72
+        54,
+        192,
+        972,
+        78
       ],
       "kind": "action",
       "label": "Kind",
@@ -31,9 +31,9 @@ Docs.screen({
       "id": "what",
       "n": 2,
       "box": [
-        90,
-        720,
-        249,
+        114,
+        714,
+        242,
         60
       ],
       "kind": "action",
@@ -44,9 +44,9 @@ Docs.screen({
       "id": "name",
       "n": 3,
       "box": [
-        90,
-        1200,
-        372,
+        114,
+        1239,
+        379,
         60
       ],
       "kind": "action",
@@ -57,9 +57,9 @@ Docs.screen({
       "id": "whatsapp",
       "n": 4,
       "box": [
-        90,
-        1398,
-        245,
+        114,
+        1455,
+        255,
         60
       ],
       "kind": "action",
@@ -70,10 +70,10 @@ Docs.screen({
       "id": "due",
       "n": 5,
       "box": [
-        162,
-        1775,
-        876,
-        84
+        168,
+        1848,
+        858,
+        75
       ],
       "kind": "action",
       "label": "Due date",
@@ -83,10 +83,10 @@ Docs.screen({
       "id": "save",
       "n": 6,
       "box": [
-        42,
-        1998,
-        996,
-        156
+        54,
+        2046,
+        972,
+        168
       ],
       "kind": "action",
       "label": "Save",

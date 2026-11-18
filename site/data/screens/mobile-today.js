@@ -18,9 +18,9 @@ Docs.screen({
       "id": "trial",
       "n": 1,
       "box": [
-        162,
-        246,
-        840,
+        192,
+        218,
+        798,
         69
       ],
       "kind": "warn",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "needs",
       "n": 2,
       "box": [
-        210,
-        1212,
-        568,
-        156
+        258,
+        495,
+        603,
+        138
       ],
       "kind": "action",
       "label": "Needs you",
@@ -45,10 +45,10 @@ Docs.screen({
       "id": "quota",
       "n": 3,
       "box": [
-        162,
-        2493,
-        840,
-        69
+        174,
+        1899,
+        810,
+        72
       ],
       "kind": "info",
       "label": "AI replies this month",
@@ -59,9 +59,9 @@ Docs.screen({
       "n": 4,
       "box": [
         591,
-        420,
-        315,
-        69
+        2115,
+        323,
+        63
       ],
       "kind": "info",
       "label": "Confirmed today",

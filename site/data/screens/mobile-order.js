@@ -18,9 +18,9 @@ Docs.screen({
       "id": "total",
       "n": 1,
       "box": [
-        84,
-        953,
-        651,
+        96,
+        905,
+        619,
         81
       ],
       "kind": "info",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "receipt",
       "n": 2,
       "box": [
-        262,
-        1151,
-        103,
-        63
+        277,
+        1100,
+        115,
+        69
       ],
       "kind": "action",
       "label": "Print / Share PDF",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "out",
       "n": 3,
       "box": [
-        42,
-        1824,
-        996,
-        156
+        54,
+        1776,
+        972,
+        168
       ],
       "kind": "action",
       "label": "Mark out for delivery",

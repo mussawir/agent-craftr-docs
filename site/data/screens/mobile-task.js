@@ -18,10 +18,10 @@ Docs.screen({
       "id": "who",
       "n": 1,
       "box": [
-        90,
-        582,
-        605,
-        72
+        102,
+        504,
+        654,
+        78
       ],
       "kind": "info",
       "label": "Who · By when",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "start",
       "n": 2,
       "box": [
-        42,
-        726,
-        256,
-        156
+        54,
+        654,
+        237,
+        168
       ],
       "kind": "action",
       "label": "Start",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "done",
       "n": 3,
       "box": [
-        310,
-        726,
-        372,
-        156
+        303,
+        654,
+        366,
+        168
       ],
       "kind": "action",
       "label": "Mark done",
@@ -57,10 +57,10 @@ Docs.screen({
       "id": "problem",
       "n": 4,
       "box": [
-        168,
-        941,
-        339,
-        63
+        186,
+        878,
+        393,
+        69
       ],
       "kind": "action",
       "label": "Report a problem",
@@ -70,10 +70,10 @@ Docs.screen({
       "id": "update",
       "n": 5,
       "box": [
-        42,
-        1242,
-        852,
-        180
+        54,
+        1209,
+        828,
+        156
       ],
       "kind": "action",
       "label": "Write an update",

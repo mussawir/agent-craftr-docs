@@ -19,7 +19,7 @@ Docs.screen({
       "n": 1,
       "box": [
         66,
-        234,
+        240,
         948,
         99
       ],
@@ -32,7 +32,7 @@ Docs.screen({
       "n": 2,
       "box": [
         174,
-        477,
+        489,
         732,
         732
       ],
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "poster",
       "n": 3,
       "box": [
-        336,
-        1482,
-        461,
-        66
+        324,
+        1509,
+        516,
+        72
       ],
       "kind": "action",
       "label": "Print / share as poster",

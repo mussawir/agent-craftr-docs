@@ -17,10 +17,10 @@ Docs.screen({
       "id": "title",
       "n": 1,
       "box": [
+        12,
         42,
-        45,
-        200,
-        78
+        232,
+        90
       ],
       "kind": "info",
       "label": "To pack",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "row",
       "n": 2,
       "box": [
-        84,
-        252,
-        137,
-        72
+        270,
+        246,
+        161,
+        75
       ],
       "kind": "action",
       "label": "An order",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "total",
       "n": 3,
       "box": [
-        780,
-        294,
-        216,
-        72
+        742,
+        254,
+        236,
+        75
       ],
       "kind": "info",
       "label": "Total",

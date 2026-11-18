@@ -18,8 +18,8 @@ Docs.screen({
       "n": 1,
       "box": [
         84,
-        252,
-        701,
+        258,
+        661,
         81
       ],
       "kind": "action",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "left",
       "n": 2,
       "box": [
-        797,
-        263,
-        175,
-        60
+        787,
+        270,
+        185,
+        57
       ],
       "kind": "warn",
       "label": "Days left",
@@ -44,8 +44,8 @@ Docs.screen({
       "n": 3,
       "box": [
         84,
-        405,
-        229,
+        417,
+        234,
         69
       ],
       "kind": "info",
@@ -56,10 +56,10 @@ Docs.screen({
       "id": "stuck",
       "n": 4,
       "box": [
-        108,
-        873,
-        493,
-        60
+        138,
+        893,
+        538,
+        57
       ],
       "kind": "warn",
       "label": "What is stuck",

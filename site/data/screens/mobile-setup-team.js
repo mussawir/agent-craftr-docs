@@ -17,10 +17,10 @@ Docs.screen({
       "id": "me",
       "n": 1,
       "box": [
-        270,
-        227,
-        497,
-        84
+        258,
+        222,
+        504,
+        75
       ],
       "kind": "info",
       "label": "You",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "role",
       "n": 2,
       "box": [
-        270,
-        518,
-        497,
-        72
+        258,
+        468,
+        504,
+        69
       ],
       "kind": "info",
       "label": "Role",
@@ -43,10 +43,10 @@ Docs.screen({
       "id": "invited",
       "n": 3,
       "box": [
-        818,
-        927,
-        124,
-        60
+        838,
+        809,
+        128,
+        57
       ],
       "kind": "warn",
       "label": "Invited",
@@ -56,10 +56,10 @@ Docs.screen({
       "id": "send",
       "n": 4,
       "box": [
-        287,
-        1104,
-        555,
-        66
+        259,
+        969,
+        633,
+        72
       ],
       "kind": "action",
       "label": "Send the link on WhatsApp",
@@ -69,10 +69,10 @@ Docs.screen({
       "id": "invite",
       "n": 5,
       "box": [
-        861,
-        2237,
-        117,
-        63
+        838,
+        2234,
+        140,
+        69
       ],
       "kind": "action",
       "label": "Invite",

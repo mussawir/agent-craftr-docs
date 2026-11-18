@@ -18,10 +18,10 @@ Docs.screen({
       "id": "late",
       "n": 1,
       "box": [
-        162,
-        330,
-        468,
-        72
+        264,
+        348,
+        336,
+        126
       ],
       "kind": "warn",
       "label": "Late",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "row",
       "n": 2,
       "box": [
-        162,
-        441,
-        468,
-        156
+        264,
+        525,
+        336,
+        201
       ],
       "kind": "action",
       "label": "A follow-up",
@@ -45,8 +45,8 @@ Docs.screen({
       "id": "snooze",
       "n": 3,
       "box": [
-        702,
-        252,
+        666,
+        306,
         84,
         84
       ],
@@ -58,10 +58,10 @@ Docs.screen({
       "id": "done",
       "n": 4,
       "box": [
-        857,
-        263,
-        109,
-        63
+        812,
+        312,
+        129,
+        72
       ],
       "kind": "action",
       "label": "Done",

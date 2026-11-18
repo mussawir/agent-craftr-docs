@@ -18,7 +18,7 @@ Docs.screen({
       "n": 1,
       "box": [
         966,
-        42,
+        45,
         84,
         84
       ],
@@ -31,9 +31,9 @@ Docs.screen({
       "n": 2,
       "box": [
         90,
-        251,
-        756,
-        84
+        246,
+        786,
+        75
       ],
       "kind": "action",
       "label": "A person",
@@ -44,9 +44,9 @@ Docs.screen({
       "n": 3,
       "box": [
         90,
-        539,
-        756,
-        72
+        489,
+        786,
+        69
       ],
       "kind": "info",
       "label": "Their own length",
@@ -56,10 +56,10 @@ Docs.screen({
       "id": "off",
       "n": 4,
       "box": [
-        750,
-        726,
-        216,
-        60
+        695,
+        635,
+        295,
+        75
       ],
       "kind": "warn",
       "label": "Switched off",

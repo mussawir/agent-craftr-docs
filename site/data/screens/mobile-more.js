@@ -18,10 +18,10 @@ Docs.screen({
       "id": "items",
       "n": 1,
       "box": [
-        210,
-        795,
-        636,
-        84
+        264,
+        785,
+        600,
+        75
       ],
       "kind": "action",
       "label": "Business and services",
@@ -32,10 +32,10 @@ Docs.screen({
       "id": "team",
       "n": 2,
       "box": [
-        210,
-        966,
-        636,
-        84
+        264,
+        962,
+        600,
+        75
       ],
       "kind": "action",
       "label": "Team",
@@ -46,10 +46,10 @@ Docs.screen({
       "id": "features",
       "n": 3,
       "box": [
-        210,
-        1137,
-        636,
-        84
+        264,
+        1139,
+        600,
+        75
       ],
       "kind": "action",
       "label": "Features",
@@ -60,10 +60,10 @@ Docs.screen({
       "id": "number",
       "n": 4,
       "box": [
-        210,
-        1308,
-        636,
-        84
+        264,
+        1316,
+        600,
+        75
       ],
       "kind": "action",
       "label": "WhatsApp number",
@@ -74,10 +74,10 @@ Docs.screen({
       "id": "teach",
       "n": 5,
       "box": [
-        210,
-        1512,
-        636,
-        84
+        264,
+        1526,
+        600,
+        75
       ],
       "kind": "action",
       "label": "Teach your agent",
@@ -88,10 +88,10 @@ Docs.screen({
       "id": "tasks",
       "n": 6,
       "box": [
-        210,
-        1683,
-        636,
-        84
+        264,
+        1703,
+        600,
+        75
       ],
       "kind": "action",
       "label": "Tasks",

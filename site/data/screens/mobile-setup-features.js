@@ -18,9 +18,9 @@ Docs.screen({
       "n": 1,
       "box": [
         42,
-        210,
+        216,
         996,
-        60
+        69
       ],
       "kind": "info",
       "label": "Changes at once",
@@ -30,8 +30,8 @@ Docs.screen({
       "id": "orders",
       "n": 2,
       "box": [
-        774,
-        378,
+        798,
+        390,
         192,
         132
       ],
@@ -44,9 +44,9 @@ Docs.screen({
       "n": 3,
       "box": [
         90,
-        510,
-        357,
-        72
+        516,
+        349,
+        69
       ],
       "kind": "info",
       "label": "Part of your trade",
@@ -57,9 +57,9 @@ Docs.screen({
       "n": 4,
       "box": [
         90,
-        1182,
-        648,
-        84
+        1188,
+        678,
+        75
       ],
       "kind": "action",
       "label": "Appointments",

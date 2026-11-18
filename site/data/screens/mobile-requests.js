@@ -19,9 +19,9 @@ Docs.screen({
       "n": 1,
       "box": [
         198,
-        201,
-        148,
-        72
+        209,
+        171,
+        69
       ],
       "kind": "action",
       "label": "Quotes · Jobs · Complaints · Enquiries",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "row",
       "n": 2,
       "box": [
-        84,
-        540,
-        746,
-        72
+        96,
+        510,
+        691,
+        69
       ],
       "kind": "action",
       "label": "A request",
@@ -45,9 +45,9 @@ Docs.screen({
       "id": "new",
       "n": 3,
       "box": [
-        675,
-        6,
-        411,
+        641,
+        9,
+        445,
         156
       ],
       "kind": "action",

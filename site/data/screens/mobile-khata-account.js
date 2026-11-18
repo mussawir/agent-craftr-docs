@@ -18,10 +18,10 @@ Docs.screen({
       "id": "balance",
       "n": 1,
       "box": [
-        755,
-        339,
-        241,
-        72
+        705,
+        296,
+        279,
+        81
       ],
       "kind": "info",
       "label": "What they owe",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "given",
       "n": 2,
       "box": [
-        84,
-        507,
-        444,
-        156
+        96,
+        510,
+        450,
+        168
       ],
       "kind": "action",
       "label": "Took on credit",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "payment",
       "n": 3,
       "box": [
-        540,
-        507,
-        354,
-        156
+        558,
+        510,
+        347,
+        168
       ],
       "kind": "action",
       "label": "Paid back",
@@ -57,10 +57,10 @@ Docs.screen({
       "id": "remind",
       "n": 4,
       "box": [
-        210,
-        890,
-        417,
-        63
+        228,
+        902,
+        482,
+        69
       ],
       "kind": "action",
       "label": "Remind on WhatsApp",
@@ -70,10 +70,10 @@ Docs.screen({
       "id": "lines",
       "n": 5,
       "box": [
-        84,
-        1028,
-        666,
-        72
+        96,
+        1032,
+        575,
+        120
       ],
       "kind": "info",
       "label": "The lines",

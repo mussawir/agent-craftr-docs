@@ -18,9 +18,9 @@ Docs.screen({
       "n": 1,
       "box": [
         84,
-        261,
-        683,
-        72
+        267,
+        670,
+        78
       ],
       "kind": "info",
       "label": "Earned this month",
@@ -31,9 +31,9 @@ Docs.screen({
       "n": 2,
       "box": [
         84,
-        348,
-        651,
-        72
+        357,
+        631,
+        78
       ],
       "kind": "info",
       "label": "Owed to you",
@@ -44,9 +44,9 @@ Docs.screen({
       "n": 3,
       "box": [
         84,
-        435,
-        683,
-        72
+        447,
+        676,
+        78
       ],
       "kind": "info",
       "label": "Paid to you",
@@ -57,9 +57,9 @@ Docs.screen({
       "n": 4,
       "box": [
         90,
-        776,
-        659,
-        72
+        774,
+        623,
+        69
       ],
       "kind": "info",
       "label": "An earning",
@@ -70,9 +70,9 @@ Docs.screen({
       "n": 5,
       "box": [
         54,
-        1122,
+        1080,
         972,
-        81
+        69
       ],
       "kind": "info",
       "label": "Payouts",

@@ -18,10 +18,10 @@ Docs.screen({
       "id": "for",
       "n": 1,
       "box": [
-        54,
-        234,
-        972,
-        81
+        66,
+        228,
+        948,
+        69
       ],
       "kind": "action",
       "label": "For",
@@ -31,9 +31,9 @@ Docs.screen({
       "id": "name",
       "n": 2,
       "box": [
-        90,
-        579,
-        372,
+        114,
+        570,
+        379,
         60
       ],
       "kind": "action",
@@ -44,8 +44,8 @@ Docs.screen({
       "id": "phone",
       "n": 3,
       "box": [
-        90,
-        783,
+        114,
+        792,
         390,
         60
       ],
@@ -57,10 +57,10 @@ Docs.screen({
       "id": "told",
       "n": 4,
       "box": [
-        42,
-        1119,
-        996,
-        60
+        54,
+        1155,
+        972,
+        69
       ],
       "kind": "info",
       "label": "The customer is told on WhatsApp",
@@ -70,10 +70,10 @@ Docs.screen({
       "id": "book",
       "n": 5,
       "box": [
-        42,
-        1203,
-        996,
-        156
+        54,
+        1248,
+        972,
+        168
       ],
       "kind": "action",
       "label": "Book",

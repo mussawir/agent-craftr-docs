@@ -19,8 +19,8 @@ Docs.screen({
       "box": [
         84,
         264,
-        356,
-        72
+        385,
+        78
       ],
       "kind": "info",
       "label": "Your number",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "status",
       "n": 2,
       "box": [
-        777,
-        299,
-        168,
-        63
+        766,
+        302,
+        184,
+        69
       ],
       "kind": "info",
       "label": "Working",
@@ -44,9 +44,9 @@ Docs.screen({
       "n": 3,
       "box": [
         210,
-        545,
-        219,
-        63
+        554,
+        258,
+        69
       ],
       "kind": "action",
       "label": "Check now",
@@ -57,9 +57,9 @@ Docs.screen({
       "n": 4,
       "box": [
         42,
-        684,
+        696,
         996,
-        60
+        69
       ],
       "kind": "info",
       "label": "Once a minute",

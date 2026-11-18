@@ -18,9 +18,9 @@ Docs.screen({
       "n": 1,
       "box": [
         90,
-        258,
-        648,
-        84
+        272,
+        678,
+        75
       ],
       "kind": "action",
       "label": "Take bookings",
@@ -31,9 +31,9 @@ Docs.screen({
       "n": 2,
       "box": [
         78,
-        444,
-        98,
-        72
+        453,
+        108,
+        78
       ],
       "kind": "info",
       "label": "Mon",
@@ -43,10 +43,10 @@ Docs.screen({
       "id": "range",
       "n": 3,
       "box": [
-        510,
-        713,
-        132,
-        63
+        507,
+        720,
+        151,
+        72
       ],
       "kind": "action",
       "label": "Range",
@@ -57,9 +57,9 @@ Docs.screen({
       "n": 4,
       "box": [
         42,
-        2202,
+        2190,
         996,
-        156
+        168
       ],
       "kind": "action",
       "label": "Save",

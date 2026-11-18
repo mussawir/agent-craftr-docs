@@ -17,9 +17,9 @@ Docs.screen({
       "id": "title",
       "n": 1,
       "box": [
-        84,
-        252,
-        739,
+        96,
+        234,
+        767,
         81
       ],
       "kind": "info",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "approve",
       "n": 2,
       "box": [
-        84,
-        456,
-        323,
-        156
+        96,
+        447,
+        324,
+        168
       ],
       "kind": "action",
       "label": "Approve",
@@ -43,9 +43,9 @@ Docs.screen({
       "id": "refuse",
       "n": 3,
       "box": [
-        419,
-        456,
-        288,
+        432,
+        453,
+        260,
         156
       ],
       "kind": "action",
