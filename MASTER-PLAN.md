@@ -62,7 +62,7 @@ The chain: **AgentCraftr → Trade Partner → Franchise holder → Business →
 | **CoAgent app** | Every business; Franchise holders also log in here | Inbox, orders, customers, khata, staff tasks with photo/video proof, approvals, "Ask your business", teach the agent ([COAGENT.md](COAGENT.md)) | `co-agent` (GitHub `agentcraftr-app`) | ✅ Built (not in the stores yet) |
 | **SaudaSulf app** | Shops of every trade that sells from a product list, and their customers | Customers add a shop by code/QR, browse its catalogue, order, chat and see their orders, payments and khata; the shop runs catalogue, orders (from the app **and** WhatsApp), payments, khata and app chats | `saudasulf` | ✅ Designed, coding started |
 | **Franchise holder dashboard** | Franchise holders | Their businesses, setup help, leads, earnings | web `/partner` + inside CoAgent | ✅ Built (to rename) |
-| **Trade Partner dashboard** | Trade Partners | Their area, Franchise holders, businesses, earnings, "cities with no Franchise holder yet" | web `/holder` | ✅ Built (to rename); not in the app yet |
+| **Trade Partner dashboard** | Trade Partners | Their area, Franchise holders, businesses, earnings, "cities with no Franchise holder yet" | web `/holder` + CoAgent (create Franchise holders, add businesses, own lists only) | ✅ Built (to rename) |
 | **Admin** | AgentCraftr staff | Businesses, payments, numbers, verification, Trade Partners, activity log | web `/admin` | ✅ Built |
 | **Personal WhatsApp app** (name ❓) | People on a normal WhatsApp number with many groups | Analysis of their chats and groups; AI replies they control (see "Personal WhatsApp" below) | not started | 🟡 Planned, after launch |
 

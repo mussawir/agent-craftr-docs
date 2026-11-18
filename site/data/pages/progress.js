@@ -13,6 +13,7 @@ Docs.page({
 <tr><td>Admin Billing desk (both products, proofs, SaudaSulf usage, statements)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
 <tr><td>Billing for Franchise holders and Trade Partners (see plan, renewal, amount due; WhatsApp reminder; upload a payment proof)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
 <tr><td>CRM for Franchise holders and Trade Partners (prospect pipeline, follow-ups, convert to business)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>Trade Partner in CoAgent (create Franchise holders, add businesses, read-only lists of their own)</td><td>✅ Built (19 Nov)</td></tr>
 <tr><td>Going live</td><td>⏳ Waits on the items under “Still open”</td></tr>
 </table>
 <p>Every piece of work went through the same steps: built task by task, each task checked by a separate reviewer, then one review of the whole plan, with its findings fixed and checked again. All automatic tests pass (backend 1,978; CoAgent 78; SaudaSulf 196).</p>
@@ -108,6 +109,15 @@ Docs.page({
 <li>The database change (<code>partner_billing_crm.sql</code>: proof columns, where a lead came from, follow-up indexes) is applied (backup taken first).</li>
 </ul>
 
+<h2>Trade Partner in CoAgent</h2>
+<p>A Trade Partner can now sign in to CoAgent. They get two tabs, <b>Businesses</b> and <b>Franchise holders</b>, each a read-only list of their own with pull to refresh.</p>
+<ul>
+<li><b>Create Franchise holder:</b> name, email, optional phone, and the cities and trades they cover, chosen only from the Trade Partner&rsquo;s own area. The server refuses it if adding Franchise holders is not switched on for them, and the app shows that message as it is.</li>
+<li><b>Add business:</b> the same form Franchise holders use at the shop counter, without plan or discount. The owner gets a sign-in link to send on WhatsApp.</li>
+<li><b>Nothing else:</b> no money, discounts, trials, payment proofs, billing, or editing or pausing Franchise holders. Those stay with AgentCraftr, and the server refuses them (ADMIN_ONLY).</li>
+<li>A paused Trade Partner sees &ldquo;Your account is paused. Contact AgentCraftr.&rdquo; instead of an empty list.</li>
+</ul>
+
 <h2>Bluetooth receipt printer (hardware #3)</h2>
 <p>The first hardware we can sell with both apps: a cheap 58 mm or 80 mm Bluetooth thermal printer. It needs no software change on the server.</p>
 <ul>
@@ -139,6 +149,6 @@ Docs.page({
 <tr><td>iOS builds, store listings, deploy</td><td>Mussawir</td></tr>
 </table>
 <p>Problems found and fixed so far, and what is still open: <a href="#/page/issues">Issues and resolutions</a>.</p>
-<p><b>Later, not planned yet:</b> owners see delivery photos inside the order; an option to create a packing task for every new order automatically; Trade Partner screens in CoAgent.</p>
+<p><b>Later, not planned yet:</b> owners see delivery photos inside the order; an option to create a packing task for every new order automatically.</p>
 `
 });
