@@ -14,9 +14,18 @@ Docs.page({
 <tr><td>Billing for Franchise holders and Trade Partners (see plan, renewal, amount due; WhatsApp reminder; upload a payment proof)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
 <tr><td>CRM for Franchise holders and Trade Partners (prospect pipeline, follow-ups, convert to business)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
 <tr><td>Trade Partner in CoAgent (create Franchise holders, add businesses, read-only lists of their own)</td><td>✅ Built (19 Nov)</td></tr>
+<tr><td>Admin team roles (Owner, Finance, Support, Marketing) and who sees which admin page</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>Admin social media marketing (post planner per platform, tracked links, leads by source)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>SaudaSulf on the web, and fixes</td><td>✅ Built and reviewed</td></tr>
+<tr><td>Redesign: CoAgent (Firoza colours) and the web dashboards</td><td>✅ Built; screenshots in these docs renewed</td></tr>
+<tr><td>Sectors and trades: 157 trades in 22 sectors; Trade Partners hold trades only, chosen in a searchable box</td><td>✅ Built; loaded into the database (18 Nov)</td></tr>
+<tr><td>SaudaSulf quick order bar (cart bar opens the order, Delivery by default, “Send order”)</td><td>✅ Built and reviewed</td></tr>
+<tr><td>SaudaSulf order by voice (paid add-on, English and Urdu, voice clip reaches the shop with the order)</td><td>✅ Built and reviewed; ⏳ database change waits for real prices</td></tr>
+<tr><td>User guides for every login, system check, issues log</td><td>✅ In these docs</td></tr>
 <tr><td>Going live</td><td>⏳ Waits on the items under “Still open”</td></tr>
 </table>
-<p>Every piece of work went through the same steps: built task by task, each task checked by a separate reviewer, then one review of the whole plan, with its findings fixed and checked again. All automatic tests pass (backend 1,978; CoAgent 78; SaudaSulf 196).</p>
+<p>Every piece of work went through the same steps: built task by task, each task checked by a separate reviewer, then one review of the whole plan, with its findings fixed and checked again. Automatic tests: backend 2,179 pass (one AI test is time-sensitive and passes when run alone); web 554; CoAgent 86; SaudaSulf all pass.</p>
+<p>See also: <a href="#/page/sectors-and-trades">Sectors and trades</a> · <a href="#/page/issues">Issues and resolutions</a> · <a href="#/page/system-check">System check</a>.</p>
 
 <h2>New names</h2>
 <p>The people who sell AgentCraftr are now called:</p>
@@ -137,6 +146,10 @@ Docs.page({
 <li>Team invites go by email, with the link sent on WhatsApp. Phone-only invites would need server work.</li>
 <li>Delivery proof is saved <b>before</b> the order moves to Delivered, so an order can never be delivered without its photo.</li>
 <li>In SaudaSulf, an AI reply with text plus files counts one message per item sent.</li>
+<li>Money comes only to AgentCraftr, by cash, bank transfer, Easypaisa or JazzCash. Franchise holders and Trade Partners never collect.</li>
+<li>CoAgent uses the Firoza palette.</li>
+<li>Trade Partners are given trades, never whole sectors. Someone who held a sector before keeps its trades as of 18 Nov, but trades added to that sector later are not given automatically.</li>
+<li>Order by voice is a monthly add-on with a cap, plus extra packs.</li>
 </ol>
 
 <h2>Still open</h2>
@@ -144,7 +157,9 @@ Docs.page({
 <tr><th>Item</th><th>Who</th></tr>
 <tr><td>Firebase set-up so SaudaSulf can send notifications</td><td>Mussawir</td></tr>
 <tr><td>A native speaker reads the new Urdu text in both apps</td><td>Team</td></tr>
-<tr><td>Pick the CoAgent colour palette (Firoza, Neela or Shaam) in the mockups</td><td>Mussawir</td></tr>
+<tr><td>Real prices for order by voice (placeholders: PKR 999 a month for 300 voice orders; extra packs 100 for 399, 300 for 999), then apply <code>saudasulf_voice.sql</code></td><td>Mussawir</td></tr>
+<tr><td>Deploy the new backend and web together (the database already has the 157 trades)</td><td>Mussawir</td></tr>
+<tr><td>Delete the test shops</td><td>Mussawir says when</td></tr>
 <tr><td>Try the receipt printing on one real 58 mm and one 80 mm printer: test print, an order with Urdu names, a long khata statement, and Print with the printer switched off</td><td>Mussawir</td></tr>
 <tr><td>iOS builds, store listings, deploy</td><td>Mussawir</td></tr>
 </table>
