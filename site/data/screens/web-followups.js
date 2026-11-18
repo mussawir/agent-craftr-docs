@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "who",
       "n": 1,
-      "box": [1273, 18, 149, 51],
+      "box": [1273, 79, 149, 51],
       "kind": "action",
       "label": "Mine / Whole team",
       "text": "Your own list, or everyone's, to see what the team still owes customers."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "tabs",
       "n": 2,
-      "box": [248, 90, 1174, 60],
+      "box": [266, 146, 1156, 56],
       "kind": "action",
       "label": "Late, Today, Coming up",
       "text": "Late ones are in red. You get a phone reminder when one is due."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "row",
       "n": 3,
-      "box": [249, 156, 1172, 88],
+      "box": [267, 208, 1154, 85],
       "kind": "action",
       "label": "A follow-up",
       "text": "What to do and for which customer. Click the name to open their page.",
@@ -39,7 +39,7 @@ Docs.screen({
     {
       "id": "later",
       "n": 4,
-      "box": [1082, 249, 120, 55],
+      "box": [1133, 302, 101, 44],
       "kind": "action",
       "label": "Tomorrow / Next week",
       "text": "Not today? Push it to tomorrow or next week."
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "done",
       "n": 5,
-      "box": [1316, 249, 89, 55],
+      "box": [1329, 302, 76, 44],
       "kind": "action",
       "label": "Done",
       "text": "Tick it off when you have done it."

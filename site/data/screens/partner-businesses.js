@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "add",
       "n": 1,
-      "box": [1274, 30, 148, 56],
+      "box": [1283, 149, 139, 53],
       "kind": "action",
       "label": "Add business",
       "text": "Sign up a new business in your cities. The owner gets a link on WhatsApp."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "status",
       "n": 2,
-      "box": [574, 202, 120, 36],
+      "box": [586, 306, 112, 36],
       "kind": "info",
       "label": "Status",
       "text": "Trial with days left, paying, or trial ended. You see status and setup only, never their chats or customers."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "setup",
       "n": 3,
-      "box": [707, 176, 85, 89],
+      "box": [710, 283, 85, 81],
       "kind": "info",
       "label": "Setup",
       "text": "Steps done out of seven. Low numbers mean the owner needs a hand."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "access",
       "n": 4,
-      "box": [1116, 270, 193, 79],
+      "box": [1131, 370, 172, 45],
       "kind": "action",
       "label": "Ask owner for access",
       "text": "Ask permission to set things up for them. The owner allows it for 7 days and sees every change."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "more",
       "n": 5,
-      "box": [1329, 687, 76, 52],
+      "box": [1329, 679, 76, 44],
       "kind": "action",
       "label": "More",
       "text": "Extend a trial or give a first-month discount, within your limits."

@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "week",
       "n": 1,
-      "box": [248, 98, 382, 55],
+      "box": [266, 154, 344, 52],
       "kind": "action",
       "label": "Week",
       "text": "Move between weeks. \"This week\" brings you back to today."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "who",
       "n": 2,
-      "box": [1230, 99, 192, 52],
+      "box": [1230, 154, 192, 51],
       "kind": "action",
       "label": "Who",
       "text": "Show one doctor's bookings only."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "booking",
       "n": 3,
-      "box": [265, 562, 1140, 56],
+      "box": [283, 601, 1122, 54],
       "kind": "info",
       "label": "A booking",
       "text": "Time, customer, service and doctor. Notes from the chat appear under the number."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "status",
       "n": 4,
-      "box": [1312, 574, 93, 32],
+      "box": [1314, 613, 91, 30],
       "kind": "action",
       "label": "Status",
       "text": "Click it to mark a visit confirmed, done or a no-show."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "book",
       "n": 5,
-      "box": [1250, 18, 172, 57],
+      "box": [1257, 79, 165, 53],
       "kind": "action",
       "label": "Book by hand",
       "text": "Add a booking for a walk-in or a phone call. Only free times are offered."

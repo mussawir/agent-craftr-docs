@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "plan",
       "n": 1,
-      "box": [1008, 52, 90, 31],
+      "box": [1009, 46, 89, 31],
       "kind": "action",
       "label": "Change plan",
       "text": "Pick the plan that fits. You can change it later; nothing is charged during the trial."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "details",
       "n": 2,
-      "box": [454, 117, 532, 68],
+      "box": [454, 110, 532, 67],
       "kind": "action",
       "label": "Your details",
       "text": "Your name, email and a password. This becomes the owner login."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "company",
       "n": 3,
-      "box": [454, 367, 532, 91],
+      "box": [454, 357, 532, 89],
       "kind": "action",
       "label": "Business name",
       "text": "The name your customers know. Leave it blank to use your own name."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "trade",
       "n": 4,
-      "box": [454, 542, 532, 91],
+      "box": [454, 529, 532, 89],
       "kind": "action",
       "label": "What kind of business?",
       "text": "Choose your trade so the agent starts with the right tone and the right features switched on."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "city",
       "n": 5,
-      "box": [454, 641, 532, 91],
+      "box": [454, 626, 532, 90],
       "kind": "action",
       "label": "City",
       "text": "Lets a local Franchise holder help you set up, if there is one in your city."
@@ -54,7 +54,7 @@ Docs.screen({
     {
       "id": "continue",
       "n": 6,
-      "box": [977, 744, 142, 66],
+      "box": [983, 728, 136, 60],
       "kind": "action",
       "label": "Continue",
       "text": "Go to the last step and start your free trial. No payment needed."

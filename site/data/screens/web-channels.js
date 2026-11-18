@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "request",
       "n": 1,
-      "box": [1219, 24, 203, 56],
+      "box": [1227, 95, 195, 53],
       "kind": "action",
       "label": "Request a number",
       "text": "Ask for a new official WhatsApp number. We get it approved and tell you when it is live."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "item",
       "n": 2,
-      "box": [598, 208, 316, 105],
+      "box": [608, 276, 314, 97],
       "kind": "info",
       "label": "Answers for",
       "text": "The products or services this number answers about. Change it from the item's Persona & numbers tab.",
@@ -31,7 +31,7 @@ Docs.screen({
     {
       "id": "health",
       "n": 3,
-      "box": [1073, 335, 125, 36],
+      "box": [1076, 391, 122, 36],
       "kind": "warn",
       "label": "Needs attention",
       "text": "Meta is unhappy with this number, for example customers blocked it. Click to see what to do."
@@ -39,7 +39,7 @@ Docs.screen({
     {
       "id": "pending",
       "n": 4,
-      "box": [918, 521, 135, 36],
+      "box": [926, 561, 130, 36],
       "kind": "info",
       "label": "Pending approval",
       "text": "A number you asked for. We are setting it up; you can withdraw the request."
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "rename",
       "n": 5,
-      "box": [1363, 224, 42, 42],
+      "box": [1363, 288, 42, 42],
       "kind": "action",
       "label": "Rename",
       "text": "Give the number a name your team understands, like \"Clinic line\"."
@@ -55,7 +55,7 @@ Docs.screen({
     {
       "id": "telegram",
       "n": 6,
-      "box": [972, 23, 206, 58],
+      "box": [1025, 94, 198, 55],
       "kind": "action",
       "label": "Connect Telegram",
       "text": "Answer customers on Telegram too, with the same agent."

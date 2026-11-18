@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "kpis",
       "n": 1,
-      "box": [248, 112, 291, 204],
+      "box": [266, 164, 286, 199],
       "kind": "info",
       "label": "Paying tenants",
       "text": "Businesses paying now, how many in total and how many joined this week."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "needs",
       "n": 2,
-      "box": [248, 328, 585, 326],
+      "box": [266, 375, 576, 394],
       "kind": "action",
       "label": "Needs you",
       "text": "Bank transfers to confirm, number requests and leads to call. Work through it every morning."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "transfer",
       "n": 3,
-      "box": [285, 422, 166, 29],
+      "box": [303, 461, 167, 30],
       "kind": "action",
       "label": "A transfer to confirm",
       "text": "Open the business to check the transfer and switch their plan on.",
@@ -39,7 +39,7 @@ Docs.screen({
     {
       "id": "tenants",
       "n": 4,
-      "box": [837, 328, 585, 326],
+      "box": [846, 375, 576, 394],
       "kind": "info",
       "label": "Tenants by status",
       "text": "Paying, on trial, trial ended and waiting to pay."
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "attention",
       "n": 5,
-      "box": [837, 666, 585, 193],
+      "box": [846, 781, 576, 119],
       "kind": "warn",
       "label": "Attention",
       "text": "Numbers Meta is unhappy with and businesses close to their AI limit."

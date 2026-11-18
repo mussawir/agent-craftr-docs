@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "stats",
       "n": 1,
-      "box": [248, 122, 294, 99],
+      "box": [266, 177, 289, 98],
       "kind": "info",
       "label": "Paid",
       "text": "Only payments you confirmed. Open deals are shown apart and never added to this."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "chat",
       "n": 2,
-      "box": [1272, 50, 150, 59],
+      "box": [1278, 109, 144, 55],
       "kind": "action",
       "label": "Open chat",
       "text": "Jump to this customer's WhatsApp chat in the Inbox.",
@@ -31,7 +31,7 @@ Docs.screen({
     {
       "id": "details",
       "n": 3,
-      "box": [269, 334, 330, 52],
+      "box": [287, 384, 330, 51],
       "kind": "action",
       "label": "Looked after by",
       "text": "The team member responsible for this customer. Edit any detail and press Save."
@@ -39,7 +39,7 @@ Docs.screen({
     {
       "id": "ai",
       "n": 4,
-      "box": [624, 225, 798, 196],
+      "box": [642, 279, 780, 183],
       "kind": "info",
       "label": "What the AI noted",
       "text": "A short summary of the chats and a suggested next step, written by the AI."
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "followup",
       "n": 5,
-      "box": [645, 532, 270, 59],
+      "box": [663, 567, 275, 55],
       "kind": "action",
       "label": "Add a follow-up",
       "text": "Set a reminder for yourself or a teammate. They get a phone notification when it is due."
@@ -55,7 +55,7 @@ Docs.screen({
     {
       "id": "note",
       "n": 6,
-      "box": [690, 637, 52, 51],
+      "box": [709, 668, 52, 50],
       "kind": "action",
       "label": "Note, call or visit",
       "text": "Write what happened so the whole team knows. It is added to the history below."

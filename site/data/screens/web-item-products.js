@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "tab",
       "n": 1,
-      "box": [694, 274, 105, 60],
+      "box": [712, 327, 106, 56],
       "kind": "action",
       "label": "Products tab",
       "text": "Only a shop with many products has this tab. Each product is one row, not a separate item."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "import",
       "n": 2,
-      "box": [1007, 484, 235, 83],
+      "box": [1014, 530, 231, 79],
       "kind": "action",
       "label": "Import from Excel / CSV",
       "text": "Upload your price list. Upload it again later and prices are updated in one go."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "add",
       "n": 3,
-      "box": [1238, 484, 159, 81],
+      "box": [1241, 530, 156, 77],
       "kind": "action",
       "label": "Add product",
       "text": "Add one product by hand: name, unit, price and stock."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "price",
       "n": 4,
-      "box": [795, 665, 163, 55],
+      "box": [801, 716, 162, 67],
       "kind": "info",
       "label": "Price",
       "text": "The agent quotes exactly this price and the system works out every order total itself."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "stock",
       "n": 5,
-      "box": [946, 794, 174, 55],
+      "box": [951, 881, 174, 19],
       "kind": "info",
       "label": "Stock",
       "text": "Leave stock empty if you don't count it. When counted, orders take it down and cancelled orders put it back."
@@ -54,7 +54,7 @@ Docs.screen({
     {
       "id": "available",
       "n": 6,
-      "box": [1124, 717, 52, 36],
+      "box": [1129, 786, 52, 36],
       "kind": "action",
       "label": "Available",
       "text": "Switch off a product you don't have today. The agent won't offer it."
@@ -62,7 +62,7 @@ Docs.screen({
     {
       "id": "shopify",
       "n": 7,
-      "box": [1230, 368, 171, 58],
+      "box": [1236, 417, 165, 55],
       "kind": "action",
       "label": "Connect Shopify",
       "text": "Selling on Shopify too? Bring products in from there and keep them in step."

@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "total",
       "n": 1,
-      "box": [248, 90, 162, 104],
+      "box": [266, 146, 157, 102],
       "kind": "info",
       "label": "Owed to you",
       "text": "Everything customers owe you right now. Totals are kept per currency and never added across currencies."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "search",
       "n": 2,
-      "box": [414, 116, 255, 52],
+      "box": [427, 172, 202, 50],
       "kind": "action",
       "label": "Search",
       "text": "Find a customer by name or number."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "row",
       "n": 3,
-      "box": [249, 291, 1172, 68],
+      "box": [267, 366, 1154, 76],
       "kind": "action",
       "label": "A customer",
       "text": "What they owe, since when and when they last paid. Click to open their page and write udhaar, record a payment or send a reminder on WhatsApp.",
@@ -39,7 +39,7 @@ Docs.screen({
     {
       "id": "limit",
       "n": 4,
-      "box": [599, 251, 89, 36],
+      "box": [615, 322, 84, 36],
       "kind": "warn",
       "label": "Over limit",
       "text": "This customer owes more than the credit limit you set for them."
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "never",
       "n": 5,
-      "box": [1020, 403, 217, 68],
+      "box": [1036, 494, 224, 76],
       "kind": "info",
       "label": "Last payment",
       "text": "\"Never\" means they have not paid anything since they started owing."

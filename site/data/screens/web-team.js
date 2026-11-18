@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "add",
       "n": 1,
-      "box": [1218, 29, 204, 56],
+      "box": [1224, 87, 198, 53],
       "kind": "action",
       "label": "Add team member",
       "text": "Makes an invite link. Send it to your staff on WhatsApp; they choose their own password."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "seats",
       "n": 2,
-      "box": [248, 108, 1174, 116],
+      "box": [266, 160, 1156, 113],
       "kind": "info",
       "label": "Seats",
       "text": "How many logins your plan allows. A pending invite uses a seat."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "role",
       "n": 3,
-      "box": [1216, 419, 58, 32],
+      "box": [1218, 464, 56, 30],
       "kind": "info",
       "label": "What they do",
       "text": "A rider sees only deliveries, a sales person sees everything except billing and team."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "invite",
       "n": 4,
-      "box": [1255, 496, 89, 32],
+      "box": [1258, 539, 86, 30],
       "kind": "info",
       "label": "Invite sent",
       "text": "Waiting for them to open the link. Use the menu to send it again or cancel it."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "menu",
       "n": 5,
-      "box": [1349, 332, 52, 52],
+      "box": [1349, 378, 52, 52],
       "kind": "action",
       "label": "Actions",
       "text": "Change someone's role, or disable their login straight away."
@@ -54,7 +54,7 @@ Docs.screen({
     {
       "id": "rules",
       "n": 6,
-      "box": [1260, 594, 137, 57],
+      "box": [1268, 635, 129, 53],
       "kind": "action",
       "label": "Who gets which chats",
       "text": "Hand chats to people automatically by number or product. People in a rule take turns."

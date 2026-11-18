@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "address",
       "n": 1,
-      "box": [438, 272, 564, 32],
+      "box": [438, 249, 564, 32],
       "kind": "info",
       "label": "Deliver to",
       "text": "The address the customer gave in the chat."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "lines",
       "n": 2,
-      "box": [438, 325, 564, 144],
+      "box": [438, 302, 564, 192],
       "kind": "info",
       "label": "What to pack",
       "text": "Every item with its quantity. The total is worked out from your price list, never by the AI."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "paid",
       "n": 3,
-      "box": [438, 489, 564, 52],
+      "box": [438, 513, 564, 52],
       "kind": "info",
       "label": "Paid or not",
       "text": "Changes to Paid when you confirm the customer's payment screenshot on the Payments page.",
@@ -39,7 +39,7 @@ Docs.screen({
     {
       "id": "next",
       "n": 4,
-      "box": [858, 613, 144, 57],
+      "box": [724, 640, 136, 53],
       "kind": "action",
       "label": "Mark packed",
       "text": "Move the order on when it is packed. Next comes Mark delivered."
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "chat",
       "n": 5,
-      "box": [438, 613, 126, 57],
+      "box": [438, 640, 120, 53],
       "kind": "action",
       "label": "Open chat",
       "text": "Open this customer's WhatsApp chat, for example to ask about a missing item.",
@@ -56,7 +56,7 @@ Docs.screen({
     {
       "id": "cancel",
       "n": 6,
-      "box": [759, 666, 145, 58],
+      "box": [864, 639, 138, 55],
       "kind": "action",
       "label": "Cancel order",
       "text": "Cancels it and puts counted stock back."

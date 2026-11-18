@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "new",
       "n": 1,
-      "box": [1279, 30, 143, 56],
+      "box": [1285, 89, 137, 53],
       "kind": "action",
       "label": "New item",
       "text": "Add a product, a service, a property or a whole shop with many products."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "card",
       "n": 2,
-      "box": [641, 154, 388, 354],
+      "box": [653, 208, 382, 348],
       "kind": "info",
       "label": "One item",
       "text": "What it is, what the agent knows about it, and the three things it needs: knowledge, a persona and a number."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "status",
       "n": 3,
-      "box": [915, 175, 93, 34],
+      "box": [921, 229, 93, 34],
       "kind": "info",
       "label": "Status",
       "text": "\"Answering\" means customers get replies. Anything else tells you what is missing."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "open",
       "n": 4,
-      "box": [662, 431, 204, 56],
+      "box": [674, 482, 204, 53],
       "kind": "action",
       "label": "Open knowledge & files",
       "text": "Teach the agent about this item: photos, price lists, notes and voice notes.",
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "warn",
       "n": 5,
-      "box": [488, 533, 128, 34],
+      "box": [500, 581, 128, 34],
       "kind": "warn",
       "label": "Not on a number",
       "text": "This item has knowledge but no WhatsApp number answers for it yet, so nobody gets replies about it."
@@ -55,7 +55,7 @@ Docs.screen({
     {
       "id": "connect",
       "n": 6,
-      "box": [269, 753, 169, 57],
+      "box": [287, 799, 168, 52],
       "kind": "action",
       "label": "Connect a number",
       "text": "Choose which of your numbers answers for this item."

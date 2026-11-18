@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "view",
       "n": 1,
-      "box": [1161, 18, 261, 59],
+      "box": [1168, 79, 254, 55],
       "kind": "action",
       "label": "View as owner",
       "text": "Open their dashboard read-only for one hour to see what they see. You cannot change anything."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "onboarding",
       "n": 2,
-      "box": [248, 81, 1174, 450],
+      "box": [266, 138, 1156, 422],
       "kind": "info",
       "label": "Onboarding",
       "text": "Every step from account to Meta-verified, and whose move it is: us, the client or Meta."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "verification",
       "n": 3,
-      "box": [248, 543, 1174, 132],
+      "box": [266, 572, 1156, 122],
       "kind": "info",
       "label": "Meta business verification",
       "text": "Where their verification stands. Verified numbers can message more customers a day."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "partner",
       "n": 4,
-      "box": [269, 745, 272, 52],
+      "box": [287, 759, 272, 51],
       "kind": "action",
       "label": "Franchise holder",
       "text": "The Franchise holder looking after this business. Change it and press Save."

@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "image",
       "n": 1,
-      "box": [265, 185, 76, 76],
+      "box": [283, 220, 76, 76],
       "kind": "info",
       "label": "The screenshot",
       "text": "The picture the customer sent on WhatsApp. Click to check it against your bank or wallet app."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "read",
       "n": 2,
-      "box": [345, 168, 132, 109],
+      "box": [363, 208, 134, 101],
       "kind": "info",
       "label": "What the AI read",
       "text": "Amount and reference read from the picture. Confidence shows how sure it is (1.00 = very sure)."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "confirm",
       "n": 3,
-      "box": [1207, 195, 107, 55],
+      "box": [1245, 236, 87, 44],
       "kind": "action",
       "label": "Confirm",
       "text": "Only after you see the money arrive. You can link it to an order so the order shows as paid."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "reject",
       "n": 4,
-      "box": [1310, 195, 95, 55],
+      "box": [1328, 236, 77, 44],
       "kind": "action",
       "label": "Reject",
       "text": "If it is wrong or old. Write why, so your team knows."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "rejected",
       "n": 5,
-      "box": [249, 656, 1172, 113],
+      "box": [267, 653, 1154, 105],
       "kind": "info",
       "label": "Rejected",
       "text": "Kept with the reason, so it is never counted as money in."

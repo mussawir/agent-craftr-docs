@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "earned",
       "n": 1,
-      "box": [248, 98, 291, 138],
+      "box": [266, 154, 286, 136],
       "kind": "info",
       "label": "Earned this month",
       "text": "Your share of what your businesses paid this month."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "owed",
       "n": 2,
-      "box": [543, 98, 290, 138],
+      "box": [556, 154, 286, 136],
       "kind": "info",
       "label": "Waiting to be paid",
       "text": "Earned but not paid out yet. AgentCraftr pays Franchise holders monthly."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "needs",
       "n": 3,
-      "box": [248, 244, 1174, 366],
+      "box": [266, 298, 1156, 314],
       "kind": "action",
       "label": "Needs you",
       "text": "Trials ending, trials that ended and setups that are stuck. Help these first."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "whatsapp",
       "n": 4,
-      "box": [1234, 311, 167, 56],
+      "box": [1253, 361, 148, 45],
       "kind": "action",
       "label": "WhatsApp owner",
       "text": "Opens a WhatsApp chat with the owner so you can help straight away."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "deal",
       "n": 5,
-      "box": [248, 618, 1174, 135],
+      "box": [266, 620, 1156, 131],
       "kind": "info",
       "label": "Your deal",
       "text": "Your share, the bonus on a first payment and the discount you may give."

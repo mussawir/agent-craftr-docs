@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "email",
       "n": 1,
-      "box": [549, 257, 342, 68],
+      "box": [549, 253, 342, 67],
       "kind": "action",
       "label": "Email",
       "text": "Type the email you signed up with, or the one your owner invited you with."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "password",
       "n": 2,
-      "box": [549, 333, 342, 68],
+      "box": [549, 328, 342, 66],
       "kind": "action",
       "label": "Password",
       "text": "Your own password. Nobody at AgentCraftr can see it."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "login",
       "n": 3,
-      "box": [549, 409, 342, 66],
+      "box": [549, 402, 342, 60],
       "kind": "action",
       "label": "Log in",
       "text": "Opens your Home page, or the Franchise holder pages if you are a Franchise holder.",
@@ -39,7 +39,7 @@ Docs.screen({
     {
       "id": "signup",
       "n": 4,
-      "box": [689, 484, 136, 29],
+      "box": [688, 471, 136, 30],
       "kind": "action",
       "label": "Create an account",
       "text": "New here? Start a free 3-day trial instead.",

@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "media",
       "n": 1,
-      "box": [269, 131, 812, 60],
+      "box": [287, 243, 794, 55],
       "kind": "info",
       "label": "Photos & videos",
       "text": "Each picture or video you uploaded, shown the way the customer will see it."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "send",
       "n": 2,
-      "box": [271, 386, 167, 32],
+      "box": [289, 490, 168, 32],
       "kind": "action",
       "label": "Send to customers",
       "text": "Switched on: the agent may send this file when a customer asks, for example \"where is the clinic?\""
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "off",
       "n": 3,
-      "box": [679, 362, 167, 32],
+      "box": [688, 466, 168, 32],
       "kind": "action",
       "label": "Knowledge only",
       "text": "Switched off: the agent still learns from it but never sends it."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "doc",
       "n": 4,
-      "box": [805, 558, 168, 32],
+      "box": [805, 659, 168, 32],
       "kind": "action",
       "label": "Documents",
       "text": "A PDF price list can go to customers too. Office files and sheets are for the agent to read."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "edit",
       "n": 5,
-      "box": [473, 384, 42, 42],
+      "box": [486, 488, 42, 42],
       "kind": "action",
       "label": "Edit",
       "text": "Rename a file or add a line about when to send it."
@@ -54,7 +54,7 @@ Docs.screen({
     {
       "id": "voice",
       "n": 6,
-      "box": [248, 707, 854, 175],
+      "box": [266, 807, 836, 93],
       "kind": "info",
       "label": "Voice notes",
       "text": "The agent learns from what is said. Recordings are never sent to customers."

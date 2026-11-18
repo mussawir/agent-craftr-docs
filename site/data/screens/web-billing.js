@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "status",
       "n": 1,
-      "box": [248, 120, 1174, 122],
+      "box": [266, 172, 1156, 119],
       "kind": "info",
       "label": "Subscription",
       "text": "Active until the renewal date. If it ends, the AI pauses but your Inbox keeps working."
@@ -22,18 +22,18 @@ Docs.screen({
     {
       "id": "usage",
       "n": 2,
-      "box": [248, 254, 1174, 442],
+      "box": [266, 510, 1156, 390],
       "kind": "info",
       "label": "AI usage",
       "text": "Included in your plan and shown for openness. It is not a separate charge."
     },
     {
-      "id": "history",
+      "id": "saudasulf",
       "n": 3,
-      "box": [249, 709, 1172, 88],
-      "kind": "action",
-      "label": "Payment history",
-      "text": "Every payment with its reference. Search or filter by date."
+      "box": [266, 303, 1156, 195],
+      "kind": "info",
+      "label": "SaudaSulf package",
+      "text": "Shown when the shop also has SaudaSulf: its renewal date and the app messages used this month."
     }
   ],
   "arrows": []
