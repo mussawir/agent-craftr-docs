@@ -46,7 +46,7 @@ Docs.screen({
       "box": [
         222,
         522,
-        554,
+        553,
         84
       ],
       "kind": "action",
