@@ -8,7 +8,8 @@ Docs.page({
 <tr><td>Catalog</td><td>An Item that is a whole shop; its products are rows in a list</td></tr>
 <tr><td>Knowledge</td><td>Files, photos, voice notes, links and notes the agent learns from</td></tr>
 <tr><td>Persona</td><td>How the agent speaks: tone, language, what it calls itself</td></tr>
-<tr><td>Trade</td><td>The kind of business; sets which features are on</td></tr>
+<tr><td>Trade</td><td>The kind of business; sets which features are on. <a href="#/page/sectors-and-trades">All trades</a></td></tr>
+<tr><td>Sector</td><td>A group of trades, using WhatsApp's business categories; only for grouping</td></tr>
 <tr><td>Handover</td><td>The AI passing a chat to a person, with a reason</td></tr>
 <tr><td>Payment proof</td><td>A payment screenshot read by the AI, waiting for a person to confirm</td></tr>
 <tr><td>Deal</td><td>A sale in progress: enquiry → quoted → invoiced → paid (or lost)</td></tr>
@@ -21,7 +22,7 @@ Docs.page({
 <tr><td>Business verification</td><td>Proving the business to Meta; needed to message more than 250 new people a day</td></tr>
 <tr><td>Franchise holder</td><td>Someone who holds one or more Franchises, brings businesses to them and earns a share</td></tr>
 <tr><td>Franchise</td><td>A city and a trade together, for example Lahore · Grocery. One Franchise holder holds each Franchise</td></tr>
-<tr><td>Trade Partner</td><td>The top level of the sales network: holds trades or sectors in an area, with Franchise holders below</td></tr>
+<tr><td>Trade Partner</td><td>The top level of the sales network: holds trades (never whole sectors) in an area, with Franchise holders below</td></tr>
 <tr><td>Khata</td><td>Customer credit: what a customer owes the shop</td></tr>
 </table>`,
 });

@@ -10,12 +10,23 @@ Docs.page({
 <tr><td>SaudaSulf: all 6 plans (subscriptions, shop codes and customers, ordering, message counting, order rule and khata, in-app chat and notifications)</td><td>✅ Built and reviewed</td></tr>
 <tr><td>CoAgent: new names, set up from the phone, staff packing and delivery, docs (16 tasks)</td><td>✅ Built and reviewed</td></tr>
 <tr><td>Database changes for both</td><td>✅ Applied (19 Nov)</td></tr>
-<tr><td>Admin Billing desk (both products, proofs, SaudaSulf usage, statements)</td><td>✅ Built; its database change is written, not applied</td></tr>
-<tr><td>Billing for Franchise holders and Trade Partners (see plan, renewal, amount due; WhatsApp reminder; upload a payment proof)</td><td>✅ Built; its database change is written, not applied</td></tr>
-<tr><td>CRM for Franchise holders and Trade Partners (prospect pipeline, follow-ups, convert to business)</td><td>✅ Built; same database change</td></tr>
+<tr><td>Admin Billing desk (both products, proofs, SaudaSulf usage, statements)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>Billing for Franchise holders and Trade Partners (see plan, renewal, amount due; WhatsApp reminder; upload a payment proof)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>CRM for Franchise holders and Trade Partners (prospect pipeline, follow-ups, convert to business)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>Trade Partner in CoAgent (create Franchise holders, add businesses, read-only lists of their own)</td><td>✅ Built (19 Nov)</td></tr>
+<tr><td>Admin team roles (Owner, Finance, Support, Marketing) and who sees which admin page</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>Admin social media marketing (post planner per platform, tracked links, leads by source)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>SaudaSulf on the web, and fixes</td><td>✅ Built and reviewed</td></tr>
+<tr><td>Redesign: CoAgent (Firoza colours) and the web dashboards</td><td>✅ Built; screenshots in these docs renewed</td></tr>
+<tr><td>Sectors and trades: 157 trades in 22 sectors; Trade Partners hold trades only, chosen in a searchable box</td><td>✅ Built; loaded into the database (18 Nov)</td></tr>
+<tr><td>SaudaSulf quick order bar (cart bar opens the order, Delivery by default, “Send order”)</td><td>✅ Built and reviewed</td></tr>
+<tr><td>SaudaSulf order by voice (paid add-on, English and Urdu, voice clip reaches the shop with the order)</td><td>✅ Built and reviewed; ⏳ database change waits for real prices</td></tr>
+<tr><td>Barcode scanning, SaudaSulf shop side (scan or type a code in the Products tab; add a product with or without a barcode; an unknown code offers “Add this product”)</td><td>✅ Built; ⏳ real-scanner test pending. CoAgent none; warehouse, market barcode and QR later</td></tr>
+<tr><td>User guides for every login, system check, issues log</td><td>✅ In these docs</td></tr>
 <tr><td>Going live</td><td>⏳ Waits on the items under “Still open”</td></tr>
 </table>
-<p>Every piece of work went through the same steps: built task by task, each task checked by a separate reviewer, then one review of the whole plan, with its findings fixed and checked again. All automatic tests pass (backend 1,978; CoAgent 78; SaudaSulf 196).</p>
+<p>Every piece of work went through the same steps: built task by task, each task checked by a separate reviewer, then one review of the whole plan, with its findings fixed and checked again. Automatic tests: backend 2,179 pass (one AI test is time-sensitive and passes when run alone); web 554; CoAgent 86; SaudaSulf all pass.</p>
+<p>See also: <a href="#/page/sectors-and-trades">Sectors and trades</a> · <a href="#/page/issues">Issues and resolutions</a> · <a href="#/page/system-check">System check</a>.</p>
 
 <h2>New names</h2>
 <p>The people who sell AgentCraftr are now called:</p>
@@ -84,7 +95,7 @@ Docs.page({
 <li>Confirming asks <b>how it was paid</b>: cash, bank transfer, Easypaisa or JazzCash (pre-filled from the payment). An extra pack only adds messages; it never moves the package dates.</li>
 <li>Finance and Owner can confirm, reject and record payouts; Support can look only; Marketing has no access.</li>
 <li>A payout settles <b>everything</b> owed to that person, not just one month.</li>
-<li>No message is sent from the desk. The database change (<code>billing_desk.sql</code>) is written but <b>not applied yet</b>; apply it after a backup, before going live.</li>
+<li>No message is sent from the desk. Its database change (<code>billing_desk.sql</code>) is applied (backup taken first).</li>
 </ul>
 
 <h2>Billing for Franchise holders and Trade Partners</h2>
@@ -105,7 +116,16 @@ Docs.page({
 <li><b>Convert to business</b> opens Add a business with the prospect&rsquo;s details filled in, and links the two. Converting twice never relinks.</li>
 <li>A Trade Partner sees prospects they handed to a Franchise holder, <b>read-only</b> (a lock icon). They can take it back with the hand-over control.</li>
 <li>Home shows <b>Follow-ups due</b> for today and earlier.</li>
-<li>The database change (<code>partner_billing_crm.sql</code>: proof columns, where a lead came from, follow-up indexes) is written but <b>not applied yet</b>; apply it after a backup, before going live.</li>
+<li>The database change (<code>partner_billing_crm.sql</code>: proof columns, where a lead came from, follow-up indexes) is applied (backup taken first).</li>
+</ul>
+
+<h2>Trade Partner in CoAgent</h2>
+<p>A Trade Partner can now sign in to CoAgent. They get two tabs, <b>Businesses</b> and <b>Franchise holders</b>, each a read-only list of their own with pull to refresh.</p>
+<ul>
+<li><b>Create Franchise holder:</b> name, email, optional phone, and the cities and trades they cover, chosen only from the Trade Partner&rsquo;s own area. The server refuses it if adding Franchise holders is not switched on for them, and the app shows that message as it is.</li>
+<li><b>Add business:</b> the same form Franchise holders use at the shop counter, without plan or discount. The owner gets a sign-in link to send on WhatsApp.</li>
+<li><b>Nothing else:</b> no money, discounts, trials, payment proofs, billing, or editing or pausing Franchise holders. Those stay with AgentCraftr, and the server refuses them (ADMIN_ONLY).</li>
+<li>A paused Trade Partner sees &ldquo;Your account is paused. Contact AgentCraftr.&rdquo; instead of an empty list.</li>
 </ul>
 
 <h2>Bluetooth receipt printer (hardware #3)</h2>
@@ -127,19 +147,24 @@ Docs.page({
 <li>Team invites go by email, with the link sent on WhatsApp. Phone-only invites would need server work.</li>
 <li>Delivery proof is saved <b>before</b> the order moves to Delivered, so an order can never be delivered without its photo.</li>
 <li>In SaudaSulf, an AI reply with text plus files counts one message per item sent.</li>
+<li>Money comes only to AgentCraftr, by cash, bank transfer, Easypaisa or JazzCash. Franchise holders and Trade Partners never collect.</li>
+<li>CoAgent uses the Firoza palette.</li>
+<li>Trade Partners are given trades, never whole sectors. Someone who held a sector before keeps its trades as of 18 Nov, but trades added to that sector later are not given automatically.</li>
+<li>Order by voice is a monthly add-on with a cap, plus extra packs.</li>
 </ol>
 
 <h2>Still open</h2>
 <table>
 <tr><th>Item</th><th>Who</th></tr>
-<tr><td>Apply <code>billing_desk.sql</code> and <code>partner_billing_crm.sql</code> (after a backup)</td><td>Mussawir</td></tr>
 <tr><td>Firebase set-up so SaudaSulf can send notifications</td><td>Mussawir</td></tr>
 <tr><td>A native speaker reads the new Urdu text in both apps</td><td>Team</td></tr>
-<tr><td>Pick the CoAgent colour palette (Firoza, Neela or Shaam) in the mockups</td><td>Mussawir</td></tr>
+<tr><td>Real prices for order by voice (placeholders: PKR 999 a month for 300 voice orders; extra packs 100 for 399, 300 for 999), then apply <code>saudasulf_voice.sql</code></td><td>Mussawir</td></tr>
+<tr><td>Deploy the new backend and web together (the database already has the 157 trades)</td><td>Mussawir</td></tr>
+<tr><td>Delete the test shops</td><td>Mussawir says when</td></tr>
 <tr><td>Try the receipt printing on one real 58 mm and one 80 mm printer: test print, an order with Urdu names, a long khata statement, and Print with the printer switched off</td><td>Mussawir</td></tr>
 <tr><td>iOS builds, store listings, deploy</td><td>Mussawir</td></tr>
 </table>
 <p>Problems found and fixed so far, and what is still open: <a href="#/page/issues">Issues and resolutions</a>.</p>
-<p><b>Later, not planned yet:</b> owners see delivery photos inside the order; an option to create a packing task for every new order automatically; Trade Partner screens in CoAgent.</p>
+<p><b>Later, not planned yet:</b> owners see delivery photos inside the order; an option to create a packing task for every new order automatically.</p>
 `
 });

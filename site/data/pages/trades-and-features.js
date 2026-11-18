@@ -1,8 +1,8 @@
 Docs.page({
   id: "trades-and-features", group: "Understand it", icon: "🏷️", title: "Trades and features",
-  summary: "81 trades in 17 sectors, using WhatsApp's own business categories. A trade is a preset: which features are on, the starting persona, and the rules.",
+  summary: "157 trades in 22 sectors, grouped by WhatsApp's own business categories. A trade is a preset: which features are on, the starting persona, and the rules.",
   body: `
-<p>When a business picks its trade at sign-up, the features that trade needs are switched on. The owner can switch others on or off in Settings. A business can add extra trades; their features add together and the <b>stricter rule wins</b>.</p>
+<p>When a business picks its trade at sign-up, the features that trade needs are switched on. The owner can switch others on or off in Settings. A business can add extra trades; their features add together and the <b>stricter rule wins</b>. Every trade, sector by sector, is listed in <a href="#/page/sectors-and-trades">Sectors and trades</a>.</p>
 <table>
 <tr><th>Feature</th><th>Good for</th></tr>
 <tr><td>Orders</td><td>Grocery, pharmacy, any shop with a product list</td></tr>
