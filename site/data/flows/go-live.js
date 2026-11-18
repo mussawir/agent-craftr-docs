@@ -8,7 +8,7 @@ Docs.flow({
     { id: "customer", label: "Customer" },
   ],
   steps: [
-    { id: "signup", lane: "owner", kind: "start", title: "Sign up", text: "Name, business, trade and city. No payment: a 3-day free trial starts at once. A partner's link or the city + trade links the business to its partner.", screen: "web-signup", mark: "trade" },
+    { id: "signup", lane: "owner", kind: "start", title: "Sign up", text: "Name, business, trade and city. No payment: a 3-day free trial starts at once. A Franchise holder's link, or the city + trade, links the business to its Franchise holder.", screen: "web-signup", mark: "trade" },
     { id: "trial", lane: "system", title: "Trial + trade presets", short: "Features switched on for the trade", text: "The trial runs Growth Pro features with trial limits (200 AI replies, 100 broadcasts). The trade decides which features are on: orders, bookings, quotes…", rule: "A trade change only ever adds features; anything in use can't be switched off." },
     { id: "item", lane: "owner", title: "Add an Item", short: "Product, service or the whole shop", text: "An Item is what the agent talks about: one product, a service, a property, or a whole shop (one catalog Item with hundreds of products as rows).", screen: "web-items", mark: "new" },
     { id: "teach", lane: "owner", title: "Teach the agent", short: "Files, photos, voice notes, prices", text: "Upload PDFs, photos, voice notes, links and notes; add a price table or product list. Choose which files the agent may send to customers.", screen: "web-item-knowledge", mark: "upload" },

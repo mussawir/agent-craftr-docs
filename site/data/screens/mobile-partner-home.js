@@ -2,13 +2,13 @@
 Docs.screen({
   "id": "mobile-partner-home",
   "app": "mobile",
-  "section": "Partner mode",
-  "title": "Partner home",
-  "route": "Partner login → Home",
+  "section": "Franchise holder mode",
+  "title": "Franchise holder home",
+  "route": "Franchise holder login → Home",
   "roles": [
     "partner"
   ],
-  "summary": "What a partner sees in the same app: money earned, businesses that need a nudge, leads to call.",
+  "summary": "What a Franchise holder sees in the same app: money earned, businesses that need a nudge, leads to call.",
   "image": "images/mobile/partner-home.png",
   "width": 1080,
   "height": 2400,

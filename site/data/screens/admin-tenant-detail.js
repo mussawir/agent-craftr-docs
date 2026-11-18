@@ -6,7 +6,7 @@ Docs.screen({
   "title": "Tenant detail",
   "route": "/admin/tenants/501",
   "roles": ["superadmin"],
-  "summary": "One business: onboarding progress, Meta verification, partner, plan, numbers and payments.",
+  "summary": "One business: onboarding progress, Meta verification, Franchise holder, plan, numbers and payments.",
   "image": "images/admin/tenant-detail.png",
   "width": 1440,
   "height": 900,
@@ -40,8 +40,8 @@ Docs.screen({
       "n": 4,
       "box": [269, 745, 272, 52],
       "kind": "action",
-      "label": "Partner",
-      "text": "The city partner looking after this business. Change it and press Save."
+      "label": "Franchise holder",
+      "text": "The Franchise holder looking after this business. Change it and press Save."
     }
   ],
   "arrows": [

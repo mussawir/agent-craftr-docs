@@ -9,7 +9,7 @@
   const APPS = {
     web: { label: "Web dashboard", icon: "🖥️", blurb: "What the business owner and staff use every day." },
     mobile: { label: "Mobile app", icon: "📱", blurb: "The same business on the phone: today, chats, orders, teaching the agent." },
-    partner: { label: "Partner", icon: "🤝", blurb: "For partners who bring businesses in their cities and trades." },
+    partner: { label: "Franchise holder", icon: "🤝", blurb: "For Franchise holders, who bring businesses to their Franchises (a city and a trade)." },
     admin: { label: "Admin (our team)", icon: "🛠️", blurb: "AgentCraftr's own team: tenants, numbers, payments." },
     saudasulf: { label: "SaudaSulf app", icon: "🛒", blurb: "The ordering app: customers add their shops and order; shopkeepers run orders, khata and chats." },
   };

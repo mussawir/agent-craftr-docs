@@ -47,7 +47,7 @@ module.exports = {
       marks: [
         { id: "email", n: 1, sel: formControl("Email"), label: "Email", text: "Type the email you signed up with, or the one your owner invited you with." },
         { id: "password", n: 2, sel: formControl("Password"), label: "Password", text: "Your own password. Nobody at AgentCraftr can see it." },
-        { id: "login", n: 3, sel: "role=button[name=\"Log in\"]", label: "Log in", text: "Opens your Home page, or the partner pages if you are a partner.", go: "web-home" },
+        { id: "login", n: 3, sel: "role=button[name=\"Log in\"]", label: "Log in", text: "Opens your Home page, or the Franchise holder pages if you are a Franchise holder.", go: "web-home" },
         { id: "signup", n: 4, sel: "text=Create an account", label: "Create an account", text: "New here? Start a free 3-day trial instead.", go: "web-signup" },
       ],
       arrows: [{ from: "email", to: "password" }, { from: "password", to: "login" }],
@@ -69,7 +69,7 @@ module.exports = {
         { id: "details", n: 2, sel: formControl("Your name"), label: "Your details", text: "Your name, email and a password. This becomes the owner login." },
         { id: "company", n: 3, sel: formControl("Company name"), label: "Business name", text: "The name your customers know. Leave it blank to use your own name." },
         { id: "trade", n: 4, sel: formControl("What kind of business"), label: "What kind of business?", text: "Choose your trade so the agent starts with the right tone and the right features switched on." },
-        { id: "city", n: 5, sel: formControl("City"), label: "City", text: "Lets a local partner help you set up, if there is one in your city." },
+        { id: "city", n: 5, sel: formControl("City"), label: "City", text: "Lets a local Franchise holder help you set up, if there is one in your city." },
         { id: "continue", n: 6, sel: "role=button[name=\"Continue\"]", label: "Continue", text: "Go to the last step and start your free trial. No payment needed." },
       ],
       arrows: [{ from: "details", to: "company" }, { from: "trade", to: "continue", label: "then" }],
@@ -425,23 +425,23 @@ module.exports = {
     },
     {
       id: "admin-tenant-detail", app: "admin", section: "Clients", title: "Tenant detail", route: "/admin/tenants/501", as: "admin", roles: ["superadmin"],
-      summary: "One business: onboarding progress, Meta verification, partner, plan, numbers and payments.",
+      summary: "One business: onboarding progress, Meta verification, Franchise holder, plan, numbers and payments.",
       marks: [
         { id: "view", n: 1, sel: "role=button[name=\"View as owner (read-only)\"]", label: "View as owner", text: "Open their dashboard read-only for one hour to see what they see. You cannot change anything." },
         { id: "onboarding", n: 2, kind: "info", sel: ".MuiPaper-root:has(h6:text-is(\"Onboarding\")) >> nth=-1", label: "Onboarding", text: "Every step from account to Meta-verified, and whose move it is: us, the client or Meta." },
         { id: "verification", n: 3, kind: "info", sel: ".MuiPaper-root:has-text(\"Meta business verification\") >> nth=-1", label: "Meta business verification", text: "Where their verification stands. Verified numbers can message more customers a day." },
-        { id: "partner", n: 4, sel: formControl("Partner"), label: "Partner", text: "The city partner looking after this business. Change it and press Save." },
+        { id: "partner", n: 4, sel: formControl("Franchise holder"), label: "Franchise holder", text: "The Franchise holder looking after this business. Change it and press Save." },
       ],
       arrows: [{ from: "onboarding", to: "verification" }],
     },
 
-    // ── Partner ─────────────────────────────────────────────────────────────
+    // ── Franchise holder ─────────────────────────────────────────────────────────────
     {
-      id: "partner-home", app: "partner", section: "Partner", title: "Partner home", route: "/partner", as: "partner", roles: ["partner"],
+      id: "partner-home", app: "partner", section: "Franchise holder", title: "Franchise holder home", route: "/franchise", as: "partner", roles: ["partner"],
       summary: "What you earned, the businesses you brought in, and which ones need you today.",
       marks: [
         { id: "earned", n: 1, kind: "info", sel: ".MuiPaper-root:has-text(\"Earned this month\") >> nth=-1", label: "Earned this month", text: "Your share of what your businesses paid this month." },
-        { id: "owed", n: 2, kind: "info", sel: ".MuiPaper-root:has-text(\"Waiting to be paid to you\") >> nth=-1", label: "Waiting to be paid", text: "Earned but not paid out yet. AgentCraftr pays partners monthly." },
+        { id: "owed", n: 2, kind: "info", sel: ".MuiPaper-root:has-text(\"Waiting to be paid to you\") >> nth=-1", label: "Waiting to be paid", text: "Earned but not paid out yet. AgentCraftr pays Franchise holders monthly." },
         { id: "needs", n: 3, sel: ".MuiPaper-root:has(h6:text-is(\"Needs you\")) >> nth=-1", label: "Needs you", text: "Trials ending, trials that ended and setups that are stuck. Help these first." },
         { id: "whatsapp", n: 4, sel: "role=link[name=\"WhatsApp owner\"] >> nth=0", label: "WhatsApp owner", text: "Opens a WhatsApp chat with the owner so you can help straight away." },
         { id: "deal", n: 5, kind: "info", sel: ".MuiPaper-root:has(h6:text-is(\"Your deal\")) >> nth=-1", label: "Your deal", text: "Your share, the bonus on a first payment and the discount you may give." },
@@ -449,7 +449,7 @@ module.exports = {
       arrows: [{ from: "needs", to: "whatsapp", label: "act" }],
     },
     {
-      id: "partner-businesses", app: "partner", section: "Partner", title: "My businesses", route: "/partner/businesses", as: "partner", roles: ["partner"],
+      id: "partner-businesses", app: "partner", section: "Franchise holder", title: "My businesses", route: "/franchise/businesses", as: "partner", roles: ["partner"],
       summary: "Every business you brought in: its plan, how far its setup is, and what you can do to help.",
       marks: [
         { id: "add", n: 1, sel: "role=link[name=\"Add business\"]", label: "Add business", text: "Sign up a new business in your cities. The owner gets a link on WhatsApp." },

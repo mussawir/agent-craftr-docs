@@ -2,9 +2,9 @@
 Docs.screen({
   "id": "partner-businesses",
   "app": "partner",
-  "section": "Partner",
+  "section": "Franchise holder",
   "title": "My businesses",
-  "route": "/partner/businesses",
+  "route": "/franchise/businesses",
   "roles": ["partner"],
   "summary": "Every business you brought in: its plan, how far its setup is, and what you can do to help.",
   "image": "images/partner/businesses.png",
