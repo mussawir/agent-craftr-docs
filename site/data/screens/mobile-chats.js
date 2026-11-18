@@ -18,9 +18,9 @@ Docs.screen({
       "id": "search",
       "n": 1,
       "box": [
-        42,
-        186,
-        996,
+        54,
+        192,
+        972,
         156
       ],
       "kind": "action",
@@ -31,9 +31,9 @@ Docs.screen({
       "id": "filters",
       "n": 2,
       "box": [
-        42,
-        354,
-        165,
+        54,
+        360,
+        156,
         144
       ],
       "kind": "action",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "row",
       "n": 3,
       "box": [
-        222,
-        522,
-        553,
-        84
+        270,
+        554,
+        246,
+        75
       ],
       "kind": "action",
       "label": "Open a chat",

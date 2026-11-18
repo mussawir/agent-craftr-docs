@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "new",
       "n": 1,
-      "box": [1240, 18, 182, 57],
+      "box": [1245, 79, 177, 53],
       "kind": "action",
       "label": "New broadcast",
       "text": "Choose an approved message, pick tags for the audience and send now or later."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "allowance",
       "n": 2,
-      "box": [248, 122, 1174, 104],
+      "box": [266, 176, 1156, 103],
       "kind": "info",
       "label": "This month's allowance",
       "text": "Offer messages your plan includes. Meta also charges your own WhatsApp account per message."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "scheduled",
       "n": 3,
-      "box": [265, 364, 269, 31],
+      "box": [283, 398, 261, 29],
       "kind": "info",
       "label": "Scheduled",
       "text": "Goes out by itself at that time. Cancel it any time before."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "results",
       "n": 4,
-      "box": [690, 411, 508, 89],
+      "box": [678, 435, 514, 79],
       "kind": "info",
       "label": "Results",
       "text": "How many got it, read it and replied. Replies go to the Inbox and the AI knows which offer they mean."

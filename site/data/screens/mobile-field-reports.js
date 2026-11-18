@@ -19,9 +19,9 @@ Docs.screen({
       "n": 1,
       "box": [
         42,
-        198,
+        204,
         996,
-        180
+        156
       ],
       "kind": "action",
       "label": "Search truck number, site…",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "row",
       "n": 2,
       "box": [
-        90,
-        539,
-        710,
-        72
+        102,
+        477,
+        679,
+        69
       ],
       "kind": "action",
       "label": "A report",
@@ -45,10 +45,10 @@ Docs.screen({
       "id": "new",
       "n": 3,
       "box": [
-        860,
-        510,
-        82,
-        60
+        865,
+        452,
+        89,
+        57
       ],
       "kind": "info",
       "label": "New",

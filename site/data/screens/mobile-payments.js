@@ -18,9 +18,9 @@ Docs.screen({
       "id": "amount",
       "n": 1,
       "box": [
-        84,
-        252,
-        301,
+        96,
+        234,
+        317,
         99
       ],
       "kind": "info",
@@ -31,8 +31,8 @@ Docs.screen({
       "id": "from",
       "n": 2,
       "box": [
-        84,
-        414,
+        96,
+        399,
         282,
         69
       ],
@@ -44,9 +44,9 @@ Docs.screen({
       "id": "reject",
       "n": 3,
       "box": [
-        84,
-        645,
-        447,
+        96,
+        636,
+        435,
         156
       ],
       "kind": "action",
@@ -58,9 +58,9 @@ Docs.screen({
       "n": 4,
       "box": [
         549,
-        645,
-        447,
-        156
+        630,
+        435,
+        168
       ],
       "kind": "action",
       "label": "Confirm",

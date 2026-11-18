@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "filters",
       "n": 1,
-      "box": [700, 98, 172, 52],
+      "box": [718, 154, 172, 50],
       "kind": "action",
       "label": "Mine / Unassigned",
       "text": "Show only the chats given to you, or the ones nobody has taken yet. Status shows AI or human chats."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "thread",
       "n": 2,
-      "box": [249, 289, 627, 93],
+      "box": [267, 327, 625, 85],
       "kind": "action",
       "label": "A chat",
       "text": "Click a chat to open it on the right. A green dot means there is a new message."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "reason",
       "n": 3,
-      "box": [895, 260, 526, 80],
+      "box": [903, 310, 518, 80],
       "kind": "info",
       "label": "Why a person has this chat",
       "text": "The AI stepped back here because the customer asked for a person. It stays quiet until you resume it."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "assign",
       "n": 4,
-      "box": [1115, 187, 162, 52],
+      "box": [1134, 240, 162, 50],
       "kind": "action",
       "label": "Assigned to",
       "text": "Give the chat to a team member. It shows up under their Mine filter."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "reply",
       "n": 5,
-      "box": [895, 716, 526, 89],
+      "box": [903, 774, 518, 85],
       "kind": "action",
       "label": "Reply",
       "text": "Type your answer and press Send. It goes to the customer on WhatsApp from your business number."
@@ -54,7 +54,7 @@ Docs.screen({
     {
       "id": "resume",
       "n": 6,
-      "box": [1273, 173, 132, 80],
+      "box": [1292, 231, 113, 68],
       "kind": "action",
       "label": "Resume AI",
       "text": "When you are done, hand the chat back so the AI answers again."
@@ -62,7 +62,7 @@ Docs.screen({
     {
       "id": "profile",
       "n": 7,
-      "box": [911, 225, 107, 27],
+      "box": [919, 275, 110, 27],
       "kind": "action",
       "label": "Customer profile",
       "text": "See this customer's orders, payments and notes.",

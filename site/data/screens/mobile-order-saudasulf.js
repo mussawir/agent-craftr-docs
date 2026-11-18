@@ -18,10 +18,10 @@ Docs.screen({
       "id": "note",
       "n": 1,
       "box": [
-        84,
-        2070,
-        912,
-        72
+        96,
+        2028,
+        888,
+        78
       ],
       "kind": "info",
       "label": "Worked in SaudaSulf",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "open",
       "n": 2,
       "box": [
-        84,
-        2160,
-        912,
-        156
+        96,
+        2124,
+        888,
+        168
       ],
       "kind": "action",
       "label": "Open in SaudaSulf",

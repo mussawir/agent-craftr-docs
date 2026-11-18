@@ -10,6 +10,7 @@ const media = [
 module.exports = {
   handlers: [
     ...media,
+    ...require("./more").handlers,
     ...require("./owner").handlers,
     ...require("./admin").handlers,
     ...require("./partner").handlers,

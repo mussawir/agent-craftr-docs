@@ -18,10 +18,10 @@ Docs.screen({
       "id": "total",
       "n": 1,
       "box": [
-        90,
-        258,
-        251,
-        72
+        114,
+        240,
+        291,
+        78
       ],
       "kind": "info",
       "label": "Owed to you",
@@ -32,9 +32,9 @@ Docs.screen({
       "n": 2,
       "box": [
         270,
-        785,
-        459,
-        84
+        843,
+        415,
+        75
       ],
       "kind": "action",
       "label": "A customer",
@@ -45,10 +45,10 @@ Docs.screen({
       "id": "limit",
       "n": 3,
       "box": [
-        633,
-        624,
-        333,
-        60
+        611,
+        678,
+        343,
+        57
       ],
       "kind": "warn",
       "label": "Over the credit limit",

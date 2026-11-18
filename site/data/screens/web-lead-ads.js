@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "connect",
       "n": 1,
-      "box": [1012, 18, 228, 81],
+      "box": [1022, 79, 236, 77],
       "kind": "action",
       "label": "Connect a Facebook Page",
       "text": "Log in with Facebook and choose the Page your ads run from. Only an admin can do this. Instagram ads come through the same Page."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "status",
       "n": 2,
-      "box": [269, 163, 125, 36],
+      "box": [287, 215, 119, 36],
       "kind": "info",
       "label": "Receiving leads",
       "text": "The Page is connected and Meta is sending us its leads. \"Waiting for Meta\" means it is not confirmed yet."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "deal",
       "n": 3,
-      "box": [752, 141, 217, 52],
+      "box": [782, 194, 205, 51],
       "kind": "action",
       "label": "Open a deal for",
       "text": "Pick the product or service this ad sells, and every new lead also opens a deal for it in Deals.",
@@ -39,7 +39,7 @@ Docs.screen({
     {
       "id": "who",
       "n": 4,
-      "box": [973, 141, 172, 52],
+      "box": [991, 194, 172, 51],
       "kind": "action",
       "label": "Who calls them",
       "text": "The team member who gets the follow-up to call each new lead. The owner if you leave it empty."
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "switch",
       "n": 5,
-      "box": [1169, 142, 50, 50],
+      "box": [1187, 195, 50, 50],
       "kind": "action",
       "label": "Receive leads",
       "text": "Switch it off to stop bringing in leads from this Page. Nothing already received is removed."
@@ -55,7 +55,7 @@ Docs.screen({
     {
       "id": "leads",
       "n": 6,
-      "box": [353, 420, 125, 32],
+      "box": [370, 460, 113, 31],
       "kind": "info",
       "label": "Latest leads",
       "text": "Each lead with the form and ad it came from. Click the name to open the new customer.",

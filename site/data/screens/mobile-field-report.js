@@ -18,10 +18,10 @@ Docs.screen({
       "id": "summary",
       "n": 1,
       "box": [
-        42,
-        210,
-        996,
-        156
+        54,
+        192,
+        972,
+        162
       ],
       "kind": "info",
       "label": "Summary",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "fields",
       "n": 2,
       "box": [
-        78,
+        90,
         546,
-        402,
-        72
+        446,
+        78
       ],
       "kind": "info",
       "label": "Details",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "voice",
       "n": 3,
       "box": [
-        42,
-        756,
-        996,
-        72
+        54,
+        768,
+        972,
+        144
       ],
       "kind": "info",
       "label": "Voice note",
@@ -57,10 +57,10 @@ Docs.screen({
       "id": "reviewed",
       "n": 4,
       "box": [
-        42,
-        942,
-        996,
-        156
+        54,
+        1032,
+        972,
+        168
       ],
       "kind": "action",
       "label": "Mark reviewed",

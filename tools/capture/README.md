@@ -48,7 +48,7 @@ Add an entry to `screens` in `screens.config.js`:
 {
   id: "web-deals", app: "web", section: "Sales", title: "Deals", route: "/app/deals", roles: ["owner", "staff"],
   summary: "One or two plain sentences for a shop owner.",
-  // as: "admin" | "partner" | null (signed out); default is the owner
+  // as: "admin" | "partner" | "holder" | null (signed out); default is the owner
   // before: [{ do: "click", sel: "tr:has-text(\"#1043\")" }, { do: "scrollY", y: 400 }],
   // fixtures: [{ path: "deals", reply: () => ({ success: true, data: [] }) }],  // this screen only
   marks: [

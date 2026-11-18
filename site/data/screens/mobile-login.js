@@ -18,10 +18,10 @@ Docs.screen({
       "id": "lang",
       "n": 1,
       "box": [
-        617,
-        77,
-        150,
-        63
+        609,
+        74,
+        157,
+        69
       ],
       "kind": "info",
       "label": "English · اردو",
@@ -32,9 +32,9 @@ Docs.screen({
       "n": 2,
       "box": [
         66,
-        858,
+        864,
         948,
-        180
+        198
       ],
       "kind": "action",
       "label": "Email",
@@ -45,9 +45,9 @@ Docs.screen({
       "n": 3,
       "box": [
         66,
-        1062,
+        1086,
         948,
-        180
+        198
       ],
       "kind": "action",
       "label": "Password",
@@ -58,9 +58,9 @@ Docs.screen({
       "n": 4,
       "box": [
         66,
-        1290,
+        1332,
         948,
-        156
+        168
       ],
       "kind": "action",
       "label": "Sign in",
@@ -71,7 +71,7 @@ Docs.screen({
       "n": 5,
       "box": [
         66,
-        1482,
+        1536,
         948,
         126
       ],

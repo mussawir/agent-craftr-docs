@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "add",
       "n": 1,
-      "box": [1268, 18, 154, 57],
+      "box": [1274, 79, 148, 53],
       "kind": "action",
       "label": "Add tenant",
       "text": "Create a business for a client. The owner gets a link to choose their own password."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "filters",
       "n": 2,
-      "box": [945, 259, 168, 36],
+      "box": [946, 312, 159, 34],
       "kind": "action",
       "label": "Needs attention only",
       "text": "Show only businesses with a problem: trial ending, no number, payment waiting."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "setup",
       "n": 3,
-      "box": [698, 482, 122, 111],
+      "box": [709, 542, 122, 103],
       "kind": "info",
       "label": "Setup",
       "text": "How many of the seven setup steps the business has done."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "needs",
       "n": 4,
-      "box": [1043, 482, 292, 111],
+      "box": [1038, 542, 292, 103],
       "kind": "warn",
       "label": "Needs",
       "text": "What needs us, in plain words. \"All good\" means nothing to do."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "row",
       "n": 5,
-      "box": [249, 384, 231, 110],
+      "box": [267, 451, 231, 103],
       "kind": "action",
       "label": "Open a business",
       "text": "Click the name to see everything about it.",

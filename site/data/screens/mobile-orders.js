@@ -19,8 +19,8 @@ Docs.screen({
       "n": 1,
       "box": [
         42,
-        174,
-        242,
+        180,
+        231,
         144
       ],
       "kind": "action",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "row",
       "n": 2,
       "box": [
-        42,
-        366,
-        996,
-        240
+        54,
+        360,
+        972,
+        381
       ],
       "kind": "action",
       "label": "An order",
@@ -45,9 +45,9 @@ Docs.screen({
       "id": "out",
       "n": 3,
       "box": [
-        108,
-        747,
-        252,
+        652,
+        905,
+        296,
         60
       ],
       "kind": "info",
@@ -58,10 +58,10 @@ Docs.screen({
       "id": "paid",
       "n": 4,
       "box": [
-        414,
-        495,
-        81,
-        60
+        471,
+        557,
+        85,
+        57
       ],
       "kind": "info",
       "label": "Paid",

@@ -18,10 +18,10 @@ Docs.screen({
       "id": "tabs",
       "n": 1,
       "box": [
-        212,
-        197,
-        141,
-        63
+        207,
+        200,
+        144,
+        69
       ],
       "kind": "action",
       "label": "Mine · Team · To check",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "row",
       "n": 2,
       "box": [
-        162,
-        359,
-        732,
-        84
+        264,
+        378,
+        600,
+        75
       ],
       "kind": "action",
       "label": "A task",
@@ -45,10 +45,10 @@ Docs.screen({
       "id": "late",
       "n": 3,
       "box": [
-        162,
-        650,
-        732,
-        72
+        264,
+        624,
+        600,
+        126
       ],
       "kind": "warn",
       "label": "Late",
@@ -58,9 +58,9 @@ Docs.screen({
       "id": "new",
       "n": 4,
       "box": [
-        648,
+        610,
         1974,
-        390,
+        428,
         180
       ],
       "kind": "action",

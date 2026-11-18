@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "kinds",
       "n": 1,
-      "box": [248, 90, 1174, 60],
+      "box": [266, 146, 1156, 56],
       "kind": "action",
       "label": "Kinds of request",
       "text": "Quotes, jobs, complaints and enquiries. The orange number is how many are waiting for you."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "open",
       "n": 2,
-      "box": [248, 155, 406, 52],
+      "box": [266, 207, 349, 50],
       "kind": "action",
       "label": "Search and Open only",
       "text": "Find a request by number or customer. Switch off Open only to see finished ones too."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "row",
       "n": 3,
-      "box": [249, 249, 1172, 84],
+      "box": [267, 311, 1154, 97],
       "kind": "action",
       "label": "A quote to price",
       "text": "The agent collected what the customer wants. Click it, enter your price, and the customer gets it on WhatsApp."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "stage",
       "n": 4,
-      "box": [1155, 336, 90, 36],
+      "box": [1164, 416, 85, 36],
       "kind": "info",
       "label": "Price sent",
       "text": "The customer has your price. When they say yes or no on WhatsApp, the stage changes by itself."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "new",
       "n": 5,
-      "box": [1312, 18, 110, 57],
+      "box": [1319, 79, 103, 53],
       "kind": "action",
       "label": "New",
       "text": "Open a request yourself, for example after a phone call."

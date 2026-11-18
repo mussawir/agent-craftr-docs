@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "tabs",
       "n": 1,
-      "box": [265, 112, 1140, 60],
+      "box": [283, 159, 1122, 56],
       "kind": "action",
       "label": "Order stages",
       "text": "New orders to pack, packed orders waiting for the rider, then delivered or cancelled."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "row",
       "n": 2,
-      "box": [249, 217, 1172, 85],
+      "box": [267, 253, 1154, 77],
       "kind": "action",
       "label": "An order",
       "text": "Who ordered, the total the system worked out, and when. Click it to see every line.",
@@ -31,7 +31,7 @@ Docs.screen({
     {
       "id": "status",
       "n": 3,
-      "box": [1271, 242, 56, 36],
+      "box": [1270, 274, 55, 36],
       "kind": "info",
       "label": "Status",
       "text": "Shows where the order is. \"Paid\" appears once you confirm a payment for it."
@@ -39,7 +39,7 @@ Docs.screen({
     {
       "id": "export",
       "n": 4,
-      "box": [338, 18, 154, 57],
+      "box": [350, 80, 134, 44],
       "kind": "action",
       "label": "Export CSV",
       "text": "Download your orders as a spreadsheet."

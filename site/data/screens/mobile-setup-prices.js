@@ -17,10 +17,10 @@ Docs.screen({
       "id": "name",
       "n": 1,
       "box": [
-        126,
-        374,
-        112,
-        48
+        138,
+        432,
+        89,
+        39
       ],
       "kind": "action",
       "label": "Name",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "price",
       "n": 2,
       "box": [
-        683,
-        374,
-        99,
-        48
+        695,
+        432,
+        79,
+        39
       ],
       "kind": "action",
       "label": "Price",
@@ -43,10 +43,10 @@ Docs.screen({
       "id": "per",
       "n": 3,
       "box": [
-        126,
-        566,
-        245,
-        48
+        138,
+        642,
+        190,
+        39
       ],
       "kind": "action",
       "label": "Per (optional)",
@@ -56,10 +56,10 @@ Docs.screen({
       "id": "add",
       "n": 4,
       "box": [
-        467,
-        1985,
-        200,
-        63
+        466,
+        2096,
+        231,
+        69
       ],
       "kind": "action",
       "label": "Add a row",
@@ -70,9 +70,9 @@ Docs.screen({
       "n": 5,
       "box": [
         42,
-        2202,
+        2190,
         996,
-        156
+        168
       ],
       "kind": "action",
       "label": "Save",

@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "needs-reply",
       "n": 1,
-      "box": [248, 191, 291, 189],
+      "box": [266, 232, 286, 182],
       "kind": "action",
       "label": "Need your reply",
       "text": "Customers waiting for a person. Click to open the Inbox and answer them first.",
@@ -23,7 +23,7 @@ Docs.screen({
     {
       "id": "orders",
       "n": 2,
-      "box": [248, 108, 1174, 71],
+      "box": [266, 160, 1156, 60],
       "kind": "action",
       "label": "Orders to pack",
       "text": "New orders the agent took on WhatsApp. Open them to pack and deliver.",
@@ -32,7 +32,7 @@ Docs.screen({
     {
       "id": "revenue",
       "n": 3,
-      "box": [837, 191, 291, 189],
+      "box": [846, 232, 286, 182],
       "kind": "info",
       "label": "Revenue this month",
       "text": "Money from payments you confirmed. Unchecked screenshots are not counted."
@@ -40,7 +40,7 @@ Docs.screen({
     {
       "id": "ai-share",
       "n": 4,
-      "box": [1132, 191, 290, 189],
+      "box": [1136, 232, 286, 182],
       "kind": "info",
       "label": "Handled by AI",
       "text": "How many of this month's chats the AI finished without a person stepping in."
@@ -48,7 +48,7 @@ Docs.screen({
     {
       "id": "insights",
       "n": 5,
-      "box": [248, 432, 1174, 103],
+      "box": [266, 458, 1156, 101],
       "kind": "info",
       "label": "This week",
       "text": "Plain facts about this week compared with last week. Click a card to see the records behind it."
@@ -56,7 +56,7 @@ Docs.screen({
     {
       "id": "agent",
       "n": 6,
-      "box": [1028, 547, 394, 353],
+      "box": [1034, 571, 388, 329],
       "kind": "info",
       "label": "AI Agent",
       "text": "AI replies used this month against your plan, and Meta's 1,000 free WhatsApp replies per number."

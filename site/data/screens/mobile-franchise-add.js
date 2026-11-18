@@ -18,9 +18,9 @@ Docs.screen({
       "n": 1,
       "box": [
         42,
-        210,
+        216,
         996,
-        180
+        198
       ],
       "kind": "action",
       "label": "Business name",
@@ -30,9 +30,9 @@ Docs.screen({
       "id": "phone",
       "n": 2,
       "box": [
-        90,
-        864,
-        437,
+        102,
+        933,
+        456,
         60
       ],
       "kind": "action",
@@ -43,9 +43,9 @@ Docs.screen({
       "id": "kind",
       "n": 3,
       "box": [
-        90,
-        1062,
-        390,
+        102,
+        1152,
+        384,
         60
       ],
       "kind": "action",
@@ -56,10 +56,10 @@ Docs.screen({
       "id": "plan",
       "n": 4,
       "box": [
-        90,
-        1184,
-        87,
-        48
+        102,
+        1338,
+        68,
+        39
       ],
       "kind": "action",
       "label": "Plan",
@@ -69,10 +69,10 @@ Docs.screen({
       "id": "discount",
       "n": 5,
       "box": [
-        90,
-        1382,
-        478,
-        48
+        102,
+        1560,
+        364,
+        39
       ],
       "kind": "action",
       "label": "Discount on the first month",
@@ -83,9 +83,9 @@ Docs.screen({
       "n": 6,
       "box": [
         42,
-        1626,
+        1776,
         996,
-        156
+        168
       ],
       "kind": "action",
       "label": "Create and get the owner's link",

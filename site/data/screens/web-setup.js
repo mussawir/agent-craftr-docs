@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "progress",
       "n": 1,
-      "box": [248, 162, 832, 20],
+      "box": [266, 212, 832, 20],
       "kind": "info",
       "label": "Your progress",
       "text": "How many of the seven steps are done. The agent starts answering once the number step is finished."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "done",
       "n": 2,
-      "box": [248, 194, 832, 118],
+      "box": [266, 244, 832, 96],
       "kind": "info",
       "label": "A finished step",
       "text": "A green tick means it is done. Press Open to change it any time."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "optional",
       "n": 3,
-      "box": [248, 410, 832, 118],
+      "box": [266, 436, 832, 118],
       "kind": "info",
       "label": "Recommended",
       "text": "Not required, but customers love it: photos and PDFs the agent can send when asked."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "next",
       "n": 4,
-      "box": [248, 626, 832, 99],
+      "box": [266, 650, 832, 96],
       "kind": "action",
       "label": "Your next step",
       "text": "Highlighted in green. Press the button to go straight to the page where you do it.",
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "attach",
       "n": 5,
-      "box": [248, 725, 832, 99],
+      "box": [266, 746, 832, 96],
       "kind": "info",
       "label": "Put the number on what you sell",
       "text": "Until a number answers for a product or service, the agent stays silent."

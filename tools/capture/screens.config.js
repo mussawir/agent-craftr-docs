@@ -3,7 +3,7 @@
 //
 // Screen fields
 //   id, app (web|admin|partner), section, title, route, roles, summary  -> copied into the screen file
-//   as        which login to use: "owner" (default) | "admin" | "partner" | null (signed out)
+//   as        which login to use: "owner" (default) | "admin" | "partner" | "holder" | null (signed out)
 //   viewport  defaults to 1440x900
 //   fixtures  this screen's own API answers, tried before the shared ones in fixtures/ (same shape)
 //   before    steps run after the page settles:
@@ -33,7 +33,8 @@ const formControl = (label) => `.MuiFormControl-root:has(label:has-text("${label
 module.exports = {
   frozenNow: FROZEN_NOW,
   viewport: { width: 1440, height: 900 },
-  users: { owner: USERS.owner, admin: USERS.admin, partner: USERS.partner },
+  users: { owner: USERS.owner, admin: USERS.admin, partner: USERS.partner,
+    holder: { id: 401, name: "Faisal Qadri", email: "faisal.tp@demo.pk", role: "Trade Partner", role_id: 31, company_id: null } },
   screens: [
     // ── Public ───────────────────────────────────────────────────────────────
     {
@@ -393,9 +394,19 @@ module.exports = {
       marks: [
         { id: "status", n: 1, kind: "info", sel: ".MuiPaper-root:has-text(\"Subscription\") >> nth=-1", label: "Subscription", text: "Active until the renewal date. If it ends, the AI pauses but your Inbox keeps working." },
         { id: "usage", n: 2, kind: "info", sel: ".MuiPaper-root:has(h6:text-is(\"AI usage this month\")) >> nth=-1", label: "AI usage", text: "Included in your plan and shown for openness. It is not a separate charge." },
-        { id: "history", n: 3, sel: "h6:text-is(\"Payment history\") >> xpath=..", label: "Payment history", text: "Every payment with its reference. Search or filter by date." },
+        { id: "saudasulf", n: 3, kind: "info", sel: ".MuiPaper-root:has-text(\"SaudaSulf package\") >> nth=-1", label: "SaudaSulf package", text: "Shown when the shop also has SaudaSulf: its renewal date and the app messages used this month." },
       ],
       arrows: [],
+    },
+
+    {
+      id: "web-saudasulf", app: "web", section: "Sales", title: "SaudaSulf", route: "/app/saudasulf", roles: OWNER,
+      summary: "Your shop code and QR for the SaudaSulf ordering app, and the app customers waiting for you to confirm them.",
+      marks: [
+        { id: "code", n: 1, kind: "info", sel: "img[alt*=\"QR\"]", label: "Shop code and QR", text: "Customers scan this or type the code in the SaudaSulf app to add your shop. Print it for the counter." },
+        { id: "print", n: 2, sel: "role=button[name=\"Print\"]", label: "Print", text: "Prints the QR with your shop code, ready to stick near the till." },
+        { id: "tabs", n: 3, sel: "role=tab[name=\"Waiting\"]", label: "Waiting", text: "New app customers. Confirm the ones you know so their orders and khata go to the right person." },
+      ],
     },
 
     // ── SuperAdmin ──────────────────────────────────────────────────────────
@@ -435,6 +446,33 @@ module.exports = {
       arrows: [{ from: "onboarding", to: "verification" }],
     },
 
+    {
+      id: "admin-team", app: "admin", section: "Our team", title: "Team", route: "/admin/team", as: "admin", roles: ["superadmin"],
+      summary: "Who on the AgentCraftr team can open the admin panel, and what each person can change.",
+      marks: [
+        { id: "table", n: 1, kind: "info", sel: "table", label: "Team members", text: "Everyone with an admin login, their role and whether they have joined yet." },
+        { id: "invited", n: 2, kind: "warn", sel: "tr:has-text(\"Ayesha Khan\")", label: "Invited", text: "Has an invite link but has not set a password yet. Send the link again if it expired." },
+      ],
+    },
+    {
+      id: "admin-billing", app: "admin", section: "Money", title: "Billing desk", route: "/admin/billing", as: "admin", roles: ["superadmin"],
+      summary: "Every payment due, overdue or waiting to be confirmed, for WhatsApp and SaudaSulf, in one place.",
+      marks: [
+        { id: "tabs", n: 1, sel: ".MuiTabs-root >> nth=0", label: "Due, Overdue, Proofs", text: "Each tab is one job. The number is how many are waiting." },
+        { id: "row", n: 2, kind: "info", sel: "tr:has-text(\"Al-Noor Kiryana Store\")", label: "A business to collect from", text: "Plan, product, amount and days left, and the Franchise holder or Trade Partner who brought it." },
+        { id: "proofs", n: 3, kind: "warn", sel: "role=tab[name=/Proofs to confirm/]", label: "Proofs to confirm", text: "Receipts uploaded by a business or its Franchise holder. Check the money arrived, then confirm." },
+      ],
+      arrows: [{ from: "tabs", to: "row" }],
+    },
+    {
+      id: "admin-social", app: "admin", section: "Marketing", title: "Social", route: "/admin/social", as: "admin", roles: ["superadmin"],
+      summary: "The content calendar for AgentCraftr's own social posts: ideas, drafts, scheduled and posted.",
+      marks: [
+        { id: "nav", n: 1, sel: "role=button[name=\"Next\"]", label: "Next", text: "Move through the calendar. Each post sits on the day it goes out." },
+        { id: "post", n: 2, kind: "info", sel: "text=SaudaSulf: orders from the shop's QR >> nth=0", label: "A scheduled post", text: "Click a post to edit its caption per platform, add media and get tracked links." },
+      ],
+    },
+
     // ── Franchise holder ─────────────────────────────────────────────────────────────
     {
       id: "partner-home", app: "partner", section: "Franchise holder", title: "Franchise holder home", route: "/franchise", as: "partner", roles: ["partner"],
@@ -459,6 +497,45 @@ module.exports = {
         { id: "more", n: 5, sel: "role=button[name=\"More for Fresh Fruit Corner\"]", label: "More", text: "Extend a trial or give a first-month discount, within your limits." },
       ],
       arrows: [{ from: "setup", to: "access", label: "stuck?" }],
+    },
+    {
+      id: "partner-billing", app: "partner", section: "Franchise holder", title: "Billing", route: "/franchise/businesses", as: "partner", roles: ["partner"],
+      summary: "What each of your businesses owes AgentCraftr, when it renews, and receipts you uploaded for them.",
+      before: [{ do: "click", sel: "role=tab[name=\"Billing\"]" }, { do: "wait", ms: 800 }],
+      marks: [
+        { id: "details", n: 1, kind: "info", sel: "text=Pay AgentCraftr >> nth=0", label: "Where to pay", text: "Businesses always pay AgentCraftr directly. Share these details with the owner." },
+        { id: "overdue", n: 2, kind: "warn", sel: "tr:has-text(\"Bano's Boutique\")", label: "Overdue", text: "The renewal date has passed. Remind the owner before the AI pauses." },
+        { id: "remind", n: 3, sel: "role=button[name=\"Send reminder\"] >> nth=0", label: "Send reminder", text: "Opens WhatsApp with a ready reminder: amount, reference and where to pay." },
+      ],
+      arrows: [{ from: "overdue", to: "remind" }],
+    },
+    {
+      id: "partner-prospects", app: "partner", section: "Franchise holder", title: "Prospects", route: "/franchise/leads", as: "partner", roles: ["partner"],
+      summary: "Your pipeline of shops you are talking to, from new to won, with follow-ups so nobody is forgotten.",
+      marks: [
+        { id: "add", n: 1, sel: "role=button[name=\"Add prospect\"]", label: "Add prospect", text: "Note a shop you met or called. Add a first note so you remember the talk." },
+        { id: "card", n: 2, kind: "info", sel: "text=Gulberg Dental Care >> nth=0", label: "A prospect", text: "Click to change its stage, add notes or set the next follow-up." },
+      ],
+    },
+
+    // ── Trade Partner ────────────────────────────────────────────────────────────
+    {
+      id: "holder-billing", app: "holder", section: "Trade Partner", title: "Billing", route: "/trade-partner/businesses", as: "holder", roles: ["trade partner"],
+      summary: "What every business in your slice owes AgentCraftr, and which Franchise holder brought it.",
+      before: [{ do: "click", sel: "role=tab[name=\"Billing\"]" }, { do: "wait", ms: 800 }],
+      marks: [
+        { id: "via", n: 1, kind: "info", sel: "th:has-text(\"Via\")", label: "Via", text: "The Franchise holder who looks after the business, or blank if it is yours directly." },
+        { id: "overdue", n: 2, kind: "warn", sel: "tr:has-text(\"Bano's Boutique\")", label: "Overdue", text: "Past the renewal date. Remind the owner, or ask their Franchise holder to." },
+        { id: "remind", n: 3, sel: "role=button[name=\"Send reminder\"] >> nth=0", label: "Send reminder", text: "A ready WhatsApp reminder with the amount and reference." },
+      ],
+    },
+    {
+      id: "holder-prospects", app: "holder", section: "Trade Partner", title: "Prospects", route: "/trade-partner/leads", as: "holder", roles: ["trade partner"],
+      summary: "Your prospect pipeline, plus the ones handed to your Franchise holders (read-only).",
+      marks: [
+        { id: "add", n: 1, sel: "role=button[name=\"Add prospect\"]", label: "Add prospect", text: "Note a shop you are talking to." },
+        { id: "card", n: 2, kind: "info", sel: "text=Model Town Pharmacy >> nth=0", label: "A prospect", text: "Open it to move the stage, add notes, set a follow-up or convert it to a business." },
+      ],
     },
   ],
 };

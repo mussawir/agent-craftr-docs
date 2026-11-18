@@ -17,10 +17,10 @@ Docs.screen({
       "id": "row",
       "n": 1,
       "box": [
-        210,
-        227,
-        636,
-        84
+        252,
+        222,
+        624,
+        75
       ],
       "kind": "action",
       "label": "An Item",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "type",
       "n": 2,
       "box": [
-        210,
-        518,
-        636,
-        72
+        252,
+        468,
+        624,
+        69
       ],
       "kind": "info",
       "label": "Item type",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "paused",
       "n": 3,
       "box": [
-        738,
-        708,
-        132,
-        60
+        758,
+        626,
+        136,
+        57
       ],
       "kind": "warn",
       "label": "Paused",
@@ -57,10 +57,10 @@ Docs.screen({
       "id": "add",
       "n": 4,
       "box": [
-        890,
-        2237,
-        88,
-        63
+        870,
+        2234,
+        108,
+        69
       ],
       "kind": "action",
       "label": "Add",

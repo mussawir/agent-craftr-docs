@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "ai",
       "n": 1,
-      "box": [254, 131, 305, 50],
+      "box": [272, 185, 289, 50],
       "kind": "action",
       "label": "AI keeps notes",
       "text": "After a chat goes quiet the AI writes a short note and fills empty fields from what the customer said. It never overwrites your team's own entries."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "row",
       "n": 2,
-      "box": [559, 314, 142, 52],
+      "box": [577, 365, 142, 51],
       "kind": "action",
       "label": "Type",
       "text": "Text, number, date, yes/no or pick-one. For pick-one, type the choices with commas."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "order",
       "n": 3,
-      "box": [987, 319, 42, 42],
+      "box": [1005, 370, 42, 42],
       "kind": "action",
       "label": "Move up / remove",
       "text": "Change the order the fields appear in. Removing a field hides it, and what was already written is kept."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "add",
       "n": 4,
-      "box": [269, 522, 152, 57],
+      "box": [287, 568, 144, 52],
       "kind": "action",
       "label": "Add a field",
       "text": "Create your own detail. It shows on every customer page and can be searched and exported."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "suggested",
       "n": 5,
-      "box": [417, 522, 331, 57],
+      "box": [427, 568, 322, 52],
       "kind": "action",
       "label": "Suggested fields",
       "text": "A ready-made set for your kind of business, so you do not start from nothing."
@@ -54,7 +54,7 @@ Docs.screen({
     {
       "id": "save",
       "n": 6,
-      "box": [970, 522, 89, 57],
+      "box": [996, 568, 81, 52],
       "kind": "action",
       "label": "Save",
       "text": "Nothing changes until you press Save."

@@ -11,7 +11,7 @@ Docs.page({
 <li>Open <b>Code</b>. Show the 6-character code or the QR at the counter (<a href="#/screen/saudasulf-shop-code">screen</a>). They work only while your package is paid.</li>
 <li>Open <b>Products</b>. Change price and stock (<a href="#/screen/saudasulf-shop-products">screen</a>).</li>
 <li>Open <b>Orders</b>. Open a new order, pack it, mark it out for delivery, then delivered. Mark payment received (<a href="#/screen/saudasulf-shop-orders">screen</a>).</li>
-<li>Open <b>Customers</b> to confirm a new customer, mark "not this person", or block (<a href="#/screen/saudasulf-app-customers">screen</a>).</li>
+<li>Open <b>Customers</b> to confirm a new customer, mark "not this person", or block (<a href="#/screen/saudasulf-app-customers">screen</a>). On the web dashboard the same code, QR and customers are under <b>Sales, SaudaSulf</b> (<a href="#/screen/web-saudasulf">screen</a>).</li>
 <li>Watch the message banner and <b>Package &amp; messages</b> (<a href="#/screen/saudasulf-package">screen</a>). Warnings come at 80% and 95%.</li>
 <li>Pay for the package to AgentCraftr only (bank, Easypaisa, JazzCash or cash). Our Finance team confirms it.</li>
 </ol>

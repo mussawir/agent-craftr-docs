@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "new",
       "n": 1,
-      "box": [1231, 30, 143, 57],
+      "box": [1239, 86, 135, 53],
       "kind": "action",
       "label": "New deal",
       "text": "Open a deal yourself, for example after a phone call or a walk-in. It starts at Enquiry."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "filters",
       "n": 2,
-      "box": [248, 111, 218, 52],
+      "box": [266, 158, 205, 51],
       "kind": "action",
       "label": "Filter",
       "text": "Show one product or service only, or one stage."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "stage",
       "n": 3,
-      "box": [249, 470, 1172, 69],
+      "box": [267, 475, 1154, 61],
       "kind": "info",
       "label": "A stage",
       "text": "Enquiry, Quoted, Invoiced, Paid and Lost. The chips show the PKR total of that stage, so you can see what is still open."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "row",
       "n": 4,
-      "box": [249, 527, 1172, 75],
+      "box": [267, 524, 1154, 67],
       "kind": "action",
       "label": "A deal",
       "text": "Who, for what, how much and how it started: \"ai\" means the agent opened it from a chat. Click it to open the deal, change its stage or add the quoted amount."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "dismiss",
       "n": 5,
-      "box": [1363, 298, 42, 42],
+      "box": [1363, 322, 42, 42],
       "kind": "action",
       "label": "Dismiss",
       "text": "Remove an enquiry that is not real, like a wrong number. It leaves the pipeline for good."

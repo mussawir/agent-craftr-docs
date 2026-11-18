@@ -18,10 +18,10 @@ Docs.screen({
       "id": "note",
       "n": 1,
       "box": [
-        42,
-        210,
-        996,
-        252
+        180,
+        684,
+        804,
+        240
       ],
       "kind": "info",
       "label": "Ask in Urdu, Roman Urdu or English",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "example",
       "n": 2,
       "box": [
-        304,
-        701,
-        473,
-        63
+        285,
+        1196,
+        510,
+        69
       ],
       "kind": "action",
       "label": "Who owes me the most?",
@@ -45,9 +45,9 @@ Docs.screen({
       "n": 3,
       "box": [
         198,
-        2142,
-        708,
-        228
+        2154,
+        690,
+        216
       ],
       "kind": "action",
       "label": "Ask your business",
@@ -58,7 +58,7 @@ Docs.screen({
       "n": 4,
       "box": [
         66,
-        2214,
+        2220,
         84,
         84
       ],

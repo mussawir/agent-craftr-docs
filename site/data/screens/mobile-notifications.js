@@ -18,10 +18,10 @@ Docs.screen({
       "id": "unread",
       "n": 1,
       "box": [
-        42,
-        186,
-        972,
-        84
+        264,
+        222,
+        618,
+        75
       ],
       "kind": "info",
       "label": "An unread notification",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "row",
       "n": 2,
       "box": [
-        42,
-        429,
-        972,
-        84
+        264,
+        462,
+        618,
+        75
       ],
       "kind": "action",
       "label": "Tap to open",
@@ -45,10 +45,10 @@ Docs.screen({
       "id": "all",
       "n": 3,
       "box": [
-        791,
-        53,
-        259,
-        63
+        765,
+        51,
+        287,
+        72
       ],
       "kind": "action",
       "label": "Mark all read",

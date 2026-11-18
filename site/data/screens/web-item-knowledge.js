@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "tiles",
       "n": 1,
-      "box": [273, 161, 281, 84],
+      "box": [291, 215, 277, 83],
       "kind": "info",
       "label": "At a glance",
       "text": "How much the agent knows, which files it may send, the prices it quotes and how many numbers answer for it."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "upload",
       "n": 2,
-      "box": [318, 495, 160, 58],
+      "box": [343, 543, 152, 54],
       "kind": "action",
       "label": "Upload files",
       "text": "Add photos, videos, PDFs or price lists. You can also drop several files on the green box."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "note",
       "n": 3,
-      "box": [476, 495, 164, 58],
+      "box": [493, 543, 156, 54],
       "kind": "action",
       "label": "Write a note",
       "text": "Type facts the agent should know, like opening hours or delivery rules."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "voice",
       "n": 4,
-      "box": [816, 495, 216, 58],
+      "box": [816, 543, 209, 54],
       "kind": "action",
       "label": "Record a voice note",
       "text": "Just talk. The agent learns from what you say; the recording itself is never sent to customers."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "prices",
       "n": 5,
-      "box": [951, 669, 130, 58],
+      "box": [959, 711, 122, 55],
       "kind": "action",
       "label": "Prices",
       "text": "The exact prices the agent quotes. It never makes up a figure of its own."
@@ -54,7 +54,7 @@ Docs.screen({
     {
       "id": "try",
       "n": 6,
-      "box": [1110, 347, 312, 462],
+      "box": [1110, 396, 312, 445],
       "kind": "action",
       "label": "Try it now",
       "text": "Ask what a customer would ask and see the reply they would get, with the files it came from."
@@ -62,7 +62,7 @@ Docs.screen({
     {
       "id": "test-tab",
       "n": 7,
-      "box": [401, 274, 141, 60],
+      "box": [420, 327, 140, 56],
       "kind": "action",
       "label": "Test the agent",
       "text": "Have a longer practice chat before you go live."

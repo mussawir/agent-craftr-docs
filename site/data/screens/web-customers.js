@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "stages",
       "n": 1,
-      "box": [248, 90, 1174, 60],
+      "box": [266, 146, 1156, 56],
       "kind": "action",
       "label": "Stages",
       "text": "Worked out for you: Lead has not bought yet, Customer bought once, Repeat bought twice or more, Gone quiet nothing for 60 days."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "filters",
       "n": 2,
-      "box": [503, 155, 152, 52],
+      "box": [518, 207, 152, 50],
       "kind": "action",
       "label": "Filters",
       "text": "Narrow the list by tag, who looks after them, city, or how long they have been quiet."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "views",
       "n": 3,
-      "box": [521, 257, 170, 55],
+      "box": [542, 307, 149, 44],
       "kind": "action",
       "label": "Save this view",
       "text": "Keep a filter you use often, like \"VIPs gone quiet\", as a one-click chip."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "row",
       "n": 4,
-      "box": [249, 353, 1172, 65],
+      "box": [267, 405, 1154, 76],
       "kind": "action",
       "label": "A customer",
       "text": "What they paid, their tags, who looks after them and the next follow-up. Click to open the profile.",
@@ -47,7 +47,7 @@ Docs.screen({
     {
       "id": "followup",
       "n": 5,
-      "box": [1269, 670, 152, 65],
+      "box": [1256, 788, 165, 76],
       "kind": "info",
       "label": "Next follow-up",
       "text": "A reminder someone set. It turns red when it is late."
@@ -55,7 +55,7 @@ Docs.screen({
     {
       "id": "add",
       "n": 6,
-      "box": [1247, 18, 175, 59],
+      "box": [1253, 79, 169, 55],
       "kind": "action",
       "label": "Add customer",
       "text": "Add someone by hand, for example a walk-in customer."

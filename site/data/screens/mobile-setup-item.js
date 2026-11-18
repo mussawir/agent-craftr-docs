@@ -18,9 +18,9 @@ Docs.screen({
       "n": 1,
       "box": [
         42,
-        210,
+        216,
         996,
-        180
+        198
       ],
       "kind": "action",
       "label": "Name",
@@ -30,9 +30,9 @@ Docs.screen({
       "id": "talks",
       "n": 2,
       "box": [
-        90,
-        678,
-        465,
+        102,
+        753,
+        464,
         60
       ],
       "kind": "action",
@@ -43,10 +43,10 @@ Docs.screen({
       "id": "reset",
       "n": 3,
       "box": [
-        679,
-        1049,
-        311,
-        63
+        636,
+        1086,
+        359,
+        72
       ],
       "kind": "action",
       "label": "Reset to default",
@@ -56,10 +56,10 @@ Docs.screen({
       "id": "prices",
       "n": 4,
       "box": [
-        210,
-        1194,
-        636,
-        84
+        252,
+        1244,
+        624,
+        75
       ],
       "kind": "action",
       "label": "Price list",
@@ -71,9 +71,9 @@ Docs.screen({
       "n": 5,
       "box": [
         42,
-        2202,
+        2190,
         996,
-        156
+        168
       ],
       "kind": "action",
       "label": "Save",

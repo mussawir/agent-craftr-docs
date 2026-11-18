@@ -18,10 +18,10 @@ Docs.screen({
       "id": "row",
       "n": 1,
       "box": [
-        90,
-        234,
-        683,
-        84
+        102,
+        222,
+        661,
+        75
       ],
       "kind": "info",
       "label": "A stay",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "dates",
       "n": 2,
       "box": [
-        90,
-        306,
-        683,
-        192
+        102,
+        285,
+        661,
+        183
       ],
       "kind": "info",
       "label": "Reference and dates",
@@ -44,10 +44,10 @@ Docs.screen({
       "id": "total",
       "n": 3,
       "box": [
-        90,
-        306,
-        683,
-        192
+        102,
+        285,
+        661,
+        183
       ],
       "kind": "info",
       "label": "Customer and total",

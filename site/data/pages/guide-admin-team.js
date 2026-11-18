@@ -9,13 +9,13 @@ Docs.page({
 <table>
 <tr><th>Area</th><th>Owner</th><th>Finance</th><th>Support</th><th>Marketing</th></tr>
 <tr><td>Home</td><td>RW</td><td>R</td><td>R</td><td>R</td></tr>
-<tr><td>Team, Activity log</td><td>RW / R</td><td>-</td><td>-</td><td>-</td></tr>
-<tr><td>Billing desk, Plans</td><td>RW</td><td>RW</td><td>R</td><td>-</td></tr>
+<tr><td>Team (<a href="#/screen/admin-team">screen</a>), Activity log</td><td>RW / R</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Billing desk (<a href="#/screen/admin-billing">screen</a>), Plans</td><td>RW</td><td>RW</td><td>R</td><td>-</td></tr>
 <tr><td>Franchise holders, Trade Partners (and payouts)</td><td>RW</td><td>RW</td><td>R</td><td>-</td></tr>
 <tr><td>Tenants, view-as, Numbers, Number requests, Business types</td><td>RW</td><td>R</td><td>RW</td><td>-</td></tr>
 <tr><td>Usage, Cities</td><td>RW</td><td>R</td><td>R</td><td>-</td></tr>
 <tr><td>Settings (AI, gateways, currencies, countries)</td><td>RW</td><td>-</td><td>-</td><td>-</td></tr>
-<tr><td>Leads, Site content, Social</td><td>RW</td><td>-</td><td>R</td><td>RW</td></tr>
+<tr><td>Leads, Site content, Social (<a href="#/screen/admin-social">screen</a>)</td><td>RW</td><td>-</td><td>R</td><td>RW</td></tr>
 </table>
 <p>The last Owner cannot be disabled or demoted. Nobody can change their own role.</p>
 

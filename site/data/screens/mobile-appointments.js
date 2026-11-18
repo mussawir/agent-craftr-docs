@@ -18,10 +18,10 @@ Docs.screen({
       "id": "who",
       "n": 1,
       "box": [
-        93,
-        257,
-        185,
-        63
+        96,
+        236,
+        204,
+        69
       ],
       "kind": "action",
       "label": "Everyone · Kamran · Zainab",
@@ -31,10 +31,10 @@ Docs.screen({
       "id": "row",
       "n": 2,
       "box": [
-        270,
-        495,
-        444,
-        84
+        276,
+        483,
+        243,
+        75
       ],
       "kind": "action",
       "label": "An appointment",
@@ -44,9 +44,9 @@ Docs.screen({
       "id": "book",
       "n": 3,
       "box": [
-        815,
-        6,
-        271,
+        805,
+        9,
+        281,
         156
       ],
       "kind": "action",

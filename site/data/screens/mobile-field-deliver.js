@@ -17,10 +17,10 @@ Docs.screen({
       "id": "address",
       "n": 1,
       "box": [
-        84,
-        429,
-        538,
-        72
+        96,
+        366,
+        595,
+        78
       ],
       "kind": "info",
       "label": "Deliver to",
@@ -30,10 +30,10 @@ Docs.screen({
       "id": "delivered",
       "n": 2,
       "box": [
-        42,
-        2109,
-        996,
-        156
+        54,
+        2070,
+        972,
+        168
       ],
       "kind": "action",
       "label": "Delivered",
@@ -43,10 +43,10 @@ Docs.screen({
       "id": "proof",
       "n": 3,
       "box": [
-        42,
-        2265,
-        996,
-        63
+        54,
+        2238,
+        972,
+        66
       ],
       "kind": "info",
       "label": "Take a photo of the delivered order",
@@ -56,10 +56,10 @@ Docs.screen({
       "id": "problem",
       "n": 4,
       "box": [
-        398,
-        1952,
-        339,
-        63
+        386,
+        1910,
+        393,
+        69
       ],
       "kind": "action",
       "label": "Report a problem",

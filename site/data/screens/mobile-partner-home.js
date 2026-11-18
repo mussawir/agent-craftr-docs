@@ -17,10 +17,10 @@ Docs.screen({
       "id": "money",
       "n": 1,
       "box": [
-        84,
-        252,
-        344,
-        69
+        114,
+        240,
+        402,
+        78
       ],
       "kind": "info",
       "label": "Earned this month · Owed to you",
@@ -31,9 +31,9 @@ Docs.screen({
       "n": 2,
       "box": [
         591,
-        534,
-        145,
-        69
+        660,
+        144,
+        63
       ],
       "kind": "info",
       "label": "Paying · On trial",
@@ -43,10 +43,10 @@ Docs.screen({
       "id": "share",
       "n": 3,
       "box": [
-        356,
-        827,
-        422,
-        63
+        342,
+        935,
+        480,
+        69
       ],
       "kind": "action",
       "label": "Share my sign-up link",
@@ -56,10 +56,10 @@ Docs.screen({
       "id": "attention",
       "n": 4,
       "box": [
-        210,
-        1298,
-        564,
-        84
+        216,
+        1404,
+        576,
+        75
       ],
       "kind": "action",
       "label": "Businesses that need you",
@@ -69,9 +69,9 @@ Docs.screen({
       "id": "add",
       "n": 5,
       "box": [
-        534,
+        483,
         1974,
-        504,
+        555,
         180
       ],
       "kind": "action",

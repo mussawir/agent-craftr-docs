@@ -14,7 +14,7 @@ Docs.screen({
     {
       "id": "tabs",
       "n": 1,
-      "box": [248, 114, 107, 51],
+      "box": [266, 146, 107, 50],
       "kind": "action",
       "label": "Waiting / All",
       "text": "Waiting shows what needs you now. All also shows ones already decided, and by whom."
@@ -22,7 +22,7 @@ Docs.screen({
     {
       "id": "card",
       "n": 2,
-      "box": [248, 169, 832, 175],
+      "box": [266, 200, 832, 169],
       "kind": "info",
       "label": "A request",
       "text": "What your team member wants to do, why, who asked and when."
@@ -30,7 +30,7 @@ Docs.screen({
     {
       "id": "note",
       "n": 3,
-      "box": [265, 269, 587, 52],
+      "box": [283, 298, 601, 50],
       "kind": "action",
       "label": "Note",
       "text": "Add a word for the team member, for example why you refused."
@@ -38,7 +38,7 @@ Docs.screen({
     {
       "id": "approve",
       "n": 4,
-      "box": [848, 269, 114, 58],
+      "box": [880, 298, 108, 54],
       "kind": "action",
       "label": "Approve",
       "text": "Approving does it straight away, for example the order is cancelled and its stock comes back."
@@ -46,7 +46,7 @@ Docs.screen({
     {
       "id": "refuse",
       "n": 5,
-      "box": [958, 269, 105, 58],
+      "box": [984, 298, 97, 54],
       "kind": "action",
       "label": "Refuse",
       "text": "Nothing happens and the team member sees your note."
