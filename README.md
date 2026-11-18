@@ -24,6 +24,7 @@ What's in it:
 | **Screen guides** | Real screenshots of the web dashboard, mobile app, partner pages and admin. Numbered boxes mark each action, and arrows show what you can do next. Three views: *Step by step* (a guided tour with a spotlight; use ← → on the keyboard), *All marks* and *Clean*. |
 | **Workflows** | Who does what, in order, in swimlanes: customer, AI, your team, the system checks. Press *Play* to walk through it. Steps that happen on a screen show a cropped piece of that screenshot, linked to its guide. |
 | **Understand it** | Short concept pages: Items, the agent and handover, trades and features, roles, plans, consent, glossary. |
+| **User guides** | One guide per kind of user (business owner, staff, Franchise holder, Trade Partner, admin team, SaudaSulf), each with steps and a "System check", plus "System check: full walkthrough" across all roles. |
 | **Search** | Every screen, action, workflow step and page. Press `/` to search. |
 | **Marking editor** | `site/editor.html`: paste a screenshot, drag boxes over buttons, join them with arrows and save the screen file. |
 

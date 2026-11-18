@@ -1,7 +1,8 @@
 /* Every file the site loads. Add a name here when you add a file in screens/, flows/ or pages/.
    The order here is the order in the menu and of "Next →" between screens. */
 window.DOCS_FILES = {
-  pages: ["what-is-agentcraftr", "progress", "coagent", "items", "agent-and-handover", "trades-and-features", "roles", "plans-and-limits", "crm", "saudasulf", "consent", "glossary"],
+  pages: ["what-is-agentcraftr", "progress", "coagent", "items", "agent-and-handover", "trades-and-features", "roles", "plans-and-limits", "crm", "saudasulf", "consent", "glossary",
+    "guide-owner", "guide-staff", "guide-franchise-holder", "guide-trade-partner", "guide-admin-team", "guide-saudasulf", "system-check"],
   screens: [
     /* web — public */
     "web-signup", "web-login",
@@ -30,12 +31,13 @@ Docs.site({
   heroScreen: "web-inbox",
   covers: { web: "web-home", partner: "partner-home", admin: "admin-home", mobile: "mobile-today", saudasulf: "saudasulf-welcome" },
   roles: [
-    { icon: "🏪", title: "I own a business", text: "Set up the agent, connect WhatsApp, and run orders and chats.", href: "#/flow/go-live" },
-    { icon: "💬", title: "I work for a business", text: "Answer handed-over chats, pack orders, check payments.", href: "#/screen/web-inbox" },
+    { icon: "🏪", title: "I own a business", text: "Set up the agent, connect WhatsApp, and run orders and chats.", href: "#/page/guide-owner" },
+    { icon: "💬", title: "I work for a business", text: "Answer handed-over chats, pack orders, check payments.", href: "#/page/guide-staff" },
     { icon: "📱", title: "I use the phone app", text: "CoAgent: today's work, chats, staff and teaching the agent.", href: "#/app/mobile" },
-    { icon: "🛒", title: "I order or sell on SaudaSulf", text: "The ordering app: add your shop by code, or run your shop's orders.", href: "#/page/saudasulf" },
-    { icon: "🤝", title: "I'm a Franchise holder", text: "Bring businesses to your Franchises (a city and a trade), and track earnings.", href: "#/flow/partner-business" },
-    { icon: "🛠️", title: "I'm on the AgentCraftr team", text: "Onboard tenants, watch numbers, confirm payments.", href: "#/app/admin" },
+    { icon: "🛒", title: "I order or sell on SaudaSulf", text: "The ordering app: add your shop by code, or run your shop's orders.", href: "#/page/guide-saudasulf" },
+    { icon: "🤝", title: "I'm a Franchise holder", text: "Bring businesses to your Franchises (a city and a trade), and track earnings.", href: "#/page/guide-franchise-holder" },
+    { icon: "🧭", title: "I'm a Trade Partner", text: "Your businesses and Franchise holders, billing reminders, prospects and earnings.", href: "#/page/guide-trade-partner" },
+    { icon: "🛠️", title: "I'm on the AgentCraftr team", text: "Guides for Owner, Finance, Support and Marketing: team, billing desk, tenants, social.", href: "#/page/guide-admin-team" },
     { icon: "📘", title: "I'm new to all this", text: "What AgentCraftr is, in plain words, in five minutes.", href: "#/page/what-is-agentcraftr" },
   ],
   journey: [

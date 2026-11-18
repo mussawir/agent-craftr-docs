@@ -11,6 +11,8 @@ Docs.page({
 <tr><td>CoAgent: new names, set up from the phone, staff packing and delivery, docs (16 tasks)</td><td>✅ Built and reviewed</td></tr>
 <tr><td>Database changes for both</td><td>✅ Applied (19 Nov)</td></tr>
 <tr><td>Admin Billing desk (both products, proofs, SaudaSulf usage, statements)</td><td>✅ Built; its database change is written, not applied</td></tr>
+<tr><td>Billing for Franchise holders and Trade Partners (see plan, renewal, amount due; WhatsApp reminder; upload a payment proof)</td><td>✅ Built; its database change is written, not applied</td></tr>
+<tr><td>CRM for Franchise holders and Trade Partners (prospect pipeline, follow-ups, convert to business)</td><td>✅ Built; same database change</td></tr>
 <tr><td>Going live</td><td>⏳ Waits on the items under “Still open”</td></tr>
 </table>
 <p>Every piece of work went through the same steps: built task by task, each task checked by a separate reviewer, then one review of the whole plan, with its findings fixed and checked again. All automatic tests pass (backend 1,978; CoAgent 78; SaudaSulf 196).</p>
@@ -85,6 +87,27 @@ Docs.page({
 <li>No message is sent from the desk. The database change (<code>billing_desk.sql</code>) is written but <b>not applied yet</b>; apply it after a backup, before going live.</li>
 </ul>
 
+<h2>Billing for Franchise holders and Trade Partners</h2>
+<p>A <b>Billing</b> tab on the Businesses page of both. Money only ever comes to AgentCraftr: they never collect, confirm or change a plan.</p>
+<ul>
+<li>They see each of their businesses with plan, renewal date, status (Active, Due, Overdue, Paused) and amount due. A Trade Partner also sees which Franchise holder a business is through, and sees the businesses of their own Franchise holders. A business moved to someone else disappears from the list at once.</li>
+<li><b>Send reminder</b> opens a WhatsApp message to the owner with the plan, renewal date, amount, AgentCraftr&rsquo;s payment details and the business&rsquo;s reference (SA-000123). The system sends nothing itself.</li>
+<li><b>Upload payment proof</b>: when a business has paid AgentCraftr, they upload the receipt (photo or PDF, up to 5 MB) and say how it was paid: bank transfer, Easypaisa or JazzCash. Cash is not offered, because cash in their hand would be collecting.</li>
+<li>The proof lands in the admin <b>Proofs to confirm</b> tab, labelled &ldquo;by Franchise holder&rdquo; or &ldquo;by Trade Partner&rdquo;, with a <b>View proof</b> button. Nothing is activated until the admin confirms. If the business already started a payment, the proof attaches to it (one line in the queue); a second proof while one waits is refused.</li>
+<li>The payment details text is written once, on the Bank transfer gateway (admin, Settings), never per Franchise holder.</li>
+</ul>
+
+<h2>CRM for Franchise holders and Trade Partners</h2>
+<p>The <b>Leads</b> page is now a prospect board with the columns New, Contacted, Demo, Trial, Won and Lost.</p>
+<ul>
+<li>Prospects come from website enquiries AgentCraftr hands over and from the ones they add themselves (name, phone, optional email and first note). The same phone number twice is refused.</li>
+<li>Each prospect has a stage, a follow-up date with a note, notes, and a timeline. Trial and Won are never set by hand: they follow the business once it is created (Won when it pays).</li>
+<li><b>Convert to business</b> opens Add a business with the prospect&rsquo;s details filled in, and links the two. Converting twice never relinks.</li>
+<li>A Trade Partner sees prospects they handed to a Franchise holder, <b>read-only</b> (a lock icon). They can take it back with the hand-over control.</li>
+<li>Home shows <b>Follow-ups due</b> for today and earlier.</li>
+<li>The database change (<code>partner_billing_crm.sql</code>: proof columns, where a lead came from, follow-up indexes) is written but <b>not applied yet</b>; apply it after a backup, before going live.</li>
+</ul>
+
 <h2>Decisions taken while building</h2>
 <ol>
 <li>Only what people see was renamed (and web addresses). Code and database names stay; a table in the backend <code>CLAUDE.md</code> maps old to new.</li>
@@ -97,6 +120,7 @@ Docs.page({
 <h2>Still open</h2>
 <table>
 <tr><th>Item</th><th>Who</th></tr>
+<tr><td>Apply <code>billing_desk.sql</code> and <code>partner_billing_crm.sql</code> (after a backup)</td><td>Mussawir</td></tr>
 <tr><td>Firebase set-up so SaudaSulf can send notifications</td><td>Mussawir</td></tr>
 <tr><td>A native speaker reads the new Urdu text in both apps</td><td>Team</td></tr>
 <tr><td>Pick the CoAgent colour palette (Firoza, Neela or Shaam) in the mockups</td><td>Mussawir</td></tr>
