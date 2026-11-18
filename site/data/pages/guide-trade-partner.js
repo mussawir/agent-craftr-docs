@@ -11,10 +11,10 @@ Docs.page({
 <table>
 <tr><th>Menu</th><th>What it is for</th></tr>
 <tr><td>Home</td><td>What needs you, your deal, follow-ups due</td></tr>
-<tr><td>Businesses</td><td>Your own businesses and your Franchise holders' businesses, with plan, renewal, status, amount due. Send reminder and Upload payment proof work for both</td></tr>
+<tr><td>Businesses</td><td>Your own businesses and your Franchise holders' businesses, with plan, renewal, status, amount due. Send reminder and Upload payment proof work for both (<a href="#/screen/holder-billing">Billing tab</a>)</td></tr>
 <tr><td>Add business</td><td>Add a business of your own</td></tr>
 <tr><td>Franchise holders</td><td>Your Franchise holders, their cities and trades, their businesses and what they did. Make a sign-in link for them</td></tr>
-<tr><td>Leads</td><td>Your own prospects (you can change them) and your Franchise holders' prospects (read only, shown with a lock)</td></tr>
+<tr><td>Leads</td><td>Your own prospects (you can change them) and your Franchise holders' prospects (read only, shown with a lock) (<a href="#/screen/holder-prospects">screen</a>)</td></tr>
 <tr><td>Earnings</td><td>Your earnings and payouts</td></tr>
 </table>
 <p>Adding a Franchise holder is only possible if AgentCraftr has switched it on for your account. If you see "not switched on", ask AgentCraftr.</p>

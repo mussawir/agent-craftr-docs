@@ -12,6 +12,7 @@ Docs.page({
 <tr><td>WhatsApp numbers</td><td>Connect your number and attach it to an Item</td><td><a href="#/screen/web-channels">Numbers</a></td></tr>
 <tr><td>Inbox</td><td>Every chat. Take over from the agent when needed</td><td><a href="#/screen/web-inbox">Inbox</a></td></tr>
 <tr><td>Orders and Payments</td><td>Work orders. Check the payment proofs customers send you</td><td><a href="#/screen/web-orders">Orders</a>, <a href="#/screen/web-payments">Payments</a></td></tr>
+<tr><td>SaudaSulf</td><td>Your shop code and QR for the ordering app; confirm app customers</td><td><a href="#/screen/web-saudasulf">SaudaSulf</a></td></tr>
 <tr><td>Customers, Follow-ups</td><td>Your own customer list, notes and reminders (CRM)</td><td><a href="#/screen/web-customers">Customers</a>, <a href="#/screen/web-followups">Follow-ups</a></td></tr>
 <tr><td>Khata</td><td>Who owes you money (credit)</td><td><a href="#/screen/web-khata">Khata</a></td></tr>
 <tr><td>Appointments, Requests</td><td>Bookings, quotes and questions the agent collected</td><td><a href="#/screen/web-appointments">Appointments</a>, <a href="#/screen/web-requests">Requests</a></td></tr>

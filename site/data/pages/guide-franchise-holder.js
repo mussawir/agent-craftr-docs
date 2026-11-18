@@ -11,9 +11,9 @@ Docs.page({
 <table>
 <tr><th>Menu</th><th>What it is for</th></tr>
 <tr><td>Home</td><td>What needs you, your deal, and follow-ups that are due (<a href="#/screen/partner-home">screen</a>)</td></tr>
-<tr><td>My businesses</td><td>Each business with plan, renewal date, status and amount due. Send reminder. Upload payment proof (<a href="#/screen/partner-businesses">screen</a>)</td></tr>
+<tr><td>My businesses</td><td>Each business with plan, renewal date, status and amount due. Send reminder. Upload payment proof (<a href="#/screen/partner-businesses">screen</a>, <a href="#/screen/partner-billing">Billing tab</a>)</td></tr>
 <tr><td>Add business</td><td>Create a new business and its owner's sign-in link</td></tr>
-<tr><td>Leads</td><td>Your prospects: a board, notes, follow-up dates, convert to business</td></tr>
+<tr><td>Leads</td><td>Your prospects: a board, notes, follow-up dates, convert to business (<a href="#/screen/partner-prospects">screen</a>)</td></tr>
 <tr><td>Earnings</td><td>What you earned and what AgentCraftr has paid you</td></tr>
 <tr><td>Franchise kit</td><td>Your sign-up link and sales material</td></tr>
 </table>

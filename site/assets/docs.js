@@ -10,6 +10,7 @@
     web: { label: "Web dashboard", icon: "🖥️", blurb: "What the business owner and staff use every day." },
     mobile: { label: "Mobile app", icon: "📱", blurb: "The same business on the phone: today, chats, orders, teaching the agent." },
     partner: { label: "Franchise holder", icon: "🤝", blurb: "For Franchise holders, who bring businesses to their Franchises (a city and a trade)." },
+    holder: { label: "Trade Partner", icon: "🏢", blurb: "For Trade Partners, who own a slice of trades and areas and run Franchise holders inside it." },
     admin: { label: "Admin (our team)", icon: "🛠️", blurb: "AgentCraftr's own team: tenants, numbers, payments." },
     saudasulf: { label: "SaudaSulf app", icon: "🛒", blurb: "The ordering app: customers add their shops and order; shopkeepers run orders, khata and chats." },
   };
