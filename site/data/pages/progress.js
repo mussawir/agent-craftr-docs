@@ -10,6 +10,7 @@ Docs.page({
 <tr><td>SaudaSulf: all 6 plans (subscriptions, shop codes and customers, ordering, message counting, order rule and khata, in-app chat and notifications)</td><td>✅ Built and reviewed</td></tr>
 <tr><td>CoAgent: new names, set up from the phone, staff packing and delivery, docs (16 tasks)</td><td>✅ Built and reviewed</td></tr>
 <tr><td>Database changes for both</td><td>✅ Applied (19 Nov)</td></tr>
+<tr><td>Admin Billing desk (both products, proofs, SaudaSulf usage, statements)</td><td>✅ Built; its database change is written, not applied</td></tr>
 <tr><td>Going live</td><td>⏳ Waits on the items under “Still open”</td></tr>
 </table>
 <p>Every piece of work went through the same steps: built task by task, each task checked by a separate reviewer, then one review of the whole plan, with its findings fixed and checked again. All automatic tests pass (backend 1,978; CoAgent 78; SaudaSulf 196).</p>
@@ -62,6 +63,26 @@ Docs.page({
 <li>Staff get an alert when a customer waits for a person, including when the AI hands over because the month’s messages are used up.</li>
 <li>Notifications reach the right customer even on a shared phone, and signing out stops them.</li>
 <li>Every message counts towards the package, the same as WhatsApp.</li>
+</ul>
+
+<h2>Admin: the Billing desk</h2>
+<p>One page in the admin web for money coming in, for both products (WhatsApp plans and SaudaSulf packages). It replaces the old Payments page; the old link opens the <b>Proofs to confirm</b> tab.</p>
+<table>
+<tr><th>Tab</th><th>Shows</th></tr>
+<tr><td>Due</td><td>Waiting for a first or renewal payment (never paid, trial or month ended) with no proof sent yet</td></tr>
+<tr><td>Overdue</td><td>The period ended and no later payment was confirmed</td></tr>
+<tr><td>Paused</td><td>Paused or suspended businesses</td></tr>
+<tr><td>Renewing in 7 days</td><td>Active, period ends within 7 days</td></tr>
+<tr><td>Proofs to confirm</td><td>Every pending payment, SaudaSulf first. Shows who put it in (business, Franchise holder, Trade Partner or staff), and “Extra pack P500” for a message pack</td></tr>
+<tr><td>SaudaSulf</td><td>The packages and extra packs, and every shop's messages used, packs bought and whether <b>ordering is closed</b> (filters: Ordering closed, Low 80%+)</td></tr>
+<tr><td>Statements</td><td>Earned, paid and owed per month for Franchise holders and Trade Partners, with <b>Record payout</b></td></tr>
+</table>
+<ul>
+<li>A business with both products appears once for each product, never merged.</li>
+<li>Confirming asks <b>how it was paid</b>: cash, bank transfer, Easypaisa or JazzCash (pre-filled from the payment). An extra pack only adds messages; it never moves the package dates.</li>
+<li>Finance and Owner can confirm, reject and record payouts; Support can look only; Marketing has no access.</li>
+<li>A payout settles <b>everything</b> owed to that person, not just one month.</li>
+<li>No message is sent from the desk. The database change (<code>billing_desk.sql</code>) is written but <b>not applied yet</b>; apply it after a backup, before going live.</li>
 </ul>
 
 <h2>Decisions taken while building</h2>
