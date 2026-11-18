@@ -85,7 +85,7 @@ Deals, own customer fields, lead ads and adding customers by hand are on the web
 |---|---|---|
 | **F1 Staff roles** | Each login sees only its own screens | ✅ |
 | **F3 Tasks** | Create a task (from scratch, a chat, an order or a request), assign it, set due date and priority; the assignee updates it with comments, photos, a video, a voice note or a document | ✅ |
-| **F4 Order fulfilment** | Warehouse marks Packed (or "Something is missing"); Rider marks Delivered with a proof photo or video; uses the normal order rules | 🟡 |
+| **F4 Order fulfilment** | Warehouse marks Packed (or "Something is missing"); Rider marks Delivered with a proof photo or video; uses the normal order rules | ✅ |
 | **F5 Problems** | "2 units missing on #152": raised with photos, video or a voice note; stays in "Needs you" until someone resolves it | ✅ |
 | **F6 Approvals** | Owner says yes or no with a reason. First kind: a field login asking to cancel an order | ✅ |
 | **F9 Offline** | No signal? Task updates, photos and voice notes wait on the phone ("Waiting to send (3)") and send once, when signal returns | ✅ for tasks |
@@ -126,7 +126,7 @@ Deals, own customer fields, lead ads and adding customers by hand are on the web
 
 Field logins use the Tasks, Orders and More screens with their own tabs.
 
-🟡 **Docs site:** 7 of these screens have pages written but no screenshots yet. Plan: copy SaudaSulf's screenshot tool (`saudasulf/tool/docs_capture/`) into CoAgent so all 32 are captured with demo data, then add mobile workflows (notification → action, staff task with proof, approval, teach from the phone, Ask your business, khata, Franchise holder adds a business).
+✅ **Docs site:** all the phone screens are captured with demo data and eight workflows are on the docs site (notification to action, staff task with proof, cancelling an order, teaching from the phone, Ask your business, khata, a Franchise holder adding a business, pack and deliver). See the CoAgent page.
 
 ---
 
@@ -156,8 +156,8 @@ Field logins use the Tasks, Orders and More screens with their own tabs.
 | # | What | Who |
 |---|---|---|
 | 1 | Deploy the 10–11 November work (CRM, khata, AI customer notes, lead ads, CoAgent operations) and rehearse on the live number | Mussawir + software |
-| 2 | Rename `partner` → Franchise holder and `trade_holder` → Trade Partner in the app's code and screens | Software |
+| 2 | Rename `partner` → Franchise holder and `trade_holder` → Trade Partner in the app's code and screens | ✅ Done |
 | 3 | Firebase setup for phone notifications (see `co-agent/README.md`) | Mussawir |
 | 4 | Publish CoAgent in the Play Store and App Store | Software |
 | 5 | Register "CoAgent" as a trademark with IPO Pakistan, before printing it on stands or boxes | Mussawir |
-| 6 | CoAgent screenshots and workflows on the docs site | Software |
+| 6 | CoAgent screenshots and workflows on the docs site | ✅ Done |
