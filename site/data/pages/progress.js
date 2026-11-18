@@ -10,9 +10,9 @@ Docs.page({
 <tr><td>SaudaSulf: all 6 plans (subscriptions, shop codes and customers, ordering, message counting, order rule and khata, in-app chat and notifications)</td><td>✅ Built and reviewed</td></tr>
 <tr><td>CoAgent: new names, set up from the phone, staff packing and delivery, docs (16 tasks)</td><td>✅ Built and reviewed</td></tr>
 <tr><td>Database changes for both</td><td>✅ Applied (19 Nov)</td></tr>
-<tr><td>Admin Billing desk (both products, proofs, SaudaSulf usage, statements)</td><td>✅ Built; its database change is written, not applied</td></tr>
-<tr><td>Billing for Franchise holders and Trade Partners (see plan, renewal, amount due; WhatsApp reminder; upload a payment proof)</td><td>✅ Built; its database change is written, not applied</td></tr>
-<tr><td>CRM for Franchise holders and Trade Partners (prospect pipeline, follow-ups, convert to business)</td><td>✅ Built; same database change</td></tr>
+<tr><td>Admin Billing desk (both products, proofs, SaudaSulf usage, statements)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>Billing for Franchise holders and Trade Partners (see plan, renewal, amount due; WhatsApp reminder; upload a payment proof)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
+<tr><td>CRM for Franchise holders and Trade Partners (prospect pipeline, follow-ups, convert to business)</td><td>✅ Built; database change applied (18 Nov)</td></tr>
 <tr><td>Going live</td><td>⏳ Waits on the items under “Still open”</td></tr>
 </table>
 <p>Every piece of work went through the same steps: built task by task, each task checked by a separate reviewer, then one review of the whole plan, with its findings fixed and checked again. All automatic tests pass (backend 1,978; CoAgent 78; SaudaSulf 196).</p>
@@ -84,7 +84,7 @@ Docs.page({
 <li>Confirming asks <b>how it was paid</b>: cash, bank transfer, Easypaisa or JazzCash (pre-filled from the payment). An extra pack only adds messages; it never moves the package dates.</li>
 <li>Finance and Owner can confirm, reject and record payouts; Support can look only; Marketing has no access.</li>
 <li>A payout settles <b>everything</b> owed to that person, not just one month.</li>
-<li>No message is sent from the desk. The database change (<code>billing_desk.sql</code>) is written but <b>not applied yet</b>; apply it after a backup, before going live.</li>
+<li>No message is sent from the desk. Its database change (<code>billing_desk.sql</code>) is applied (backup taken first).</li>
 </ul>
 
 <h2>Billing for Franchise holders and Trade Partners</h2>
@@ -105,7 +105,7 @@ Docs.page({
 <li><b>Convert to business</b> opens Add a business with the prospect&rsquo;s details filled in, and links the two. Converting twice never relinks.</li>
 <li>A Trade Partner sees prospects they handed to a Franchise holder, <b>read-only</b> (a lock icon). They can take it back with the hand-over control.</li>
 <li>Home shows <b>Follow-ups due</b> for today and earlier.</li>
-<li>The database change (<code>partner_billing_crm.sql</code>: proof columns, where a lead came from, follow-up indexes) is written but <b>not applied yet</b>; apply it after a backup, before going live.</li>
+<li>The database change (<code>partner_billing_crm.sql</code>: proof columns, where a lead came from, follow-up indexes) is applied (backup taken first).</li>
 </ul>
 
 <h2>Bluetooth receipt printer (hardware #3)</h2>
@@ -132,7 +132,6 @@ Docs.page({
 <h2>Still open</h2>
 <table>
 <tr><th>Item</th><th>Who</th></tr>
-<tr><td>Apply <code>billing_desk.sql</code> and <code>partner_billing_crm.sql</code> (after a backup)</td><td>Mussawir</td></tr>
 <tr><td>Firebase set-up so SaudaSulf can send notifications</td><td>Mussawir</td></tr>
 <tr><td>A native speaker reads the new Urdu text in both apps</td><td>Team</td></tr>
 <tr><td>Pick the CoAgent colour palette (Firoza, Neela or Shaam) in the mockups</td><td>Mussawir</td></tr>
