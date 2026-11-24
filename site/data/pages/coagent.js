@@ -8,6 +8,8 @@ Docs.page({
 
 <p>Dedicated apps sit beside it, each for one job and sold on its own after the WhatsApp package. <a href="#/page/saudasulf">SaudaSulf</a> (ordering) is the first.</p>
 
+<div class="callout"><b>Not only for shops</b>CoAgent assembles itself from the trade: a clinic gets Appointments and Patients, a lawyer Enquiries and Clients, a bank branch Complaints and Account holders. See <a href="#/page/ecosystem">The ecosystem</a>.</div>
+
 <h2>Who uses it</h2>
 <p>One app. What a person sees depends on how they log in.</p>
 <table>

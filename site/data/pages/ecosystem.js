@@ -30,6 +30,60 @@ Docs.page({
 <tr><td>KhidmatKhalq</td><td>Community and public services: announcements, requests, contributions</td></tr>
 </table>
 
+<h2>CoAgent for every trade, not only shops</h2>
+<p>Only "Answers" is used by all 157 trades; orders by 63. A clinic, a lawyer or a bank branch must feel CoAgent is <i>their</i> app. The trade's workflow list decides what CoAgent shows; the app assembles itself from it.</p>
+<table>
+<tr><th>Inside CoAgent</th><th>What it is</th><th>Who gets it</th></tr>
+<tr><td><b>Core</b></td><td>Today, Chats, Contacts, follow-ups, tasks, problems, approvals, marketing, Ask your business, teach the agent, notifications</td><td>Every business</td></tr>
+<tr><td><b>Main work tab</b></td><td>The tab between Chats and Contacts, named after the trade's main work</td><td>Every business, a different tab per trade</td></tr>
+<tr><td><b>Work modules</b></td><td>Basic versions of what the 12 business apps do in full</td><td>Switched on by the trade's workflows</td></tr>
+</table>
+
+<h3>What each kind of business sees</h3>
+<table>
+<tr><th>Business app family</th><th>Main tab</th><th>Other modules</th><th>Contacts are called</th></tr>
+<tr><td>SaudaSulf (shops)</td><td>Orders</td><td>Khata, Payments</td><td>Customers</td></tr>
+<tr><td>KhanaPeena (food)</td><td>Orders (Preparing / Ready)</td><td>Table bookings, Payments</td><td>Customers</td></tr>
+<tr><td>DawaDaru (health)</td><td>Appointments</td><td>Payments</td><td>Patients</td></tr>
+<tr><td>SajDhaj (beauty, fitness)</td><td>Appointments</td><td>Payments</td><td>Clients / Members</td></tr>
+<tr><td>IlmHunar (education)</td><td>Enquiries → Admissions</td><td>Fee proofs, Announcements</td><td>Students / Parents</td></tr>
+<tr><td>SairSapata (travel, stays)</td><td>Bookings (dates)</td><td>Deposits</td><td>Guests</td></tr>
+<tr><td>KaamKaaj (repairs, field)</td><td>Jobs</td><td>Quotes, Field reports</td><td>Customers</td></tr>
+<tr><td>SalahMashwara (professional)</td><td>Enquiries</td><td>Leads, Consultations</td><td>Clients</td></tr>
+<tr><td>LenDen (financial)</td><td>Complaints</td><td>Enquiries, Rates</td><td>Account holders</td></tr>
+<tr><td>ThokMandi (wholesale)</td><td>Quotes</td><td>Orders, Khata</td><td>Buyers</td></tr>
+<tr><td>KhidmatKhalq (community)</td><td>Requests</td><td>Announcements, Contributions</td><td>Members</td></tr>
+</table>
+
+<h3>Work modules: basic in CoAgent, full in the trade app</h3>
+<table>
+<tr><th>Module</th><th>Basic version in CoAgent</th><th>Status</th></tr>
+<tr><td>Orders</td><td>List by status, one order, receipt, fulfilment</td><td>✅</td></tr>
+<tr><td>Khata</td><td>Gave / got, statements</td><td>✅</td></tr>
+<tr><td>Payments</td><td>Check and confirm payment proofs</td><td>✅</td></tr>
+<tr><td>Appointments</td><td>Today's list, confirm, reschedule, no-show, reminder</td><td>✅</td></tr>
+<tr><td>Bookings with dates</td><td>Check-in / check-out, deposit, status</td><td>✅</td></tr>
+<tr><td>Jobs</td><td>Request → quote → stages → done, with field reports</td><td>🟡 stages new</td></tr>
+<tr><td><b>Enquiries</b></td><td>The agent's intake answers in one card; qualify, assign, follow up</td><td>🟡 new</td></tr>
+<tr><td><b>Leads pipeline</b></td><td>New, Talking, Visit, Proposal, Won, Lost</td><td>🟡 web only today</td></tr>
+<tr><td><b>Complaints / cases</b></td><td>Number, category, status, due date, closed with a reason</td><td>🟡 new</td></tr>
+<tr><td>Announcements</td><td>Send to a group of your own contacts</td><td>🟡 web only today</td></tr>
+</table>
+
+<h3>Minimal by design</h3>
+<table>
+<tr><th>Rule</th><th>What it means</th></tr>
+<tr><td>Assembled, not hidden</td><td>A business only gets modules its trade uses. No menu full of things that don't apply</td></tr>
+<tr><td>Four tabs, always</td><td>Today · Chats · <i>Main work</i> · Contacts, plus More. The main tab holds at most three modules, as chips</td></tr>
+<tr><td>The trade's own words</td><td>Patient, Appointment, Visit done; Client, Consultation; Account holder, Complaint. In English and Urdu</td></tr>
+<tr><td>One card, everywhere</td><td>Every work item: who · what · when · status · one next-step button</td></tr>
+<tr><td>Stages come from data</td><td>Each trade's status list comes from its app schema, not from code</td></tr>
+<tr><td>Show only what's waiting</td><td>A quiet day shows one line: "Nothing waiting"</td></tr>
+<tr><td>Appear on first use</td><td>A second module joins the chips when its first item arrives; the owner can turn any module off</td></tr>
+<tr><td>Roles cut further</td><td>Each staff login sees only its role's modules</td></tr>
+<tr><td>Light app</td><td>One list screen and one item screen, configured by data. A new trade adds data, not screens</td></tr>
+</table>
+
 <h2>The one rule: every record has one home</h2>
 <p>Each piece of data is <b>worked</b> in one app. Other apps may <b>show</b> it, but to act on it they open the home app. This is the <a href="#/page/coagent">CoAgent</a> order rule with SaudaSulf, made general.</p>
 <table>
@@ -47,7 +101,7 @@ Docs.page({
 <p>CoAgent already has basic orders, appointments, stays, requests and quotes, and field reports. Keep them: they are the free sample.</p>
 <table>
 <tr><th>The business has</th><th>Where the work is done</th></tr>
-<tr><td>WhatsApp only</td><td>CoAgent, basic version, free</td></tr>
+<tr><td>WhatsApp only</td><td>CoAgent: its main work tab, basic version, free</td></tr>
 <tr><td>WhatsApp + its trade app</td><td>The trade app; CoAgent shows each record with "Open in …"</td></tr>
 <tr><td>The trade app lapses or is paused</td><td>Back in CoAgent by itself. Nothing is ever stuck</td></tr>
 </table>
