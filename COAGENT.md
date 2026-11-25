@@ -30,13 +30,85 @@ The AI agent answers customers on WhatsApp; the owner and staff work alongside i
 
 ---
 
+## 1b. Built for every trade, not only shops
+
+✅ **Decided 2026-11-25.** Only "Answers" is used by all 157 trades; orders by 63. CoAgent must feel like *their* app to a clinic, a lawyer or a bank branch, not a shop app with parts hidden. The trade's workflow list (`business_types.workflows`) decides what CoAgent shows. Nothing is built per trade: the app reads the list and assembles itself.
+
+### Three layers inside CoAgent
+
+| Layer | What it is | Who gets it |
+|---|---|---|
+| **Core** | Today, Chats, Contacts, follow-ups, tasks, problems, approvals, marketing, Ask your business, teach the agent, notifications | Every business |
+| **Main work tab** | The tab between Chats and Contacts. Its name and content are the trade's main work | Every business, a different tab per trade |
+| **Work modules** | Basic versions of what the 12 business apps do in full | Switched on by the trade's workflows |
+
+### The main work tab, by app family
+
+| Business app | Main tab in CoAgent | Other modules switched on | Contacts are called |
+|---|---|---|---|
+| SaudaSulf (shops) | Orders | Khata, Payments | Customers |
+| KhanaPeena (food) | Orders (with Preparing / Ready) | Table bookings, Payments | Customers |
+| DawaDaru (health) | Appointments | Payments | Patients |
+| SajDhaj (beauty, fitness) | Appointments | Payments | Clients / Members |
+| IlmHunar (education) | Enquiries → Admissions | Fee proofs, Announcements | Students / Parents |
+| SairSapata (travel, stays) | Bookings (dates) | Deposits | Guests |
+| KaamKaaj (repairs, field) | Jobs | Quotes, Field reports | Customers |
+| SalahMashwara (professional) | Enquiries | Leads, Consultations | Clients |
+| LenDen (financial) | Complaints | Enquiries, Rates | Account holders |
+| ThokMandi (wholesale) | Quotes | Orders, Khata | Buyers |
+| KhidmatKhalq (community) | Requests | Announcements, Contributions | Members |
+
+### Work modules (basic in CoAgent, full in the trade app)
+
+| Module | Basic version in CoAgent | Platform workflow | Status in CoAgent |
+|---|---|---|---|
+| Orders | List by status, one order, receipt, fulfilment | orders | ✅ |
+| Khata | Gave / got, statements | khata | ✅ |
+| Payments | Check and confirm payment proofs | payments | ✅ |
+| Appointments | Today's list, confirm, reschedule, no-show, reminder | bookings | ✅ |
+| Bookings with dates | Check-in / check-out, deposit, status | rentals | ✅ (Stays) |
+| Jobs | Request → quote → stages → done, with field reports | quotes, tracking, field_reports | 🟡 quotes and field reports ✅; stages 🟡 |
+| **Enquiries** | The agent's intake answers in one card; qualify, assign, follow up | questions | 🟡 new |
+| **Leads pipeline** | Stages (New, Talking, Visit, Proposal, Won, Lost) | deals | 🟡 web only today |
+| **Complaints / cases** | Number, category, status, due date, closed with a reason | tickets | 🟡 new |
+| Announcements | Send to a group of your own contacts | broadcasts | 🟡 web only today |
+
+A module is a basic version: it has no trade-specific forms. The trade app adds those (menus, measurements, room calendars, case files) and takes over the work under the order rule in section 4.
+
+### Minimal by design: the rules
+
+1. **Assembled, not hidden.** A business only gets modules its trade uses. There is no "turn on" menu full of things that don't apply.
+2. **Four tabs, always:** Today · Chats · *Main work* · Contacts, plus More. The main work tab holds at most three modules, as chips at the top (for example, Appointments | Payments).
+3. **The trade's own words.** A vocabulary pack per trade: Patient, Appointment, Visit done; Client, Consultation; Account holder, Complaint. Labels, empty screens and "Needs you" all use it.
+4. **One card, everywhere.** Every work item uses the same card: who · what · when · status · one next-step button. Learn it once, read every module.
+5. **Stages come from data.** Each module's statuses come from the trade's stage list (`<app>_workflow_stages` in the app schemas), not from code.
+6. **Show only what's waiting.** Today and Needs you show non-empty items only. A quiet day shows one line: "Nothing waiting".
+7. **Appear on first use.** A secondary module joins the chips the first time it has an item (for example, the agent's first quote). The owner can turn any module off in More → Settings.
+8. **Roles cut further.** Each staff login sees only its role's modules.
+9. **Light app.** One generic list screen and one item screen, configured by the module and vocabulary data. A new trade adds data, not screens.
+
+### What this adds to the build
+
+| # | Work | Status |
+|---|---|---|
+| T1 | Main work tab chosen from the trade's workflows; module chips | 🟡 |
+| T2 | Vocabulary packs (English and Urdu) per trade family | 🟡 |
+| T3 | Generic work card, list and item screens | 🟡 |
+| T4 | Enquiries module (questions) | 🟡 |
+| T5 | Complaints / cases module (tickets) | 🟡 |
+| T6 | Leads pipeline in the app (deals) | 🟡 |
+| T7 | Job stages (tracking) and stage lists from data | 🟡 |
+| T8 | Announcements from the phone (broadcasts) | 🟡 |
+
+---
+
 ## 2. Who uses it
 
 One app; what a person sees depends on how they log in.
 
 | Login | Tabs | What they do |
 |---|---|---|
-| **Owner / Manager** | Today · Chats · Orders · Customers · More | Everything: chats, orders, payments, customers, khata, workflows, staff, teaching the agent, "Ask your business" |
+| **Owner / Manager** | Today · Chats · *Main work* (Orders, Appointments, Jobs, Complaints … by trade, see 1b) · Contacts · More | Everything: chats, orders, payments, customers, khata, workflows, staff, teaching the agent, "Ask your business" |
 | **Staff: Sales** | As the owner, limited by role | Chats, customers, follow-ups |
 | **Staff: Warehouse, Rider, Technician** (field logins) | Tasks · Orders · More | Their own tasks, orders to pack or deliver, proof photos and videos, problems; works offline. No billing, no settings |
 | **Franchise holder** | Home · Businesses · Earnings · Leads · More | Their businesses, adding a business, setup help, leads, earnings |
@@ -57,7 +129,7 @@ One app; what a person sees depends on how they log in.
 | **Notification bell** | Unread count and list: new order, payment to check, customer waiting, task assigned, problem raised. Costs nothing, unlike WhatsApp alerts | ✅ |
 | **Phone notifications** | A push for work waiting; tapping it opens that screen | ✅ (needs the one-time Firebase setup) |
 
-### Sales and money
+### Shop and money modules (shown when the trade uses them, see 1b)
 
 | Feature | What the person gets | Status |
 |---|---|---|
